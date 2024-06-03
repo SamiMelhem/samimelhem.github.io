@@ -1,11 +1,89 @@
-# Projects Tip:
+# Projects Tips:
   MAKE ALL PROJECTS LOOK GOOD
+  USE REAL-TIME SCENARIOS FOR API DATA GRABS
 
 # Datasets
   kaggle -> Original & Interesting, Data on something your are interested in
   awesome public datasets on GitHub
   You can also use APIs to collect data
   Create your own custom dataset -> Google Activity Data from takeout.google.com, Managing your finances via your bank stats, web scraping is not recommended but fine
+
+# Technologies/Concepts/Skills
+Python -> Syntax
+  Libraries: NumPy, Pandas, Matplotlib, Seaborn
+Math & Stats
+  Basics: Descriptive vs inferential statistics, continuous vs discrete data, nomial vs ordinal data
+  Basic plots: Histograms, pie charts, bar charts, scatter plot, etc.
+  Measures of central tendency: mean, median, mode
+  Measures of dispersion: variance, standard deviation
+  Probability basics
+  Distributions: Normal distribution
+  Correlation and covariance
+  Central Limit Theorem
+  Hypothesis Testing: p value, confidence interval, type 1 vs type 2 error, Z test, t test, ANOVA 
+  *Resources for Learning: Khan Academy Stats & Probability Course, StatQuest with Josh Starmer YT Channel, and codebasics "Mathematics, Statistics for DS & ML"*
+Exploratory Data Analysis (EDA)
+  Practice EDA with at least 3 datasets, with 2 additional datasets by yourself
+SQL
+  Relational Databases
+  Basic Queries: SELECT, WHERE LIKE, DISTINCT, BETWEEN, GROUP BY, ORDER BY
+  Advance Queries: CTE, Subqueries, Window Functions
+  Joins: Left, Right, Inner, Full
+Machine Learning
+  Preprocessing
+    Handling NA values, outlier treatment, data normalization
+    One hot encoding, label encoding
+    Feature engineering
+    Train test split
+    Cross validation
+  Model Building
+    Types of ML: Supervised, Unsupervised
+    Supervised: Regression vs Classification
+    Linear models: Linear regression, logisitic regression, gradient descent
+    Non-linear models (tree-based models): Decision tree, Random forest, XGBoost
+    Model evaluation:
+      Regression: Mean Squared Error, Mean Absolute Error, MAPE
+      Classification: Accuracy, Precision-Recall, F1 Score, ROC Curve, Confusion matrix
+    Hyperparameter tunning: GridSearchCV, RandomSearchCV
+    Unsupervised: K means, hierarchical clustering, Dimensionally reduction (PCA)
+  *Resources for Learning: Machine Learning Tutorial Python by codebasics, Feature Engineering Tutorial Python by codebasics*
+  *Scrum Training Series & Kanban, with tools of JIRA and Notion*
+Machine Learning Projects with Deployment
+  Regression Project: Dallas property price prediction (https://bit.ly/3ivycWr)
+    Data Cleaning, Feature Engineering, Model Building & hyper parameter tuning, Write flask server as web backend, building website for price prediction, & AWS deployment 
+  Classification Project: Sports celebrity image classification (https://bit.ly/3ioaMSU)
+    Data Collection and data cleaning, feature engineering and model training, flask server as a web backend, building website and deployment
+Better regression and Classification Projects:
+  Use FASTAPI instead of Flask
+  Regression Project: Find one of interest on Kaggle
+  Classification Project: Find one of interest on Kaggle and build end to end solution along with deployment to AWS or Azure
+Deep Learning
+  Neural Network -> Forward propagation, back propagation
+  Building multilayer perceptron
+  Special neural network architectures
+    Convolutional neural network (CNN)
+    Sequence models: RNN, LSTM
+  Deep Learning via Tensorflow and PyTorch from codebasics
+  End to end potato disease classification project
+NLP or Computer Vision
+  NLP
+    Regex
+    Text presentation: Count vectorizer, TF-IDF, BOW, Word2Vec, Embeddings
+    Text classification: Naive Bayes
+    Fundamentals of Spacy & NLTP library
+    One end to end project
+    NLP YT Playlist from codebasics
+  Computer Vision
+    Basic image processing techniques: Filtering, Edge Detection, Image Scaling, Rotation
+    OpenCV library
+    Convolutional Neural Networks (CNN): *Already covered in deep learning*
+    Data preprocessing, augmentation: *Already covered in deep learning*
+Onwards
+  More projects
+  Online brand building through LinkedIn, Kaggle, Discord, Opensoure contribution
+  Job Application and Success
+    
+    
 
 # Project 1: Data Cleaning & Transformation
 Option 1: FIFA players dataset
@@ -39,6 +117,8 @@ Option 2: Own YouTube Watch History
   During what days / which hours were you watching the most content on YouTube?
 
 # Project 3: Data Visualization
+Potential Project - Live trends of companies and the likelihood of getting into a company with certain attributes
+ 
 Option 1: London bike sharing dataset
   Tableau or Power BI
   How does weather affect bike usage?
