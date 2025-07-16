@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Project } from '../../../../data/projects'
 import ContactIcons from '../../../../components/ContactIcons'
+import NotionRagCliIcon from '../../../../components/NotionRagCliIcon'
 import { FaExternalLinkAlt as ExternalLink, FaGithub as Github, FaArrowLeft as ArrowLeft, FaCalendarAlt as Calendar, FaBullseye as Target, FaCog as Cog, FaChartBar as BarChart3, FaCheckCircle as CheckCircle } from 'react-icons/fa'
 
 interface ProjectPageClientProps {
@@ -12,7 +13,6 @@ interface ProjectPageClientProps {
 }
 
 export default function ProjectPageClient({ project }: ProjectPageClientProps) {
-
 
   return (
     <main className="relative min-h-screen flex flex-col text-white">
@@ -98,13 +98,19 @@ export default function ProjectPageClient({ project }: ProjectPageClientProps) {
             {project.image && (
               <div className="relative">
                 <div className="relative rounded-xl overflow-hidden shadow-2xl">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={600}
-                    height={400}
-                    className="w-full h-auto object-cover"
-                  />
+                  {project.image === 'NotionRagCliIcon' ? (
+                    <div className="w-full h-80 bg-gray-800 flex items-center justify-center">
+                      <NotionRagCliIcon />
+                    </div>
+                  ) : (
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={600}
+                      height={400}
+                      className="w-full h-auto object-cover"
+                    />
+                  )}
                 </div>
               </div>
             )}
@@ -129,6 +135,25 @@ function ProjectContent({ project }: { project: Project }) {
       keyResults: string[]
       businessImpact: string
     }> = {
+      'notion-rag-cli': {
+        challenge: "Notion's built-in AI feature is expensive and limited, costing users significant money for basic AI-powered information retrieval. Users struggle to leverage their Notion knowledge base for intelligent queries without paying premium fees for Notion AI. Traditional approaches require complex setup, manual data processing, and lack integration between personal knowledge management systems and modern AI capabilities. There's a gap between having valuable information in Notion and being able to query it intelligently using AI in a cost-effective way.",
+        solution: "Developed a comprehensive command-line tool that transforms Notion pages into a powerful RAG (Retrieval-Augmented Generation) system using Gemini 2.5 Flash-Lite Preview. The tool seamlessly extracts content from Notion, processes it through advanced embedding generation, stores it in ChromaDB for efficient vector search, and provides intelligent querying capabilities through sophisticated prompt engineering with real-time cost tracking.",
+        technicalHighlights: [
+          "Integrated Gemini 2.5 Flash-Lite Preview for advanced AI-powered responses",
+          "Built modular Python architecture with ChromaDB vector store achieving ~1.4s average query response time",
+          "Implemented comprehensive cost tracking and API usage monitoring with tiktoken token counting",
+          "Created specialized prompt templates for semantic search, summarization, and content analysis",
+          "Developed recursive page fetching with metadata preservation and secure credential management"
+        ],
+        keyResults: [
+          "Achieved ~0.8s fetch time for 9 pages and ~14s load time for 54K characters",
+          "Maintained ~1.4s average query response time with optimized ChromaDB vector search",
+          "Implemented comprehensive cost tracking and API usage monitoring system",
+          "Created user-friendly CLI tool with interactive chat and specialized prompt templates",
+          "Established foundation for scalable AI-powered knowledge management solutions"
+        ],
+        businessImpact: "This tool democratizes AI-powered knowledge management by making sophisticated RAG systems accessible to individual users and small teams. The integration with Gemini 2.5 Flash-Lite Preview provides cutting-edge AI capabilities while the performance metrics demonstrate production-ready efficiency. It bridges the gap between personal knowledge management and AI capabilities, enabling users to leverage their Notion content for intelligent information retrieval and analysis."
+      },
       'save-gas': {
         challenge: "With gas prices fluctuating daily and varying significantly between stations, drivers were losing money and time searching for the best fuel prices. Users needed a reliable way to find the cheapest gas nearby without compromising their location privacy or spending excessive time comparing prices.",
         solution: "Built a real-time gas price tracking system that aggregates data from 100+ stations and presents it through an intuitive map interface. The application balances real-time accuracy with performance through a smart 60-second refresh system, while maintaining strict privacy standards for location-based services.",

@@ -36,6 +36,9 @@ import {
   SiLucide,
   SiSocketdotio,
   SiAdobeacrobatreader,
+  SiNotion,
+  SiPytest,
+  SiGooglegemini
 } from 'react-icons/si'
 import { FaYahoo } from 'react-icons/fa'
 import { FcScatterPlot } from 'react-icons/fc'
@@ -43,7 +46,7 @@ import { BiSolidDashboard } from 'react-icons/bi'
 import { PiMicrosoftExcelLogoFill } from 'react-icons/pi'
 import { BsRouterFill } from 'react-icons/bs'
 import { IoBookOutline, IoBusiness } from 'react-icons/io5'
-import { TbNeedleThread, TbLayoutNavbar } from 'react-icons/tb'
+import { TbNeedleThread, TbLayoutNavbar, TbDatabase, TbTerminal, TbFileText } from 'react-icons/tb'
 import { ComponentType } from 'react'
 import React from 'react'
 import ConvexIcon from './ConvexIcon'
@@ -89,6 +92,9 @@ const iconComponents: Record<string, ComponentType<{ size?: number; className?: 
   SiLucide,
   SiSocketdotio,
   SiAdobeacrobatreader,
+  SiNotion,
+  SiPytest,
+  SiGooglegemini,
   BiSolidDashboard,
   PiMicrosoftExcelLogoFill,
   BsRouterFill,
@@ -96,6 +102,9 @@ const iconComponents: Record<string, ComponentType<{ size?: number; className?: 
   IoBusiness,
   TbNeedleThread,
   TbLayoutNavbar,
+  TbDatabase,
+  TbTerminal,
+  TbFileText,
   ConvexIcon,
   CarlaIcon,
   IoBookOutline,

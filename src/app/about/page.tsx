@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaDownload, FaGraduationCap, FaCode, FaBrain, FaFileAlt, FaMusic, FaDumbbell, FaPlane, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaDownload, FaGraduationCap, FaCode, FaBrain, FaFileAlt, FaMusic, FaDumbbell, FaPlane, FaMapMarkerAlt, FaExternalLinkAlt } from 'react-icons/fa'
 import { GiTennisRacket } from 'react-icons/gi'
 import ContactIcons from '../../../components/ContactIcons'
 
@@ -80,9 +80,10 @@ export default function AboutPage() {
               {[
                 { title: "Programming Languages", content: "Python (Advanced), JavaScript (Advanced), HTML/CSS (Advanced), SQL (Advanced),  C++ (Intermediate), Java (Intermediate), Go (Beginner), Rust (Beginner), R (Beginner)" },
                 { title: "Frameworks & Libraries", content: "React.js, Node.js, TypeScript, Next.js, Flask, Pandas, NumPy, Matplotlib, Scikit-learn, TensorFlow, PyTorch, FastAPI" },
-                { title: "Tools & Platforms", content: "Git, Docker, Postman, Electron, Vercel, Power BI, Tableau, Visual Studio Code, PyCharm, IntelliJ, Cursor" },
-                { title: "Cloud & Databases", content: "AWS, GCP, MySQL, PostgreSQL, Linux, Firebase, NoSQL, SQLAlchemy" },
-                { title: "AI & Data Science", content: "Machine Learning, Computer Vision, Statistical Modeling, Feature Engineering, A/B Testing, Data Visualization" },
+                { title: "Tools & Platforms", content: "Git, Docker, Postman, Electron, Vercel, Power BI, Tableau, Visual Studio Code, PyCharm, IntelliJ, Cursor, Pytest, CLI" },
+                { title: "Cloud & Databases", content: "AWS, GCP, MySQL, PostgreSQL, Linux, Firebase, NoSQL, SQLAlchemy, ChromaDB" },
+                { title: "AI & Data Science", content: "Machine Learning, Computer Vision, Statistical Modeling, Feature Engineering, A/B Testing, Data Visualization, Embedding Generation, Prompt Engineering, Gemini 2.5 Flash-Lite, tiktoken" },
+                { title: "APIs & Integrations", content: "Notion API, REST APIs, WebSocket APIs, Authentication Systems, Third-party Integrations" },
                 { title: "Methodologies", content: "Agile, Waterfall, Scrum, Physics-Informed Neural Networks (PINNs), ETL Pipelines" }
               ].map((skill, index) => (
                 <motion.div 
@@ -153,7 +154,8 @@ export default function AboutPage() {
               >
                 <h3 className="font-semibold text-white text-lg">Honors & Awards</h3>
                 <p className="text-gray-300">
-                  • Michael 78 & Dianne 79 Pfister Endowed Scholar (2024-2025)<br/>
+                  • Michelle '88 & Todd Steudtner '87 Scholarship (2025-2026, 2026-2027)<br/>
+                  • Michael '78 & Dianne '79 Pfister Endowed Scholar (2024-2025, 2025-2026)<br/>
                   • Best Juniors at ACPC Spring Competition (Spring 2025)<br/>
                   • Distinguished Student (Fall 2024)
                 </p>
@@ -313,6 +315,126 @@ export default function AboutPage() {
                 <FaDownload className="group-hover:animate-bounce text-xs" />
                 Download Research Paper
               </a>
+            </motion.div>
+          </motion.section>
+
+          {/* Media & Speaking Engagements */}
+          <motion.section 
+            className="bg-gray-800/70 rounded-xl p-6 sm:p-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.45 }}
+          >
+            <motion.h2 
+              className="text-2xl sm:text-3xl font-semibold mb-6 text-teal-400 flex items-center gap-3"
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+            >
+              <FaExternalLinkAlt className="text-teal-400" />
+              Media & Speaking Engagements
+            </motion.h2>
+            <motion.p 
+              className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              I&apos;ve been featured in various media outlets and speaking engagements, sharing insights on AI in education 
+              and innovative learning methodologies that bridge technology and pedagogy.
+            </motion.p>
+            
+            <motion.div 
+              className="space-y-4"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              {/* Nature Feature */}
+              <motion.div 
+                className="bg-gray-700/50 rounded-lg p-4 border-l-4 border-blue-400"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.4, delay: 0.5 }}
+              >
+                <h3 className="font-semibold text-white text-lg mb-2">Featured in Nature - AI in Education</h3>
+                <p className="text-gray-300 text-sm mb-2">
+                  <strong>Nature</strong> (March 2025)
+                </p>
+                <p className="text-gray-300 text-sm mb-3">
+                  Featured in Nature&apos;s comprehensive article on how students are creatively using ChatGPT and AI tools 
+                  for learning, highlighting innovative approaches to AI-assisted education and the &quot;priming&quot; methodology.
+                </p>
+                <a
+                  href="https://www.nature.com/articles/d41586-025-00621-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm"
+                >
+                  <FaExternalLinkAlt className="group-hover:animate-pulse text-xs" />
+                  Read Article
+                </a>
+              </motion.div>
+
+              {/* UIUC Speaking Engagement */}
+              <motion.div 
+                className="bg-gray-700/50 rounded-lg p-4 border-l-4 border-green-400"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.4, delay: 0.6 }}
+              >
+                <h3 className="font-semibold text-white text-lg mb-2">Public Speaking - University of Illinois Urbana-Champaign</h3>
+                <p className="text-gray-300 text-sm mb-2">
+                  <strong>UIUC Graduate Students</strong> (March 2024)
+                </p>
+                <p className="text-gray-300 text-sm mb-3">
+                  Presented to 100+ graduate students on practical AI applications in education, demonstrating the 
+                  &quot;priming&quot; methodology and innovative ways to leverage ChatGPT for academic success.
+                </p>
+                <a
+                  href="https://www.linkedin.com/posts/sami-melhem_aiineducation-chatgpt4-classprimer-activity-7171281188806881280-l2Ca"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors text-sm"
+                >
+                  <FaExternalLinkAlt className="group-hover:animate-pulse text-xs" />
+                  View Details
+                </a>
+              </motion.div>
+
+              {/* AI x Education Newsletter */}
+              <motion.div 
+                className="bg-gray-700/50 rounded-lg p-4 border-l-4 border-purple-400"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.4, delay: 0.7 }}
+              >
+                <h3 className="font-semibold text-white text-lg mb-2">Featured in AI x Education Newsletter</h3>
+                <p className="text-gray-300 text-sm mb-2">
+                  <strong>AI x Education Substack</strong> (February 2024)
+                </p>
+                <p className="text-gray-300 text-sm mb-3">
+                  Featured in the &quot;Efficiency vs Ethics of AI in Education&quot; newsletter, sharing insights on the 
+                  &quot;priming&quot; methodology and how students can effectively use AI tools for academic preparation 
+                  while maintaining authentic learning experiences.
+                </p>
+                <a
+                  href="https://aixeducation.substack.com/p/efficiency-vs-ethics-of-ai-in-education"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors text-sm"
+                >
+                  <FaExternalLinkAlt className="group-hover:animate-pulse text-xs" />
+                  Read Newsletter
+                </a>
+              </motion.div>
             </motion.div>
           </motion.section>
 

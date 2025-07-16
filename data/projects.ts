@@ -16,6 +16,24 @@ export interface Project {
 
 const projects: Project[] = [
   {
+    slug: 'notion-rag-cli',
+    title: 'Notion RAG CLI',
+    description: 'Retrieval-Augmented Generation system for Notion, enabling AI-powered search and chat using Gemini 2.5 Flash-Lite Preview.',
+    longDescription: 'A comprehensive command-line tool that transforms Notion pages into a powerful RAG (Retrieval-Augmented Generation) system using Gemini 2.5 Flash-Lite Preview. The tool fetches and indexes Notion content, implements ChromaDB vector search, provides cost tracking, and offers specialized prompt templates for semantic search, summarization, and content analysis.',
+    image: 'NotionRagCliIcon',
+    techs: ['Python', 'ChromaDB', 'Gemini 2.5 Flash-Lite', 'Notion API', 'Pytest', 'Embedding Generation', 'Prompt Engineering', 'Command-Line interface (CLI)', 'tiktoken'],
+    github: 'https://github.com/SamiMelhem/notion-rag-cli',
+    featured: true,
+    date: 'July 2025',
+    achievements: [
+      'Integrated Gemini 2.5 Flash-Lite Preview for advanced AI-powered responses',
+      'Achieved ~1.4s average query response time with ChromaDB vector search',
+      'Implemented comprehensive cost tracking and API usage monitoring',
+      'Built recursive page fetching with metadata preservation',
+      'Created specialized prompt templates for semantic search and content analysis'
+    ]
+  },
+  {
     slug: 'save-gas',
     title: 'SaveGas',
     description: 'Real-time gas price tracking application that helps users save up to $0.30 per gallon by comparing prices across 100+ stations.',
@@ -76,7 +94,6 @@ const projects: Project[] = [
     image: '/images/projects/panda_express.png',
     techs: ['TypeScript', 'React', 'JavaScript', 'HTML/CSS', 'Next.js', 'Tailwind CSS', 'Lucide React', 'Node.js', 'Express.js', 'PostgreSQL'],
     github: 'https://github.com/CSCE331-Fall2024/Panda_Express_POS_System/',
-    featured: true,
     date: 'October 2024 - December 2024',
     achievements: [
       'Full-stack POS system with role-based access control for multiple user types',

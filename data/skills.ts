@@ -32,7 +32,7 @@ export const skills: Skill[] = [
     proficiency: 'Advanced',
     description: 'My go-to language for data science, machine learning, and backend development. Specialized in data processing, conversational AI systems, and environmental data pipelines with extensive experience across research, industry, and academic settings.',
     experience: '4+ years',
-    projects: ['av-simulator', 'financial-modeling-tool'],
+    projects: ['av-simulator', 'financial-modeling-tool', 'notion-rag-cli'],
     icon: 'SiPython',
     color: '#3776ab',
     internships: 4,
@@ -1921,7 +1921,7 @@ Designed and implemented systematic workflows that leverage Excel for initial da
     proficiency: 'Advanced',
     description: 'Specialized in crafting effective prompts for AI systems. Featured work with educational GPT bots.',
     experience: '2+ years',
-    projects: ['class-primer'],
+    projects: ['class-primer', 'notion-rag-cli'],
     icon: 'SiOpenai',
     color: '#9333ea',
     researchRoles: 1,
@@ -2117,6 +2117,157 @@ Applied a systematic approach to VBA development that prioritizes comprehensive 
 - **Enterprise VBA Architecture**: Learning large-scale VBA deployment strategies, code organization patterns, and maintenance approaches for enterprise-level Excel automation solutions
 - **API Integration & External Connectivity**: Expanding VBA capabilities to include external API calls, database connectivity, and integration with other business systems for comprehensive workflow automation
 - **Modern Development Practices**: Implementing version control, documentation standards, and collaborative development practices for VBA projects to support team-based development and long-term maintainability`
+  },
+
+  // New Skills
+  {
+    name: 'ChromaDB',
+    slug: 'chromadb',
+    category: 'Databases',
+    proficiency: 'Intermediate',
+    description: 'Open-source embedding database for building RAG applications. Experienced in implementing efficient vector storage and retrieval systems for AI applications.',
+    experience: '1 year',
+    projects: ['notion-rag-cli'],
+    icon: 'TbDatabase',
+    color: '#4a90e2',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Vector Storage**: Implementing efficient storage and retrieval of embeddings
+- **Collection Management**: Creating and managing collections for different document types
+- **Query Optimization**: Fine-tuning similarity search parameters for accurate retrieval
+- **Integration Patterns**: Seamless integration with Python-based RAG applications
+- **Performance Optimization**: Balancing speed and accuracy in vector search operations
+
+**Complex Problem-Solving Examples:**
+*RAG System Implementation:*
+Successfully implemented ChromaDB as the vector store for a Notion-based RAG system, enabling efficient storage and retrieval of document embeddings. Optimized collection management and query parameters to ensure fast and accurate information retrieval.`
+  },
+  {
+    name: 'Pytest',
+    slug: 'pytest',
+    category: 'Tools & Platforms',
+    proficiency: 'Intermediate',
+    description: 'Python testing framework used for comprehensive test coverage in Python applications. Experienced in writing unit tests, fixtures, and integration tests.',
+    experience: '2 years',
+    projects: ['notion-rag-cli'],
+    icon: 'SiPytest',
+    color: '#009fe3',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Test Case Design**: Writing effective unit tests and integration tests
+- **Fixtures & Mocking**: Creating reusable test fixtures and mock objects
+- **Test Coverage**: Ensuring comprehensive test coverage across applications
+- **Test Organization**: Structuring tests for maintainability and clarity
+- **Parameterized Testing**: Writing flexible tests for multiple scenarios
+
+**Complex Problem-Solving Examples:**
+*CLI Tool Testing:*
+Implemented comprehensive test suite for a Notion RAG CLI tool, covering various edge cases and ensuring reliable functionality across different usage scenarios.`
+  },
+  {
+    name: 'Embedding Generation',
+    slug: 'embedding-generation',
+    category: 'AI/ML',
+    proficiency: 'Intermediate',
+    description: 'Expertise in generating and managing text embeddings for RAG systems and other AI applications. Experienced with various embedding models and optimization techniques.',
+    experience: '1 year',
+    projects: ['notion-rag-cli'],
+    icon: 'SiTensorflow',
+    color: '#6b46c1',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Model Selection**: Choosing appropriate embedding models for specific use cases
+- **Text Processing**: Preprocessing and chunking text for optimal embedding generation
+- **Optimization**: Balancing embedding quality with computational resources
+- **Integration**: Integrating embedding generation into RAG pipelines
+- **Quality Assurance**: Ensuring embedding quality and relevance
+
+**Complex Problem-Solving Examples:**
+*Document Embedding Pipeline:*
+Designed and implemented an efficient embedding generation pipeline for Notion documents, ensuring optimal text chunking and embedding quality for accurate information retrieval.`
+  },
+
+  {
+    name: 'Command-Line Interface (CLI)',
+    slug: 'cli',
+    category: 'Tools & Platforms',
+    proficiency: 'Intermediate',
+    description: 'Experience in designing and implementing command-line tools with focus on user experience and functionality. Proficient in creating intuitive CLI applications with proper error handling and documentation.',
+    experience: '2 years',
+    projects: ['notion-rag-cli'],
+    icon: 'TbTerminal',
+    color: '#2d3748',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Argument Parsing**: Implementing robust command-line argument handling
+- **User Experience**: Creating intuitive and user-friendly CLI interfaces
+- **Error Handling**: Comprehensive error handling and user feedback
+- **Documentation**: Writing clear usage instructions and help messages
+- **Testing**: Ensuring reliability through automated CLI testing
+
+**Complex Problem-Solving Examples:**
+*Notion RAG CLI Tool:*
+Designed and implemented a user-friendly CLI tool for creating RAG systems from Notion pages, focusing on intuitive command structure and comprehensive error handling.`
+  },
+  {
+    name: 'Gemini 2.5 Flash-Lite',
+    slug: 'gemini-2-5-flash-lite',
+    category: 'AI/ML',
+    proficiency: 'Intermediate',
+    description: 'Advanced large language model from Google, integrated for AI-powered responses in RAG systems. Experienced in prompt engineering and API integration for intelligent content generation and analysis.',
+    experience: '1 year',
+    projects: ['notion-rag-cli'],
+    icon: 'SiGooglegemini',
+    color: '#4285f4',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **API Integration**: Seamless integration with Google Cloud Vertex AI for Gemini 2.5 Flash-Lite
+- **Prompt Engineering**: Advanced prompt design for RAG systems and content analysis
+- **Response Optimization**: Fine-tuning prompts for accurate and contextual responses
+- **Cost Management**: Implementing token counting and cost tracking for API usage
+- **Error Handling**: Robust error handling and fallback strategies for API calls
+
+**Complex Problem-Solving Examples:**
+*RAG System Integration:*
+Successfully integrated Gemini 2.5 Flash-Lite Preview into a Notion-based RAG system, achieving ~1.4s average query response time while maintaining high accuracy and implementing comprehensive cost tracking.`
+  },
+
+  {
+    name: 'tiktoken',
+    slug: 'tiktoken',
+    category: 'AI/ML',
+    proficiency: 'Intermediate',
+    description: 'Fast BPE tokenizer for OpenAI models, used for accurate token counting and cost estimation in AI applications. Experienced in implementing token counting for cost optimization.',
+    experience: '1 year',
+    projects: ['notion-rag-cli'],
+    icon: 'SiOpenai',
+    color: '#ff6b6b',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Token Counting**: Accurate token estimation for cost calculation and API usage tracking
+- **Cost Optimization**: Implementing token counting for budget management and usage monitoring
+- **Model Compatibility**: Working with different tokenization schemes for various AI models
+- **Performance**: Fast token counting for real-time cost estimation
+- **Integration**: Seamless integration with AI API calls for cost tracking
+
+**Complex Problem-Solving Examples:**
+*Cost Tracking System:*
+Implemented tiktoken for accurate token counting in a RAG system, enabling real-time cost estimation and budget management for API usage across multiple AI models.`
+  },
+  {
+    name: 'Notion API',
+    slug: 'notion-api',
+    category: 'Tools & Platforms',
+    proficiency: 'Intermediate',
+    description: 'Official API for integrating with Notion workspace data. Experienced in fetching, processing, and managing Notion content for AI applications and data pipelines.',
+    experience: '1 year',
+    projects: ['notion-rag-cli'],
+    icon: 'SiNotion',
+    color: '#000000',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Content Extraction**: Fetching and processing Notion pages, databases, and blocks
+- **Authentication**: Implementing secure API key management and authentication flows
+- **Data Processing**: Converting Notion content into structured formats for AI applications
+- **Recursive Fetching**: Implementing efficient page traversal and content aggregation
+- **Metadata Management**: Preserving and organizing Notion page metadata and relationships
+
+**Complex Problem-Solving Examples:**
+*RAG System Integration:*
+Successfully integrated Notion API to fetch and process content for a RAG system, implementing recursive page fetching and metadata preservation to create a comprehensive knowledge base from Notion pages.`
   },
 
 ]
