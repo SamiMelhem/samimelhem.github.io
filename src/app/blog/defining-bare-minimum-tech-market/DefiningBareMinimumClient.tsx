@@ -106,7 +106,7 @@ export default function DefiningBareMinimumClient({ postData }: { postData: Post
               
               <div className="space-y-6">
                 <div className="bg-black/50 rounded-lg p-6 border border-gray-600/30">
-                  <h3 className="text-xl font-semibold text-emerald-300 mb-4">What "Coding with AI" Actually Means</h3>
+                  <h3 className="text-xl font-semibold text-emerald-300 mb-4">{`What "Coding with AI" Actually Means`}</h3>
                   
                   <div className="grid md:grid-cols-2 gap-6 mb-6">
                     <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4">
@@ -135,7 +135,7 @@ export default function DefiningBareMinimumClient({ postData }: { postData: Post
                   <div className="bg-gray-800/50 rounded-lg p-4">
                     <h4 className="text-emerald-300 font-semibold mb-3">The Infrastructure Gap</h4>
                     <p className="text-gray-300 text-sm mb-3">
-                      AI hasn't been fully implemented into our infrastructure yet, but it's happening rapidly. Getting good at using AI now means you'll be ahead of the curve when it becomes the standard.
+                      {`AI hasn't been fully implemented into our infrastructure yet, but it's happening rapidly. Getting good at using AI now means you'll be ahead of the curve when it becomes the standard.`}
                     </p>
                     
                     <div className="grid md:grid-cols-3 gap-4 mb-4">
@@ -315,10 +315,10 @@ export default function DefiningBareMinimumClient({ postData }: { postData: Post
                     </div>
                     
                     <div className="bg-orange-900/20 border border-orange-500/30 rounded-lg p-4">
-                      <h4 className="text-orange-300 font-semibold mb-3">Why It's Overlooked:</h4>
+                      <h4 className="text-orange-300 font-semibold mb-3">{`Why It's Overlooked:`}</h4>
                       <ul className="space-y-2 text-gray-300 text-sm">
                         <li>• Most developers avoid security</li>
-                        <li>• Seen as cybersecurity team's job</li>
+                        <li>• {`Seen as cybersecurity team's job`}</li>
                         <li>• Perceived as complex and difficult</li>
                         <li>• Not prioritized in learning</li>
                         <li>• Creates competitive advantage</li>
@@ -352,7 +352,7 @@ export default function DefiningBareMinimumClient({ postData }: { postData: Post
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold">3</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white">There's No Right Path—Just Start and Keep Going</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">{`There's No Right Path—Just Start and Keep Going`}</h2>
             </div>
             
             <div className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50">
@@ -402,10 +402,10 @@ export default function DefiningBareMinimumClient({ postData }: { postData: Post
                     <div className="bg-gray-800/50 rounded-lg p-4">
                       <h4 className="text-emerald-300 font-semibold mb-2">Common Misconceptions</h4>
                       <ul className="text-gray-300 text-sm space-y-1">
-                        <li>• "I just need a degree and good grades"</li>
-                        <li>• "I have the drive, that's enough"</li>
-                        <li>• "I'll learn everything on the job"</li>
-                        <li>• "The market will always need developers"</li>
+                        <li>• {`"I just need a degree and good grades"`}</li>
+                        <li>• {`"I have the drive, that's enough"`}</li>
+                        <li>• {`"I'll learn everything on the job"`}</li>
+                        <li>• {`"The market will always need developers"`}</li>
                       </ul>
                     </div>
                     
@@ -416,7 +416,7 @@ export default function DefiningBareMinimumClient({ postData }: { postData: Post
                         <li>• Drive without direction leads nowhere</li>
                         <li>• Companies expect immediate value</li>
                         <li>• The market is increasingly competitive</li>
-                        <li>• AI is changing what "good enough" means</li>
+                        <li>• AI is changing what {`"good enough"`} means</li>
                       </ul>
                     </div>
                   </div>
@@ -516,13 +516,13 @@ export default function DefiningBareMinimumClient({ postData }: { postData: Post
           >
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Define Your Path in Tech?</h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              The tech industry is evolving rapidly, and the bare minimum has changed. Whether you're just starting your journey or looking to stay ahead of the curve, understanding these new requirements is crucial for your success.
+              {`The tech industry is evolving rapidly, and the bare minimum has changed. Whether you're just starting your journey or looking to stay ahead of the curve, understanding these new requirements is crucial for your success.`}
             </p>
             <Link 
               href="/contact/" 
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-emerald-600 transition-all duration-200 transform hover:scale-105"
             >
-              Let's Discuss Your Tech Journey
+              {`Let's Discuss Your Tech Journey`}
             </Link>
           </motion.div>
 
