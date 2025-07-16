@@ -154,8 +154,8 @@ export default function AboutPage() {
               >
                 <h3 className="font-semibold text-white text-lg">Honors & Awards</h3>
                 <p className="text-gray-300">
-                  • Michelle '88 & Todd Steudtner '87 Scholarship (2025-2026, 2026-2027)<br/>
-                  • Michael '78 & Dianne '79 Pfister Endowed Scholar (2024-2025, 2025-2026)<br/>
+                  • {`Michelle '88 & Todd Steudtner '87 Scholarship (2025-2026, 2026-2027)`}<br/>
+                  • {`Michael '78 & Dianne '79 Pfister Endowed Scholar (2024-2025, 2025-2026)`}<br/>
                   • Best Juniors at ACPC Spring Competition (Spring 2025)<br/>
                   • Distinguished Student (Fall 2024)
                 </p>
