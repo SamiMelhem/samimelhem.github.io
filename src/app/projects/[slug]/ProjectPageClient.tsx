@@ -95,23 +95,20 @@ export default function ProjectPageClient({ project }: ProjectPageClientProps) {
             </div>
             
             {/* Project Image */}
-            {project.image && (
-              <div className="relative">
-                <div className="relative rounded-xl overflow-hidden shadow-2xl">
-                  {project.image === 'NotionRagCliIcon' ? (
-                    <div className="w-full h-80 bg-gray-800 flex items-center justify-center">
-                      <NotionRagCliIcon />
-                    </div>
-                  ) : (
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={600}
-                      height={400}
-                      className="w-full h-auto object-cover"
-                    />
-                  )}
-                </div>
+            {project.image && project.image !== 'NotionRagCliIcon' && (
+              <div className="relative rounded-xl overflow-hidden shadow-2xl">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            )}
+            {project.image === 'NotionRagCliIcon' && (
+              <div className="relative rounded-xl overflow-hidden shadow-2xl w-full h-80 bg-gray-800 flex items-center justify-center">
+                <NotionRagCliIcon />
               </div>
             )}
           </div>

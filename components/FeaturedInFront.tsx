@@ -42,7 +42,7 @@ export default function FeaturedAndBlog({
   useEffect(() => {
     const preloadImages = () => {
       featured.forEach((project) => {
-        if (project.image) {
+        if (project.image && project.image !== 'NotionRagCliIcon') {
           const img = new Image();
           img.src = project.image;
         }

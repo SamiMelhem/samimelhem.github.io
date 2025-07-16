@@ -13,6 +13,8 @@ export default function BlogCard({ slug, title, date, excerpt, image }: BlogCard
   // Define gradient backgrounds that match blog post backgrounds
   const getGradientClass = (imageType?: string) => {
     switch (imageType) {
+      case 'bare-minimum-gradient':
+        return 'bg-gradient-to-br from-blue-900 via-black to-emerald-900';
       case 'gradient-gray-blue':
         return 'bg-gradient-to-br from-gray-900 via-black to-blue-900';
       case 'gradient-purple-pink':
