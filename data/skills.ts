@@ -36,11 +36,11 @@ export const skills: Skill[] = [
     icon: 'SiPython',
     color: '#3776ab',
     internships: 4,
-    internshipDetails: ['INTERA Incorporated (Data Science)', 'Pivotal Research Inc.', 'INTERA Incorporated (Data Engineering)', 'Momentum Technologies'],
-    jobs: 1,
-    jobDetails: ['PitchFact'],
-    researchRoles: 2,
-    researchDetails: ['TAMU x Soft Interaction Lab', 'Algoverse'],
+    internshipDetails: ['INTERA Incorporated (Data Science)', 'Pivotal Research Inc.', 'INTERA Incorporated (Data Engineering)', 'Momentum Technologies Inc.'],
+    jobs: 2,
+    jobDetails: ['PitchFact', 'Momentum Technologies Inc.'],
+    researchRoles: 3,
+    researchDetails: ['TAMU x Soft Interaction Lab', 'Algoverse', 'TAMU Mechanical Engineering Research'],
     teachingRoles: 1,
     teachingDetails: ['CSCE 221 Teaching Assistant'],
     certifications: 2,
@@ -489,7 +489,9 @@ Applied TensorFlow expertise to financial data modeling, creating predictive mod
     icon: 'SiPytorch',
     color: '#ee4c2c',
     internships: 1,
-    internshipDetails: ['Momentum Technologies'],
+    internshipDetails: ['Momentum Technologies Inc.'],
+    jobs: 1,
+    jobDetails: ['Momentum Technologies Inc.'],
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
 - **Production-Focused Neural Networks**: Extensive use of torch.nn for building ML models to optimize chemical processes, product production, and staff allocation with emphasis on practical deployment
 - **Physics-Informed Neural Networks (PINNs)**: Advanced implementation of PINNs incorporating Physics loss and Mass Balance loss for chemical process optimization and metal precipitation retention prediction
@@ -510,7 +512,7 @@ Applied TensorFlow expertise to financial data modeling, creating predictive mod
 **Complex Problem-Solving Examples:**
 
 *Chemical Process Optimization with PINNs:*
-Developed sophisticated Physics-Informed Neural Networks at Momentum Technologies that optimize chemical processes for maximum product yield and efficiency. The challenge involved incorporating fundamental physics constraints (Physics loss) and chemical engineering principles (Mass Balance loss) into neural network architectures to predict metal precipitation retention percentages. Successfully implemented models that respect chemical process limitations while optimizing for practical industrial outcomes, demonstrating deep understanding of both machine learning and chemical engineering principles.
+Developed sophisticated Physics-Informed Neural Networks at Momentum Technologies Inc. that optimize chemical processes for maximum product yield and efficiency. The challenge involved incorporating fundamental physics constraints (Physics loss) and chemical engineering principles (Mass Balance loss) into neural network architectures to predict metal precipitation retention percentages. Successfully implemented models that respect chemical process limitations while optimizing for practical industrial outcomes, demonstrating deep understanding of both machine learning and chemical engineering principles.
 
 *Production-Ready Model Development Workflow:*
 Established a systematic three-phase development process that consistently delivers production-ready models: first building the simplest working solution, then adapting it to specific situational requirements, and finally optimizing for speed and production deployment. This methodology has proven effective across multiple chemical process optimization projects, ensuring rapid iteration while maintaining industrial-grade reliability and performance standards.
@@ -1172,9 +1174,9 @@ Architected a sophisticated role-based access control system that dynamically sh
     icon: 'SiPandas',
     color: '#150458',
     internships: 4,
-    internshipDetails: ['INTERA Incorporated (Data Science)', 'Pivotal Research Inc.', 'INTERA Incorporated (Data Engineering)', 'Momentum Technologies'],
-    jobs: 1,
-    jobDetails: ['PitchFact'],
+    internshipDetails: ['INTERA Incorporated (Data Science)', 'Pivotal Research Inc.', 'INTERA Incorporated (Data Engineering)', 'Momentum Technologies Inc.'],
+    jobs: 2,
+    jobDetails: ['PitchFact', 'Momentum Technologies Inc.'],
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
 - **LLM Pipeline Architecture**: Expert development of high-performance LLM pipelines processing 500+ PDFs weekly for startup evaluation systems, with emphasis on speed and reliability
 - **Local Storage & Performance Optimization**: Strategic use of FastAPI for local storage solutions that enable rapid processing, achieving under 1-minute processing time per PDF upload
@@ -1225,7 +1227,9 @@ Created a system that efficiently processes and integrates information from both
     icon: 'SiNumpy',
     color: '#013243',
     internships: 4,
-    internshipDetails: ['INTERA Incorporated (Data Science)', 'Pivotal Research Inc.', 'INTERA Incorporated (Data Engineering)', 'Momentum Technologies'],
+    internshipDetails: ['INTERA Incorporated (Data Science)', 'Pivotal Research Inc.', 'INTERA Incorporated (Data Engineering)', 'Momentum Technologies Inc.'],
+    jobs: 1,
+    jobDetails: ['Momentum Technologies Inc.'],
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
 - **Array Manipulation Mastery**: Extensive experience with multi-dimensional array operations, reshaping, indexing, and slicing for diverse scientific computing applications across environmental data analysis and machine learning workflows
 - **Mathematical Functions & Operations**: Comprehensive use of NumPy's mathematical function library for implementing complex calculations in financial modeling, physics equations, and statistical analysis across multiple industry applications
@@ -1246,7 +1250,7 @@ Created a system that efficiently processes and integrates information from both
 **Complex Problem-Solving Examples:**
 
 *Physics-Informed Neural Network Mathematical Implementation:*
-Developed sophisticated physics equation implementations using NumPy for Physics-Informed Neural Networks at Momentum Technologies, integrating fundamental physics principles directly into neural network loss functions. The challenge involved translating complex chemical engineering equations into efficient NumPy array operations while maintaining mathematical accuracy and computational performance. Successfully implemented custom loss functions that incorporate physics constraints, mass balance equations, and thermodynamic principles using NumPy's mathematical functions, enabling the neural network to respect physical laws while optimizing chemical process parameters.
+Developed sophisticated physics equation implementations using NumPy for Physics-Informed Neural Networks at Momentum Technologies Inc., integrating fundamental physics principles directly into neural network loss functions. The challenge involved translating complex chemical engineering equations into efficient NumPy array operations while maintaining mathematical accuracy and computational performance. Successfully implemented custom loss functions that incorporate physics constraints, mass balance equations, and thermodynamic principles using NumPy's mathematical functions, enabling the neural network to respect physical laws while optimizing chemical process parameters.
 
 *Financial Modeling Mathematical Engine:*
 Architected a comprehensive financial mathematics engine using NumPy that calculates complex financial forecasts, statistical models, and quantitative analysis for the financial modeling tool. The project required implementing sophisticated mathematical operations including time series analysis, statistical distributions, risk calculations, and portfolio optimization algorithms. Successfully created a robust numerical computing foundation that handles diverse financial calculations, from basic statistical measures to complex derivative pricing models, demonstrating mastery of NumPy's mathematical function library for real-world financial applications.
@@ -1276,7 +1280,9 @@ Developed comprehensive environmental data analysis systems at INTERA using NumP
     icon: 'FcScatterPlot',
     color: '#1f77b4',
     internships: 3,
-    internshipDetails: ['INTERA Incorporated (Data Science)', 'INTERA Incorporated (Data Engineering)', 'Momentum Technologies'],
+    internshipDetails: ['INTERA Incorporated (Data Science)', 'INTERA Incorporated (Data Engineering)', 'Momentum Technologies Inc.'],
+    jobs: 1,
+    jobDetails: ['Momentum Technologies Inc.'],
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
 - **Comprehensive Plot Types**: Extensive experience with line plots, scatter plots, bar charts, and 3D visualizations for diverse scientific and engineering applications across environmental consulting and chemical process optimization
 - **DataFrame & NumPy Integration**: Seamless creation of visualizations directly from Pandas DataFrames and NumPy arrays, enabling efficient data-to-visualization workflows for analysis and reporting
@@ -1300,7 +1306,7 @@ Developed comprehensive environmental data analysis systems at INTERA using NumP
 Developed comprehensive time series visualization systems at INTERA for environmental monitoring data that required regulatory compliance reporting and client presentations. The challenge involved processing large volumes of environmental measurements from multiple monitoring stations and creating clear, professional visualizations that demonstrate compliance with environmental regulations. Successfully implemented automated plotting workflows that generate standardized time series charts, statistical analysis visualizations, and regulatory compliance reports that meet strict environmental consulting standards and client requirements.
 
 *Chemical Process Optimization Visualization System:*
-Created sophisticated visualization systems at Momentum Technologies for mapping chemical processes and visualizing predictive equations derived from experimental data points. The project required developing plots that could clearly show the relationship between process parameters and outcomes, enabling optimization of chemical processes through visual analysis. Successfully implemented custom plotting workflows that visualize complex chemical process data, predictive models, and optimization results, providing clear insights for process improvement and decision-making.
+Created sophisticated visualization systems at Momentum Technologies Inc. for mapping chemical processes and visualizing predictive equations derived from experimental data points. The project required developing plots that could clearly show the relationship between process parameters and outcomes, enabling optimization of chemical processes through visual analysis. Successfully implemented custom plotting workflows that visualize complex chemical process data, predictive models, and optimization results, providing clear insights for process improvement and decision-making.
 
 *Autonomous Vehicle Sensor Data & Performance Visualization:*
 Architected comprehensive sensor data visualization and performance metric plotting systems for the autonomous vehicle simulator project. The challenge involved creating debugging visualizations that could clearly show sensor performance, system metrics, and validation results to ensure correct autonomous vehicle behavior. Successfully developed visualization workflows that process real-time sensor data, performance metrics, and system debugging information, enabling effective development and validation of autonomous vehicle systems through clear visual feedback.
@@ -1327,7 +1333,9 @@ Designed and implemented visualization pipelines that handle diverse data source
     icon: 'SiScikitlearn',
     color: '#f7931e',
     internships: 1,
-    internshipDetails: ['Momentum Technologies'],
+    internshipDetails: ['Momentum Technologies Inc.'],
+    jobs: 1,
+    jobDetails: ['Momentum Technologies Inc.'],
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
 - **Classification & Regression Algorithms**: Comprehensive experience with fundamental ML algorithms including Random Forest, Support Vector Machines (SVMs), and regression models for diverse industry applications
 - **ML Pipeline Development**: Strategic implementation of complete machine learning workflows from data preprocessing through model training, evaluation, and deployment across multiple domains
@@ -1348,7 +1356,7 @@ Designed and implemented visualization pipelines that handle diverse data source
 **Complex Problem-Solving Examples:**
 
 *Chemical Process Evaluation Metrics System:*
-Developed comprehensive evaluation metric systems at Momentum Technologies using Scikit-Learn to assess chemical process optimization models based on experimental data from DataFrames. The challenge involved creating robust evaluation frameworks that could accurately measure model performance across different chemical process parameters and optimization objectives. Successfully implemented evaluation pipelines that use Scikit-Learn metrics to validate PyTorch PINN models, ensuring that chemical process optimization algorithms meet accuracy and reliability standards for industrial applications.
+Developed comprehensive evaluation metric systems at Momentum Technologies Inc. using Scikit-Learn to assess chemical process optimization models based on experimental data from DataFrames. The challenge involved creating robust evaluation frameworks that could accurately measure model performance across different chemical process parameters and optimization objectives. Successfully implemented evaluation pipelines that use Scikit-Learn metrics to validate PyTorch PINN models, ensuring that chemical process optimization algorithms meet accuracy and reliability standards for industrial applications.
 
 *Financial Analysis & Risk Modeling Pipeline:*
 Architected a sophisticated financial modeling system using Scikit-Learn for financial forecasting, risk analysis, price prediction, and statistical analysis integrated with Dash for portfolio optimization. The project required implementing multiple ML algorithms including Random Forest and regression models to handle diverse financial analysis tasks. Successfully created comprehensive workflows that combine Scikit-Learn's statistical analysis capabilities with advanced visualization tools, enabling robust financial modeling and portfolio optimization decisions based on rigorous statistical validation.
@@ -1870,9 +1878,9 @@ Successfully integrated C++ client-server socket programming with Python WebSock
     icon: 'PiMicrosoftExcelLogoFill',
     color: '#217346',
     internships: 4,
-    internshipDetails: ['INTERA Incorporated (Data Science)', 'Pivotal Research Inc.', 'INTERA Incorporated (Data Engineering)', 'Momentum Technologies'],
-    jobs: 1,
-    jobDetails: ['PitchFact'],
+    internshipDetails: ['INTERA Incorporated (Data Science)', 'Pivotal Research Inc.', 'INTERA Incorporated (Data Engineering)', 'Momentum Technologies Inc.'],
+    jobs: 2,
+    jobDetails: ['PitchFact', 'Momentum Technologies Inc.'],
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
 - **Advanced Data Analysis Functions**: Expert use of pivot tables and INDEX/MATCH for complex data identification and trend analysis that are challenging to model effectively in Python
 - **Statistical Analysis & Data Modeling**: Comprehensive statistical analysis, data cleaning, and complex calculations using Excel's advanced analytical capabilities
@@ -1899,7 +1907,7 @@ Developed a comprehensive Excel-based data processing and reporting system that 
 Architected sophisticated custom graphical user interfaces using VBA integrated with Excel that automate complex business processes and eliminate manual data manipulation tasks. The challenge involved creating user-friendly interfaces that could handle complex data operations while remaining accessible to non-technical users. Successfully developed custom GUI solutions that combine Excel's analytical power with VBA's automation capabilities, creating streamlined workflows that significantly reduce processing time and human error in data-intensive operations.
 
 *Multi-Internship Data Integration Framework:*
-Created comprehensive Excel-based data integration systems across multiple internship roles (INTERA x2, Pivotal Research, Momentum Technologies) that handle diverse data sources and analytical requirements. The challenge involved adapting Excel workflows to different industry contexts while maintaining consistency and efficiency. Successfully implemented flexible Excel architectures that process CSV files, database exports, and API data feeds, creating unified analytical frameworks that support various business intelligence and research requirements across different organizational contexts.
+Created comprehensive Excel-based data integration systems across multiple internship roles (INTERA x2, Pivotal Research, Momentum Technologies Inc. x2) that handle diverse data sources and analytical requirements. The challenge involved adapting Excel workflows to different industry contexts while maintaining consistency and efficiency. Successfully implemented flexible Excel architectures that process CSV files, database exports, and API data feeds, creating unified analytical frameworks that support various business intelligence and research requirements across different organizational contexts.
 
 *Excel-Python Bridge Development:*
 Designed and implemented systematic workflows that leverage Excel for initial data collection and preprocessing, then seamlessly transition to Python for advanced modeling and statistical analysis. The challenge involved optimizing the handoff between Excel's business-friendly interface and Python's advanced analytical capabilities. Successfully created integrated workflows that utilize Excel for data gathering, initial cleaning, and stakeholder communication, while leveraging Python for complex modeling, ensuring optimal tool utilization and maintaining accessibility for non-technical team members.
@@ -1924,8 +1932,8 @@ Designed and implemented systematic workflows that leverage Excel for initial da
     projects: ['class-primer', 'notion-rag-cli'],
     icon: 'SiOpenai',
     color: '#9333ea',
-    researchRoles: 1,
-    researchDetails: ['TAMU x Soft Interaction Lab'],
+    researchRoles: 2,
+    researchDetails: ['TAMU x Soft Interaction Lab', 'TAMU Mechanical Engineering Research'],
     publications: 1,
     publicationDetails: ['ChatGPT 4o Performance on Mechanical Engineering Concept Inventories'],
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
