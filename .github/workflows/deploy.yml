@@ -26,31 +26,28 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      # 3) Cache npm and Next.js build cache 
+      # 3) Set up Bun
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      # 4) Cache Next.js build output
       - name: Cache Next.js build output
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.npm
-            .next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.ts', '**/*.tsx') }}
+          path: .next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('bun.lock') }}-${{ hashFiles('**/*.js', '**/*.ts', '**/*.tsx') }}
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+            ${{ runner.os }}-nextjs-${{ hashFiles('bun.lock') }}-
 
-      # 4) Set up Node.js and cache npm installs
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      # 5) Install your dependencies
+      # 5) Install dependencies
       - name: Install dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       # 6) Build your Next.js site
       - name: Build
-        run: npm run build
+        run: bun run build
 
       # 7) Upload the static output directory (out/) to the Pages artifact
       - name: Upload Pages artifact
