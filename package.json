@@ -11,7 +11,7 @@
     "deploy": "git config user.email \"SamiISaboss23@gmail.com\" && git config user.name \"Sami Melhem\" && gh-pages -d out -r https://x-access-token:${GH_TOKEN}@github.com/samimelhem/samimelhem.github.io.git"
   },
   "dependencies": {
-    "framer-motion": "^12.23.26",
+    "framer-motion": "^12.24.0",
     "next": "^16.1.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
