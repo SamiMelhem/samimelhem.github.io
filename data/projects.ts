@@ -20,8 +20,8 @@ const projects: Project[] = [
     title: 'AI-Powered Data Breach Hub',
     description: 'Collaborated with Amazon in developing a scalable, AI-driven platform for aggregating and analyzing real-world cybersecurity breach events.',
     longDescription: 'Led the design and delivery of an open-access AI-powered data breach intelligence platform that aggregates and normalizes 3,100+ public breach and security incident reports per year. The system automatically collects breach information from multiple sources, processes it using advanced GenAI techniques, and provides comprehensive analytics through an interactive dashboard to help security analysts understand threat patterns and benchmark organizational risk exposure.',
-    image: '/images/projects/ai_data_breach_hub.png',
-    techs: ['TypeScript', 'Next.js', 'Tailwind CSS', 'FastAPI', 'Docker', 'AWS', 'S3', 'Lambda', 'Redis', 'ScrapeGraphAI', 'MongoDB', 'ElasticSearch', 'Kibana', 'Pytest', 'Ruff', 'GitHub Actions'],
+    image: '/images/projects/ai_data_breach_hub.jpeg',
+    techs: ['Python', 'TypeScript', 'Next.js', 'Tailwind CSS', 'FastAPI', 'Docker', 'AWS', 'S3', 'Lambda', 'Redis', 'ScrapeGraphAI', 'MongoDB', 'ElasticSearch', 'Kibana', 'Pytest', 'Ruff', 'GitHub Actions'],
     liveDemo: 'https://docs.google.com/presentation/d/1CllzpbuwN0MlSp2k4h3xLUVtEjwC-eWl/edit?usp=sharing&ouid=111409177641527085625&rtpof=true&sd=true',
     featured: true,
     date: 'August 2025 - December 2025',
@@ -59,7 +59,7 @@ const projects: Project[] = [
     image: '/images/projects/savegas.png',
     techs: ['React', 'TypeScript', 'JavaScript', 'HTML/CSS', 'Convex', 'Vercel', 'Node.js', 'Auth0', 'Vite', 'Tailwind CSS'],
     github: 'https://github.com/SamiMelhem/save-gas/',
-    featured: true,
+    featured: false,
     date: 'April 2025 - May 2025',
     achievements: [
       'Real-time gas price tracking that helps users save an average of $0.15-$0.30 per gallon',
@@ -77,7 +77,7 @@ const projects: Project[] = [
     image: '/images/projects/exped_browser.png',
     techs: ['React', 'TypeScript', 'JavaScript', 'HTML/CSS', 'Node.js', 'Electron', 'Vite', 'Tailwind CSS', 'Lucide React'],
     github: 'https://github.com/SamiMelhem/exped-browser/',
-    featured: true,
+    featured: false,
     date: 'January 2025 - April 2025',
     achievements: [
       'Electron desktop application supporting 10,000+ concurrent users across all OS',
@@ -95,7 +95,7 @@ const projects: Project[] = [
     image: '/images/projects/av_sim.png',
     techs: ['Python', 'PyTorch', 'TensorFlow', 'Scikit-Learn', 'OpenCV', 'Tableau', 'Power BI', 'Excel', 'Pandas', 'NumPy', 'Matplotlib'],
     liveDemo: 'https://docs.google.com/presentation/d/1V2agrhnjItJWyib6dGJf8xYpDqPeRsu3l0NsSZdQheE/edit?usp=sharing/',
-    featured: true,
+    featured: false,
     date: 'August 2024 - December 2024',
     achievements: [
       'LiDAR/Camera sensor integration for real-time object detection with 80%+ accuracy',

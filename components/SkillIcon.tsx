@@ -38,7 +38,15 @@ import {
   SiAdobeacrobatreader,
   SiNotion,
   SiPytest,
-  SiGooglegemini
+  SiGooglegemini,
+  SiAmazonwebservices,
+  SiAmazons3,
+  SiAwslambda,
+  SiRedis,
+  SiMongodb,
+  SiElasticsearch,
+  SiKibana,
+  SiGithubactions
 } from 'react-icons/si'
 import { FaYahoo } from 'react-icons/fa'
 import { FcScatterPlot } from 'react-icons/fc'
@@ -51,6 +59,7 @@ import { ComponentType } from 'react'
 import React from 'react'
 import ConvexIcon from './ConvexIcon'
 import CarlaIcon from './CarlaIcon'
+import ScrapeGraphAIIcon from './ScrapeGraphAIIcon'
 
 // Static import Simple Icons
 const iconComponents: Record<string, ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>> = {
@@ -95,6 +104,14 @@ const iconComponents: Record<string, ComponentType<{ size?: number; className?: 
   SiNotion,
   SiPytest,
   SiGooglegemini,
+  SiAmazonwebservices,
+  SiAmazons3,
+  SiAwslambda,
+  SiRedis,
+  SiMongodb,
+  SiElasticsearch,
+  SiKibana,
+  SiGithubactions,
   BiSolidDashboard,
   PiMicrosoftExcelLogoFill,
   BsRouterFill,
@@ -107,6 +124,7 @@ const iconComponents: Record<string, ComponentType<{ size?: number; className?: 
   TbFileText,
   ConvexIcon,
   CarlaIcon,
+  ScrapeGraphAIIcon,
   IoBookOutline,
 }
 

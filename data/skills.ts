@@ -32,7 +32,7 @@ export const skills: Skill[] = [
     proficiency: 'Advanced',
     description: 'My go-to language for data science, machine learning, and backend development. Specialized in data processing, conversational AI systems, and environmental data pipelines with extensive experience across research, industry, and academic settings.',
     experience: '4+ years',
-    projects: ['av-simulator', 'financial-modeling-tool', 'notion-rag-cli'],
+    projects: ['ai-data-breach-hub', 'av-simulator', 'financial-modeling-tool', 'notion-rag-cli'],
     icon: 'SiPython',
     color: '#3776ab',
     internships: 4,
@@ -2283,7 +2283,7 @@ Successfully integrated Notion API to fetch and process content for a RAG system
     category: 'Cloud & DevOps',
     proficiency: 'Intermediate',
     description: 'Amazon Web Services cloud platform for building scalable, secure infrastructure. Experienced in deploying data pipelines, serverless functions, and storage solutions.',
-    experience: '1 year',
+    experience: '2+ years',
     projects: ['ai-data-breach-hub'],
     icon: 'SiAmazonwebservices',
     color: '#FF9900',
@@ -2366,7 +2366,7 @@ Implemented Redis caching via AWS ElastiCache for a cybersecurity analytics plat
     description: 'AI-powered web scraping framework using LLMs for intelligent data extraction. Experienced in building ethical, automated data collection pipelines.',
     experience: '1 year',
     projects: ['ai-data-breach-hub'],
-    icon: 'SiOpenai',
+    icon: 'ScrapeGraphAIIcon',
     color: '#00D4AA',
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
 - **AI-Powered Scraping**: Using LLMs to intelligently extract structured data from web pages
