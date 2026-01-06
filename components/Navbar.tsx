@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaDownload } from 'react-icons/fa'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 export default function Navbar() {
   const path = usePathname()
@@ -119,13 +119,14 @@ export default function Navbar() {
               })}
             </ul>
             
-            {/* Resume/CV Downloads */}
+            {/* Resume/CV Links */}
             <div className="flex space-x-4 ml-4 pl-4 border-l border-gray-600">
               {documentLinks.map(({ href, label }) => (
                 <a
                   key={href}
                   href={href}
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`
                     relative group flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium
                     transition-colors duration-200
@@ -135,7 +136,7 @@ export default function Navbar() {
                     }
                   `}
                 >
-                  <FaDownload className="text-xs" />
+                  <FaExternalLinkAlt className="text-xs" />
                   {label}
                   {/* teal underline */}
                   <span
@@ -238,7 +239,7 @@ export default function Navbar() {
                   )
                 })}
                 
-                {/* Mobile Resume/CV Downloads */}
+                {/* Mobile Resume/CV Links */}
                 <motion.li
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -258,11 +259,12 @@ export default function Navbar() {
                       >
                         <a
                           href={href}
-                          download
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="flex items-center justify-center gap-2 text-lg font-medium text-white hover:text-teal-400 transition-colors duration-200 pb-1"
                           onClick={() => setMobileMenuOpen(false)}
                         >
-                          <FaDownload className="text-sm" />
+                          <FaExternalLinkAlt className="text-sm" />
                           {label}
                         </a>
                         {/* teal underline */}
