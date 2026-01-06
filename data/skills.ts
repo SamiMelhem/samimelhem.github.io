@@ -85,7 +85,7 @@ Developed Flask-based conversational AI tools at TAMU's Soft Interaction Lab ser
     proficiency: 'Advanced',
     description: 'My preferred language for modern web development, chosen for its type safety and superior development experience. This entire portfolio showcases TypeScript integration with Next.js, React, and modern development workflows.',
     experience: '2+ years',
-    projects: ['save-gas', 'exped-browser', 'panda-express-pos'],
+    projects: ['ai-data-breach-hub', 'save-gas', 'exped-browser', 'panda-express-pos'],
     icon: 'SiTypescript',
     color: '#3178c6',
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
@@ -306,7 +306,7 @@ Successfully implemented Context-based state management across multiple projects
     proficiency: 'Advanced',
     description: 'My full-stack framework of choice for modern web development. Expert in App Router, SSG/SSR implementation, and seamless user experience design. This entire portfolio demonstrates advanced Next.js architecture with persistent backgrounds and smooth animations.',
     experience: '2+ years',
-    projects: ['panda-express-pos'],
+    projects: ['ai-data-breach-hub', 'panda-express-pos'],
     icon: 'SiNextdotjs',
     color: '#ffffff',
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
@@ -389,7 +389,7 @@ Successfully coordinated multiple external services and APIs within Node.js appl
     proficiency: 'Advanced',
     description: 'My preferred CSS framework for rapid UI development. I appreciate its utility-first approach and how it speeds up the design process.',
     experience: '2+ years',
-    projects: ['save-gas', 'exped-browser', 'panda-express-pos'],
+    projects: ['ai-data-breach-hub', 'save-gas', 'exped-browser', 'panda-express-pos'],
     icon: 'SiTailwindcss',
     color: '#06b6d4',
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
@@ -685,7 +685,7 @@ Developed an integrated Flask and Selenium application for automated web scrapin
     proficiency: 'Intermediate',
     description: 'Modern Python web framework for building APIs with Uvicorn server deployment. Used for creating high-performance LLM pipelines processing 500+ PDFs weekly and startup evaluation systems.',
     experience: '1+ years',
-    projects: [],
+    projects: ['ai-data-breach-hub'],
     icon: 'SiFastapi',
     color: '#009688',
     jobs: 1,
@@ -1027,7 +1027,7 @@ Created authentication workflows that support the unique needs of research envir
     proficiency: 'Intermediate',
     description: 'Containerization platform for consistent development environments across multiple devices and operating systems. Expert in Dockerfile creation for dependency management and team collaboration in research settings.',
     experience: '1+ years',
-    projects: [],
+    projects: ['ai-data-breach-hub'],
     icon: 'SiDocker',
     color: '#2496ed',
     researchRoles: 1,
@@ -2156,7 +2156,7 @@ Successfully implemented ChromaDB as the vector store for a Notion-based RAG sys
     proficiency: 'Intermediate',
     description: 'Python testing framework used for comprehensive test coverage in Python applications. Experienced in writing unit tests, fixtures, and integration tests.',
     experience: '2 years',
-    projects: ['notion-rag-cli'],
+    projects: ['ai-data-breach-hub', 'notion-rag-cli'],
     icon: 'SiPytest',
     color: '#009fe3',
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
@@ -2276,6 +2276,207 @@ Implemented tiktoken for accurate token counting in a RAG system, enabling real-
 **Complex Problem-Solving Examples:**
 *RAG System Integration:*
 Successfully integrated Notion API to fetch and process content for a RAG system, implementing recursive page fetching and metadata preservation to create a comprehensive knowledge base from Notion pages.`
+  },
+  {
+    name: 'AWS',
+    slug: 'aws',
+    category: 'Cloud & DevOps',
+    proficiency: 'Intermediate',
+    description: 'Amazon Web Services cloud platform for building scalable, secure infrastructure. Experienced in deploying data pipelines, serverless functions, and storage solutions.',
+    experience: '1 year',
+    projects: ['ai-data-breach-hub'],
+    icon: 'SiAmazonwebservices',
+    color: '#FF9900',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **S3**: Object storage for large-scale data ingestion and archival
+- **Lambda**: Serverless compute for event-driven data processing
+- **Infrastructure Design**: Architecting scalable, privacy-safe cloud solutions
+- **Security**: Implementing secure data handling with zero PII ingestion
+- **Integration**: Connecting AWS services for end-to-end data pipelines
+
+**Complex Problem-Solving Examples:**
+*Data Breach Intelligence Platform:*
+Provisioned a scalable AWS architecture for an AI-powered cybersecurity platform, utilizing S3 for data storage, Lambda for serverless processing, and ensuring 100% PII-free ingestion with high-throughput analytics capabilities.`
+  },
+  {
+    name: 'S3',
+    slug: 's3',
+    category: 'Cloud & DevOps',
+    proficiency: 'Intermediate',
+    description: 'Amazon Simple Storage Service for scalable object storage. Experienced in data lake architectures and high-volume data ingestion pipelines.',
+    experience: '1 year',
+    projects: ['ai-data-breach-hub'],
+    icon: 'SiAmazons3',
+    color: '#569A31',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Object Storage**: Storing and retrieving large datasets efficiently
+- **Data Lake Architecture**: Building scalable data storage solutions
+- **Security**: Implementing bucket policies and access controls
+- **Integration**: Connecting with other AWS services for data pipelines
+
+**Complex Problem-Solving Examples:**
+*Breach Data Storage:*
+Implemented S3-based storage for a cybersecurity intelligence platform, handling 3,100+ breach reports annually with efficient data organization and retrieval.`
+  },
+  {
+    name: 'Lambda',
+    slug: 'lambda',
+    category: 'Cloud & DevOps',
+    proficiency: 'Intermediate',
+    description: 'AWS serverless compute service for event-driven processing. Experienced in building scalable, cost-effective data processing pipelines.',
+    experience: '1 year',
+    projects: ['ai-data-breach-hub'],
+    icon: 'SiAwslambda',
+    color: '#FF9900',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Serverless Architecture**: Event-driven function execution without server management
+- **Scalability**: Auto-scaling compute for variable workloads
+- **Cost Optimization**: Pay-per-use model for efficient resource utilization
+- **Integration**: Triggering functions from S3, API Gateway, and other AWS services
+
+**Complex Problem-Solving Examples:**
+*Automated Data Processing:*
+Deployed Lambda functions for serverless data processing in a cybersecurity platform, enabling automatic breach data classification and analytics at scale.`
+  },
+  {
+    name: 'Redis',
+    slug: 'redis',
+    category: 'Databases',
+    proficiency: 'Intermediate',
+    description: 'In-memory data store for caching and real-time data processing. Experienced in implementing high-performance caching layers for analytics platforms.',
+    experience: '1 year',
+    projects: ['ai-data-breach-hub'],
+    icon: 'SiRedis',
+    color: '#DC382D',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Caching**: Implementing fast data retrieval for frequently accessed information
+- **Session Management**: Managing user sessions and temporary data
+- **Real-time Processing**: Supporting high-throughput data operations
+- **AWS ElastiCache**: Managed Redis deployment for scalable caching
+
+**Complex Problem-Solving Examples:**
+*Analytics Caching Layer:*
+Implemented Redis caching via AWS ElastiCache for a cybersecurity analytics platform, enabling fast retrieval of breach trend data and improving dashboard response times.`
+  },
+  {
+    name: 'ScrapeGraphAI',
+    slug: 'scrapegraphai',
+    category: 'AI/ML',
+    proficiency: 'Intermediate',
+    description: 'AI-powered web scraping framework using LLMs for intelligent data extraction. Experienced in building ethical, automated data collection pipelines.',
+    experience: '1 year',
+    projects: ['ai-data-breach-hub'],
+    icon: 'SiOpenai',
+    color: '#00D4AA',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **AI-Powered Scraping**: Using LLMs to intelligently extract structured data from web pages
+- **Ethical Data Collection**: Implementing legally-sourced, privacy-safe data gathering
+- **Pipeline Integration**: Building automated scraping workflows for continuous data ingestion
+- **Data Normalization**: Converting diverse web sources into standardized formats
+
+**Complex Problem-Solving Examples:**
+*Breach Intelligence Collection:*
+Deployed ScrapeGraphAI-powered scrapers for a cybersecurity platform, automatically collecting and normalizing breach reports from PDFs, advisories, and news sources while ensuring zero PII ingestion and legal compliance.`
+  },
+  {
+    name: 'MongoDB',
+    slug: 'mongodb',
+    category: 'Databases',
+    proficiency: 'Intermediate',
+    description: 'NoSQL document database for flexible, scalable data storage. Experienced in polyglot persistence architectures and high-volume data ingestion.',
+    experience: '1 year',
+    projects: ['ai-data-breach-hub'],
+    icon: 'SiMongodb',
+    color: '#47A248',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Document Storage**: Flexible schema design for diverse data structures
+- **AWS DocumentDB**: Managed MongoDB-compatible database deployment
+- **Polyglot Persistence**: Integrating with other databases for optimal data handling
+- **Scalability**: Horizontal scaling for high-volume data ingestion
+
+**Complex Problem-Solving Examples:**
+*Breach Data Storage:*
+Implemented MongoDB via AWS DocumentDB for storing normalized breach reports, enabling flexible document storage for varied incident formats while supporting high-throughput analytics.`
+  },
+  {
+    name: 'ElasticSearch',
+    slug: 'elasticsearch',
+    category: 'Databases',
+    proficiency: 'Intermediate',
+    description: 'Distributed search and analytics engine for real-time data exploration. Experienced in building fast search interfaces and trend analysis dashboards.',
+    experience: '1 year',
+    projects: ['ai-data-breach-hub'],
+    icon: 'SiElasticsearch',
+    color: '#005571',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Full-text Search**: Implementing fast, relevant search across large datasets
+- **Analytics**: Building aggregations for trend analysis and data visualization
+- **Real-time Indexing**: Continuous data ingestion with immediate searchability
+- **Dashboard Integration**: Connecting with Kibana for interactive visualizations
+
+**Complex Problem-Solving Examples:**
+*Breach Analytics Engine:*
+Deployed Elasticsearch for a cybersecurity intelligence platform, enabling fast trend analysis by sector, geography, severity, and attack type across 3,100+ annual breach reports.`
+  },
+  {
+    name: 'Kibana',
+    slug: 'kibana',
+    category: 'Tools & Platforms',
+    proficiency: 'Intermediate',
+    description: 'Data visualization and exploration tool for Elasticsearch. Experienced in building interactive dashboards for security analytics and trend monitoring.',
+    experience: '1 year',
+    projects: ['ai-data-breach-hub'],
+    icon: 'SiKibana',
+    color: '#005571',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Dashboard Creation**: Building interactive visualizations for data exploration
+- **Real-time Monitoring**: Creating live dashboards for trend analysis
+- **Data Exploration**: Enabling ad-hoc queries and drill-down analysis
+- **Alerting**: Setting up notifications for significant data patterns
+
+**Complex Problem-Solving Examples:**
+*Breach Visibility Dashboard:*
+Created interactive Kibana dashboards for a cybersecurity platform, providing single-pane visibility into breach trends, sector analysis, and threat pattern detection.`
+  },
+  {
+    name: 'Ruff',
+    slug: 'ruff',
+    category: 'Tools & Platforms',
+    proficiency: 'Intermediate',
+    description: 'Extremely fast Python linter and formatter written in Rust. Experienced in maintaining code quality in large Python projects.',
+    experience: '1 year',
+    projects: ['ai-data-breach-hub'],
+    icon: 'SiPython',
+    color: '#D7FF64',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Code Linting**: Enforcing consistent code style and catching common errors
+- **Formatting**: Automatic code formatting for team consistency
+- **CI Integration**: Running linting checks in GitHub Actions pipelines
+- **Performance**: Leveraging Rust-based speed for fast feedback loops
+
+**Complex Problem-Solving Examples:**
+*Code Quality Pipeline:*
+Integrated Ruff into CI/CD workflows for a data breach platform, ensuring consistent Python code quality across a multi-developer team with fast, automated checks.`
+  },
+  {
+    name: 'GitHub Actions',
+    slug: 'github-actions',
+    category: 'Cloud & DevOps',
+    proficiency: 'Intermediate',
+    description: 'CI/CD platform for automating software workflows. Experienced in building automated testing, linting, and deployment pipelines.',
+    experience: '1 year',
+    projects: ['ai-data-breach-hub'],
+    icon: 'SiGithubactions',
+    color: '#2088FF',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **CI/CD Pipelines**: Automating build, test, and deployment workflows
+- **Testing Automation**: Running pytest and other test suites on pull requests
+- **Code Quality**: Integrating linters and formatters into automated checks
+- **Deployment**: Automating deployments to cloud environments
+
+**Complex Problem-Solving Examples:**
+*Automated Quality Assurance:*
+Built GitHub Actions workflows for a cybersecurity platform, automating pytest test runs, Ruff linting, and deployment processes for reliable, consistent releases.`
   },
 
 ]

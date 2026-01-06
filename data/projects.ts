@@ -16,6 +16,24 @@ export interface Project {
 
 const projects: Project[] = [
   {
+    slug: 'ai-data-breach-hub',
+    title: 'AI-Powered Data Breach Hub',
+    description: 'Collaborated with Amazon in developing a scalable, AI-driven platform for aggregating and analyzing real-world cybersecurity breach events.',
+    longDescription: 'Led the design and delivery of an open-access AI-powered data breach intelligence platform that aggregates and normalizes 3,100+ public breach and security incident reports per year. The system automatically collects breach information from multiple sources, processes it using advanced GenAI techniques, and provides comprehensive analytics through an interactive dashboard to help security analysts understand threat patterns and benchmark organizational risk exposure.',
+    image: '/images/projects/ai_data_breach_hub.png',
+    techs: ['TypeScript', 'Next.js', 'Tailwind CSS', 'FastAPI', 'Docker', 'AWS', 'S3', 'Lambda', 'Redis', 'ScrapeGraphAI', 'MongoDB', 'ElasticSearch', 'Kibana', 'Pytest', 'Ruff', 'GitHub Actions'],
+    liveDemo: 'https://docs.google.com/presentation/d/1CllzpbuwN0MlSp2k4h3xLUVtEjwC-eWl/edit?usp=sharing&ouid=111409177641527085625&rtpof=true&sd=true',
+    featured: true,
+    date: 'August 2025 - December 2025',
+    achievements: [
+      'Architected a data intelligence platform aggregating 3.1k+ incidents per year, enabling real-time sector and threat analysis',
+      'Deployed GenAI pipelines detecting +42% ransomware growth in universities and +58% data-theft disclosures in hospitals',
+      'Provisioned a scalable, privacy-safe AWS architecture ensuring 100% PII-free ingestion and high-throughput analytics',
+      'Implemented end-to-end AI data pipeline covering GenAI classification, polyglot storage, and Elasticsearch analytics',
+      'Engineered ethical, legally-sourced data collection with zero PII ingestion and horizontal scalability'
+    ]
+  },
+  {
     slug: 'notion-rag-cli',
     title: 'Notion RAG CLI',
     description: 'Retrieval-Augmented Generation system for Notion, enabling AI-powered search and chat using Gemini 2.5 Flash-Lite Preview.',
