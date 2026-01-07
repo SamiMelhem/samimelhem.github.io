@@ -46,7 +46,9 @@ import {
   SiMongodb,
   SiElasticsearch,
   SiKibana,
-  SiGithubactions
+  SiGithubactions,
+  SiBun,
+  SiZod
 } from 'react-icons/si'
 import { FaYahoo } from 'react-icons/fa'
 import { FcScatterPlot } from 'react-icons/fc'
@@ -60,6 +62,9 @@ import React from 'react'
 import ConvexIcon from './ConvexIcon'
 import CarlaIcon from './CarlaIcon'
 import ScrapeGraphAIIcon from './ScrapeGraphAIIcon'
+import SupabaseIcon from './SupabaseIcon'
+import WebAuthnIcon from './WebAuthnIcon'
+import OpenRouterIcon from './OpenRouterIcon'
 
 // Static import Simple Icons
 const iconComponents: Record<string, ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>> = {
@@ -112,6 +117,8 @@ const iconComponents: Record<string, ComponentType<{ size?: number; className?: 
   SiElasticsearch,
   SiKibana,
   SiGithubactions,
+  SiBun,
+  SiZod,
   BiSolidDashboard,
   PiMicrosoftExcelLogoFill,
   BsRouterFill,
@@ -125,6 +132,9 @@ const iconComponents: Record<string, ComponentType<{ size?: number; className?: 
   ConvexIcon,
   CarlaIcon,
   ScrapeGraphAIIcon,
+  SupabaseIcon,
+  WebAuthnIcon,
+  OpenRouterIcon,
   IoBookOutline,
 }
 

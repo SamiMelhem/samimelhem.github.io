@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react'
 import projects from '../../../data/projects'
 import ProjectCard from '../../../components/ProjectCard'
 import ContactIcons from '../../../components/ContactIcons'
+import { FaGithub } from 'react-icons/fa'
+import { HiOutlineCheckCircle } from 'react-icons/hi'
 
 export default function ProjectsPage() {
   const [isMobile, setIsMobile] = useState(false)
@@ -18,10 +20,52 @@ export default function ProjectsPage() {
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
+  // Separate open source and completed projects
+  const openSourceProjects = projects.filter(p => p.openSource)
+  const completedProjects = projects.filter(p => !p.openSource)
+
   // Calculate project statistics
   const totalProjects = projects.length
   const featuredProjects = projects.filter(p => p.featured).length
   const uniqueTechs = [...new Set(projects.flatMap(p => p.techs || []))].length
+
+  // Reusable project grid component
+  const ProjectGrid = ({ projectList }: { projectList: typeof projects }) => (
+    <div 
+      className={isMobile 
+        ? "flex flex-col items-center gap-6" 
+        : "grid gap-6 sm:gap-8 md:grid-cols-2"
+      }
+    >
+      {projectList.map((p) => (
+        <div
+          key={p.slug}
+          className={`
+            group relative rounded-xl overflow-hidden cursor-pointer 
+            shadow-[0_0_10px_rgba(20,184,166,0.3)] 
+            hover:shadow-[0_0_20px_rgba(20,184,166,0.6)]
+            border border-white hover:border-teal-400
+            transition-all duration-300
+            ${isMobile 
+              ? 'w-[calc(100vw-2rem)] max-w-[350px]' 
+              : ''
+            }
+          `}
+        >
+          <ProjectCard
+            title={p.title}
+            description={p.description}
+            href={p.href ?? `/projects/${p.slug}/`}
+            image={p.image}
+            techs={p.techs}
+            github={p.github}
+            liveDemo={p.liveDemo}
+            date={p.date}
+          />
+        </div>
+      ))}
+    </div>
+  )
 
   return (
     <main className="relative min-h-screen flex flex-col text-white">
@@ -52,44 +96,51 @@ export default function ProjectsPage() {
             <span>{uniqueTechs}+ Technologies</span>
           </div>
         </motion.div>
-        
-        <motion.div 
-          className={isMobile 
-            ? "flex flex-col items-center gap-6" 
-            : "grid gap-6 sm:gap-8 md:grid-cols-2"
-          }
+
+        {/* Open Source Projects Section */}
+        {openSourceProjects.length > 0 && (
+          <motion.section
+            className="mb-12 sm:mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.6 }}
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <FaGithub className="text-2xl sm:text-3xl text-teal-400" />
+              <h2 className="text-2xl sm:text-3xl font-bold">
+                Open Source
+              </h2>
+              <span className="ml-2 px-2 py-0.5 text-xs font-medium bg-teal-500/20 text-teal-300 rounded-full border border-teal-500/30">
+                {openSourceProjects.length} {openSourceProjects.length === 1 ? 'project' : 'projects'}
+              </span>
+            </div>
+            <p className="text-gray-400 mb-6 text-sm sm:text-base">
+              Active open-source projects available for community use and contribution.
+            </p>
+            <ProjectGrid projectList={openSourceProjects} />
+          </motion.section>
+        )}
+
+        {/* Completed Projects Section */}
+        <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.6 }}
+          transition={{ duration: 0.4, delay: openSourceProjects.length > 0 ? 0.8 : 0.6 }}
         >
-          {projects.map((p) => (
-            <div
-              key={p.slug}
-              className={`
-                group relative rounded-xl overflow-hidden cursor-pointer 
-                shadow-[0_0_10px_rgba(20,184,166,0.3)] 
-                hover:shadow-[0_0_20px_rgba(20,184,166,0.6)]
-                border border-white hover:border-teal-400
-                transition-all duration-300
-                ${isMobile 
-                  ? 'w-[calc(100vw-2rem)] max-w-[350px]' 
-                  : ''
-                }
-              `}
-            >
-              <ProjectCard
-                title={p.title}
-                description={p.description}
-                href={p.href ?? `/projects/${p.slug}/`}
-                image={p.image}
-                techs={p.techs}
-                github={p.github}
-                liveDemo={p.liveDemo}
-                date={p.date}
-              />
-            </div>
-          ))}
-        </motion.div>
+          <div className="flex items-center gap-3 mb-6">
+            <HiOutlineCheckCircle className="text-2xl sm:text-3xl text-emerald-400" />
+            <h2 className="text-2xl sm:text-3xl font-bold">
+              Completed Projects
+            </h2>
+            <span className="ml-2 px-2 py-0.5 text-xs font-medium bg-emerald-500/20 text-emerald-300 rounded-full border border-emerald-500/30">
+              {completedProjects.length} {completedProjects.length === 1 ? 'project' : 'projects'}
+            </span>
+          </div>
+          <p className="text-gray-400 mb-6 text-sm sm:text-base">
+            Finished projects demonstrating various technologies and problem-solving approaches.
+          </p>
+          <ProjectGrid projectList={completedProjects} />
+        </motion.section>
       </div>
       
       <ContactIcons />

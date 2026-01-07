@@ -40,9 +40,10 @@ export default function FeaturedAndBlog({
 
   // Preload all featured project images for smooth navigation
   useEffect(() => {
+    const iconNames = ['NotionRagCliIcon', 'CustomBenchIcon', 'BMAuthIcon'];
     const preloadImages = () => {
       featured.forEach((project) => {
-        if (project.image && project.image !== 'NotionRagCliIcon') {
+        if (project.image && !iconNames.includes(project.image)) {
           const img = new Image();
           img.src = project.image;
         }

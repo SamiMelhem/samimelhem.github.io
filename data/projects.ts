@@ -12,9 +12,48 @@ export interface Project {
     featured?: boolean
     date?: string
     achievements?: string[]
+    openSource?: boolean
 }
 
 const projects: Project[] = [
+  {
+    slug: 'custombench',
+    title: 'CustomBench',
+    description: 'Web app & CLI for benchmarking LLMs via OpenRouter. Test multiple models simultaneously with custom benchmarks, live progress tracking, and detailed results analysis.',
+    longDescription: 'A full-stack LLM benchmarking platform built with Next.js 16, React 19, TypeScript, and Bun, enabling concurrent evaluation of 10+ LLMs per run via OpenRouter. Features custom Q&A dataset support, real-time Server-Sent Events execution, automated LLM-as-judge evaluation with structured Zod schemas, and consolidated result reporting with leaderboard rankings.',
+    image: 'CustomBenchIcon',
+    techs: ['TypeScript', 'React', 'Next.js', 'Bun', 'Tailwind CSS', 'OpenRouter', 'Zod'],
+    github: 'https://github.com/SamiMelhem/CustomBench',
+    featured: true,
+    openSource: true,
+    date: 'December 2025 - Present',
+    achievements: [
+      'Built full-stack LLM benchmarking platform enabling concurrent evaluation of 10+ models per run via OpenRouter',
+      'Implemented real-time benchmark execution with Server-Sent Events (SSE) and 30-minute timeout safeguards',
+      'Engineered automated LLM-as-judge evaluation pipeline with 100% structured verdict output using Zod schemas',
+      'Designed leaderboard system with accuracy metrics, winner highlighting, and reproducible JSON result exports',
+      'Created dual-interface platform supporting both web UI workflows and CLI automation for research/CI use cases'
+    ]
+  },
+  {
+    slug: 'bmauth',
+    title: 'BMAuth',
+    description: 'Biometric Authentication System for FastAPI applications, providing the most secure authentication system to any developer.',
+    longDescription: 'A production-grade biometric authentication framework for FastAPI based on WebAuthn/FIDO2 principles. The system replaces passwords with device-bound public-key cryptography and multi-layer verification (biometrics + email PINs), featuring pluggable storage architecture with Supabase/Postgres backend and advanced cross-device authentication flows.',
+    image: 'BMAuthIcon',
+    techs: ['Python', 'FastAPI', 'HTML/CSS', 'WebAuthn/FIDO2', 'Supabase', 'PostgreSQL'],
+    github: 'https://github.com/SamiMelhem/BMAuth',
+    featured: true,
+    openSource: true,
+    date: 'October 2025 - Present',
+    achievements: [
+      'Built production-grade WebAuthn/FIDO2 biometric auth framework eliminating password-based attack vectors',
+      'Developed pluggable storage architecture with Supabase/Postgres backend and automatic schema generation',
+      'Implemented multi-layer verification combining device biometrics with email PIN verification',
+      'Designed cross-device authentication via QR-based biometric verification and secure account recovery',
+      'Published to PyPI enabling zero-config integration with any FastAPI application'
+    ]
+  },
   {
     slug: 'ai-data-breach-hub',
     title: 'AI-Powered Data Breach Hub',

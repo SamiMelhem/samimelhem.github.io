@@ -32,7 +32,7 @@ export const skills: Skill[] = [
     proficiency: 'Advanced',
     description: 'My go-to language for data science, machine learning, and backend development. Specialized in data processing, conversational AI systems, and environmental data pipelines with extensive experience across research, industry, and academic settings.',
     experience: '4+ years',
-    projects: ['ai-data-breach-hub', 'av-simulator', 'financial-modeling-tool', 'notion-rag-cli'],
+    projects: ['bmauth', 'ai-data-breach-hub', 'av-simulator', 'financial-modeling-tool', 'notion-rag-cli'],
     icon: 'SiPython',
     color: '#3776ab',
     internships: 4,
@@ -85,7 +85,7 @@ Developed Flask-based conversational AI tools at TAMU's Soft Interaction Lab ser
     proficiency: 'Advanced',
     description: 'My preferred language for modern web development, chosen for its type safety and superior development experience. This entire portfolio showcases TypeScript integration with Next.js, React, and modern development workflows.',
     experience: '2+ years',
-    projects: ['ai-data-breach-hub', 'save-gas', 'exped-browser', 'panda-express-pos'],
+    projects: ['custombench', 'ai-data-breach-hub', 'save-gas', 'exped-browser', 'panda-express-pos'],
     icon: 'SiTypescript',
     color: '#3178c6',
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
@@ -214,7 +214,7 @@ Successfully integrated multiple browser APIs including fetch for HTTP requests,
     proficiency: 'Advanced',
     description: 'Foundation web technologies with emphasis on modern layout systems, animations, and dynamic theming. Specialized in CSS Grid layouts, utility-first styling with Tailwind CSS, and creating engaging user experiences through smooth animations and transitions.',
     experience: '4+ years',
-    projects: ['save-gas', 'exped-browser', 'panda-express-pos'],
+    projects: ['bmauth', 'save-gas', 'exped-browser', 'panda-express-pos'],
     icon: 'SiHtml5',
     color: '#e34f26',
     researchRoles: 1,
@@ -266,7 +266,7 @@ Consistently implemented CSS animations, transitions, and transforms across all 
     proficiency: 'Advanced',
     description: 'My pragmatic framework of choice for building modern, interactive user interfaces. Expert in practical React development with strong focus on TypeScript integration, Next.js SSR, and advanced component styling systems.',
     experience: '3+ years',
-    projects: ['save-gas', 'exped-browser', 'panda-express-pos'],
+    projects: ['custombench', 'save-gas', 'exped-browser', 'panda-express-pos'],
     icon: 'SiReact',
     color: '#61dafb',
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
@@ -306,7 +306,7 @@ Successfully implemented Context-based state management across multiple projects
     proficiency: 'Advanced',
     description: 'My full-stack framework of choice for modern web development. Expert in App Router, SSG/SSR implementation, and seamless user experience design. This entire portfolio demonstrates advanced Next.js architecture with persistent backgrounds and smooth animations.',
     experience: '2+ years',
-    projects: ['ai-data-breach-hub', 'panda-express-pos'],
+    projects: ['custombench', 'ai-data-breach-hub', 'panda-express-pos'],
     icon: 'SiNextdotjs',
     color: '#ffffff',
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
@@ -389,7 +389,7 @@ Successfully coordinated multiple external services and APIs within Node.js appl
     proficiency: 'Advanced',
     description: 'My preferred CSS framework for rapid UI development. I appreciate its utility-first approach and how it speeds up the design process.',
     experience: '2+ years',
-    projects: ['ai-data-breach-hub', 'save-gas', 'exped-browser', 'panda-express-pos'],
+    projects: ['custombench', 'ai-data-breach-hub', 'save-gas', 'exped-browser', 'panda-express-pos'],
     icon: 'SiTailwindcss',
     color: '#06b6d4',
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
@@ -685,7 +685,7 @@ Developed an integrated Flask and Selenium application for automated web scrapin
     proficiency: 'Intermediate',
     description: 'Modern Python web framework for building APIs with Uvicorn server deployment. Used for creating high-performance LLM pipelines processing 500+ PDFs weekly and startup evaluation systems.',
     experience: '1+ years',
-    projects: ['ai-data-breach-hub'],
+    projects: ['bmauth', 'ai-data-breach-hub'],
     icon: 'SiFastapi',
     color: '#009688',
     jobs: 1,
@@ -840,7 +840,7 @@ Solved complex timing challenges when scraping websites with dynamic content loa
     proficiency: 'Intermediate',
     description: 'My database of choice for complex applications. Extensive experience with relational database design, foreign key relationships, and business logic implementation for commercial POS systems.',
     experience: '2+ years',
-    projects: ['panda-express-pos'],
+    projects: ['bmauth', 'panda-express-pos'],
     icon: 'SiPostgresql',
     color: '#336791',
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
@@ -2477,6 +2477,111 @@ Integrated Ruff into CI/CD workflows for a data breach platform, ensuring consis
 **Complex Problem-Solving Examples:**
 *Automated Quality Assurance:*
 Built GitHub Actions workflows for a cybersecurity platform, automating pytest test runs, Ruff linting, and deployment processes for reliable, consistent releases.`
+  },
+  {
+    name: 'WebAuthn/FIDO2',
+    slug: 'webauthn-fido2',
+    category: 'Frameworks & Libraries',
+    proficiency: 'Intermediate',
+    description: 'Modern passwordless authentication standard using public-key cryptography. Experienced in implementing biometric authentication systems that eliminate password-based attack vectors.',
+    experience: '1 year',
+    projects: ['bmauth'],
+    icon: 'WebAuthnIcon',
+    color: '#3DDC84',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Public-Key Cryptography**: Device-bound key pairs for secure authentication without passwords
+- **Biometric Integration**: Leveraging device biometrics (fingerprint, face) for user verification
+- **Challenge-Response Protocol**: Implementing secure authentication flows with cryptographic challenges
+- **Multi-Device Support**: Cross-device authentication via QR-based verification
+- **Account Recovery**: Secure recovery flows with email PIN verification and device de-authorization
+
+**Complex Problem-Solving Examples:**
+*BMAuth Framework:*
+Built a production-grade WebAuthn/FIDO2 authentication framework for FastAPI, replacing passwords with device-bound cryptography and multi-layer verification to significantly reduce phishing and credential-reuse attack surfaces.`
+  },
+  {
+    name: 'Supabase',
+    slug: 'supabase',
+    category: 'Databases',
+    proficiency: 'Intermediate',
+    description: 'Open-source Firebase alternative with Postgres backend. Experienced in building pluggable storage architectures with automatic schema generation and lifecycle management.',
+    experience: '1 year',
+    projects: ['bmauth'],
+    icon: 'SupabaseIcon',
+    color: '#3ECF8E',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Postgres Integration**: First-class Supabase Client with full database access
+- **Schema Management**: Automatic table creation and schema generation
+- **Storage Backend**: Pluggable storage architecture for authentication systems
+- **Lifecycle Management**: Managing users, challenges, sessions, and verification data
+- **Debug Endpoints**: Building observability tools for development and troubleshooting
+
+**Complex Problem-Solving Examples:**
+*Authentication Storage Layer:*
+Developed a pluggable Supabase/Postgres storage backend for BMAuth, including automatic schema generation, lifecycle management for users and sessions, and debug endpoints for observability, with in-memory fallback for zero-config usage.`
+  },
+  {
+    name: 'Bun',
+    slug: 'bun',
+    category: 'Tools & Platforms',
+    proficiency: 'Intermediate',
+    description: 'Fast JavaScript runtime and package manager. Experienced in using Bun for high-performance web applications and development tooling.',
+    experience: '1 year',
+    projects: ['custombench'],
+    icon: 'SiBun',
+    color: '#fbf0df',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Runtime Performance**: Leveraging Bun's faster execution compared to Node.js for improved application performance
+- **Package Management**: Using Bun's built-in package manager for faster dependency installation
+- **TypeScript Support**: Native TypeScript execution without transpilation configuration
+- **Development Workflow**: Hot reloading and fast development server for rapid iteration
+- **API Compatibility**: Working with Node.js-compatible APIs while benefiting from Bun's optimizations
+
+**Complex Problem-Solving Examples:**
+*LLM Benchmarking Platform:*
+Built CustomBench using Bun runtime for improved performance in concurrent LLM API calls and real-time benchmark execution, benefiting from faster startup times and efficient SSE streaming.`
+  },
+  {
+    name: 'OpenRouter',
+    slug: 'openrouter',
+    category: 'AI/ML',
+    proficiency: 'Intermediate',
+    description: 'Unified API gateway for accessing multiple LLM providers. Experienced in building multi-model evaluation systems and LLM benchmarking platforms.',
+    experience: '1 year',
+    projects: ['custombench'],
+    icon: 'OpenRouterIcon',
+    color: '#6366f1',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Multi-Model Access**: Routing requests to 10+ LLM providers through a unified API interface
+- **Model Selection**: Programmatic model selection and comparison for benchmarking use cases
+- **Cost Optimization**: Understanding pricing across different providers for cost-effective model selection
+- **API Integration**: Building robust integrations with proper error handling and rate limiting
+- **Concurrent Requests**: Managing simultaneous requests to multiple models for parallel evaluation
+
+**Complex Problem-Solving Examples:**
+*CustomBench Multi-Model Evaluation:*
+Implemented concurrent LLM benchmarking via OpenRouter, enabling simultaneous testing of 10+ models per run with live progress tracking, structured result collection, and automated accuracy comparison across providers.`
+  },
+  {
+    name: 'Zod',
+    slug: 'zod',
+    category: 'Frameworks & Libraries',
+    proficiency: 'Intermediate',
+    description: 'TypeScript-first schema validation library. Experienced in building type-safe APIs and structured LLM output parsing.',
+    experience: '1 year',
+    projects: ['custombench'],
+    icon: 'SiZod',
+    color: '#3E67B1',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Schema Definition**: Creating comprehensive schemas for API validation and type inference
+- **Type Inference**: Leveraging Zod's TypeScript integration for compile-time type safety
+- **LLM Output Parsing**: Structuring LLM responses with guaranteed schema compliance
+- **Fallback Handling**: Implementing graceful degradation when structured outputs fail
+- **Validation Pipelines**: Building robust data validation workflows for complex applications
+
+**Complex Problem-Solving Examples:**
+*LLM-as-Judge Evaluation Pipeline:*
+Engineered automated evaluation using Zod schemas to ensure 100% structured verdict outputs from LLM judges, with fallback parsing for models that don't support native structured outputs, producing per-question verdicts, rationales, and accuracy metrics.`
   },
 
 ]

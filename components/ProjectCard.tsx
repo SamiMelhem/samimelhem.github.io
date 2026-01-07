@@ -5,6 +5,8 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import NotionRagCliIcon from './NotionRagCliIcon'
+import CustomBenchIcon from './CustomBenchIcon'
+import BMAuthIcon from './BMAuthIcon'
 
 export interface ProjectCardProps {
   title: string
@@ -128,7 +130,7 @@ export default function ProjectCard({
         href={href}
         className="flex flex-col flex-1 transition-transform group-hover:scale-[1.02] relative z-10"
       >
-        {image && image !== 'NotionRagCliIcon' && (
+        {image && !['NotionRagCliIcon', 'CustomBenchIcon', 'BMAuthIcon'].includes(image) && (
           <div className="relative h-36 sm:h-48 w-full flex-shrink-0">
             <Image
               src={image}
@@ -144,6 +146,16 @@ export default function ProjectCard({
         {image === 'NotionRagCliIcon' && (
           <div className="relative h-36 sm:h-48 w-full flex-shrink-0 flex items-center justify-center bg-gray-800">
             <NotionRagCliIcon />
+          </div>
+        )}
+        {image === 'CustomBenchIcon' && (
+          <div className="relative h-36 sm:h-48 w-full flex-shrink-0 overflow-hidden">
+            <CustomBenchIcon />
+          </div>
+        )}
+        {image === 'BMAuthIcon' && (
+          <div className="relative h-36 sm:h-48 w-full flex-shrink-0 overflow-hidden">
+            <BMAuthIcon />
           </div>
         )}
         <div className="p-4 sm:p-6 flex flex-col flex-1 justify-between min-h-0 bg-gray-900/70">
