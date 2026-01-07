@@ -86,13 +86,13 @@ export default function AboutPage() {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               {[
-                { title: "Programming Languages", content: "Python (Advanced), JavaScript (Advanced), HTML/CSS (Advanced), SQL (Advanced),  C++ (Intermediate), Java (Intermediate), Go (Beginner), Rust (Beginner), R (Beginner)" },
-                { title: "Frameworks & Libraries", content: "React.js, Node.js, TypeScript, Next.js, Flask, Pandas, NumPy, Matplotlib, Scikit-learn, TensorFlow, PyTorch, FastAPI" },
-                { title: "Tools & Platforms", content: "Git, Docker, Postman, Electron, Vercel, Power BI, Tableau, Visual Studio Code, PyCharm, IntelliJ, Cursor, Pytest, CLI" },
-                { title: "Cloud & Databases", content: "AWS, GCP, MySQL, PostgreSQL, Linux, Firebase, NoSQL, SQLAlchemy, ChromaDB" },
-                { title: "AI & Data Science", content: "Machine Learning, Computer Vision, Statistical Modeling, Feature Engineering, A/B Testing, Data Visualization, Embedding Generation, Prompt Engineering, Gemini 2.5 Flash-Lite, tiktoken" },
-                { title: "APIs & Integrations", content: "Notion API, REST APIs, WebSocket APIs, Authentication Systems, Third-party Integrations" },
-                { title: "Methodologies", content: "Agile, Waterfall, Scrum, Physics-Informed Neural Networks (PINNs), ETL Pipelines" }
+                { title: "Programming Languages", content: "Python (Advanced), TypeScript (Advanced), JavaScript (Advanced), HTML/CSS (Advanced), SQL (Advanced), C++ (Intermediate), Java (Intermediate), Go (Beginner), Rust (Beginner), R (Beginner)" },
+                { title: "Frameworks & Libraries", content: "React.js, Next.js, Node.js, FastAPI, Flask, Zod, Pandas, NumPy, Matplotlib, Scikit-learn, TensorFlow, PyTorch, Tailwind CSS" },
+                { title: "Tools & Platforms", content: "Git, Docker, Bun, Electron, Vercel, GitHub Actions, Kibana, Power BI, Tableau, Pytest, Ruff, CLI, Cursor" },
+                { title: "Cloud & Databases", content: "AWS (S3, Lambda), Supabase, PostgreSQL, MongoDB, Redis, ElasticSearch, Firebase, MySQL, Linux, SQLAlchemy, ChromaDB" },
+                { title: "AI & Data Science", content: "Machine Learning, OpenRouter, ScrapeGraphAI, Computer Vision, Statistical Modeling, Feature Engineering, Embedding Generation, Prompt Engineering, Gemini 2.5 Flash-Lite, tiktoken" },
+                { title: "APIs & Integrations", content: "Notion API, REST APIs, WebSocket APIs, WebAuthn/FIDO2, Authentication Systems, Third-party Integrations" },
+                { title: "Methodologies", content: "Agile, Waterfall, Scrum, LLM Benchmarking, Physics-Informed Neural Networks (PINNs), ETL Pipelines" }
               ].map((skill, index) => (
                 <motion.div 
                   key={skill.title}
