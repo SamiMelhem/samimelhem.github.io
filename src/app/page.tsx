@@ -59,7 +59,7 @@ export default function Home() {
     const dateB = new Date(b.date.replace(/(\d+)(st|nd|rd|th)/, '$1'));
     return dateB.getTime() - dateA.getTime();
   })
-  .slice(0, 3);
+  .slice(0, 2);
 
   return (
     <>
