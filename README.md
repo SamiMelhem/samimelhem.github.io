@@ -43,7 +43,7 @@ A high-performance, fully customizable developer portfolio built with **Next.js 
 - **Automated CI/CD**: GitHub Actions deployment to GitHub Pages
 - **TypeScript**: Complete type safety with custom interfaces
 - **ESLint & Prettier**: Code quality and formatting enforcement
-- **Hot Reload**: Instant development feedback with Vite integration
+- **Hot Reload**: Instant development feedback with Turbopack
 
 ## 📋 Table of Contents
 
@@ -78,10 +78,10 @@ A high-performance, fully customizable developer portfolio built with **Next.js 
 
 ```bash
 # Install dependencies
-npm install
+bun install
 
 # Start development server
-npm run dev
+bun run dev
 ```
 
 Visit `http://localhost:3000` to see your portfolio!
@@ -251,8 +251,7 @@ The repository includes automated CI/CD via GitHub Actions:
 
 ```bash
 # Build and export
-npm run build
-npm run export
+bun run build
 
 # Deploy the 'out' directory to your hosting provider
 ```
@@ -296,6 +295,7 @@ samimelhem-portfolio/
 - **[Framer Motion](https://www.framer.com/motion/)** - Animation library
 
 ### Development Tools
+- **[Bun](https://bun.sh/)** - Fast JavaScript runtime and package manager
 - **[ESLint](https://eslint.org/)** - Code linting and quality
 - **[Prettier](https://prettier.io/)** - Code formatting
 - **[GitHub Actions](https://github.com/features/actions)** - CI/CD automation
@@ -316,14 +316,14 @@ samimelhem-portfolio/
 **Build Errors:**
 ```bash
 # Clear dependencies and reinstall
-rm -rf node_modules package-lock.json
-npm install
+rm -rf node_modules bun.lock
+bun install
 
 # Check for TypeScript errors
-npx tsc --noEmit
+bunx tsc --noEmit
 
 # Check for linting issues before pushing
-npm run lint
+bun run lint
 ```
 
 **Deployment Issues:**
@@ -337,7 +337,7 @@ npm run lint
 - Optimize large images (recommended: <500KB per image)
 
 **Performance Issues:**
-- Run `npm run build` to check bundle size
+- Run `bun run build` to check bundle size
 - Use browser DevTools to identify bottlenecks
 - Consider lazy loading for heavy components
 
@@ -371,7 +371,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### For First-Time Users
 1. **Start small** - Update personal info first, then customize gradually
-2. **Test frequently** - Run `npm run dev` after each change
+2. **Test frequently** - Run `bun run dev` after each change
 3. **Use TypeScript** - It catches errors before they become problems
 4. **Optimize images** - Compress before adding to reduce load times
 
