@@ -25,6 +25,9 @@
 *.pem
 /upcoming_plans
 
+# newsletter automation (private)
+/.newsletter-automation/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
