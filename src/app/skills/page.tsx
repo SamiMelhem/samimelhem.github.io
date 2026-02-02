@@ -12,6 +12,11 @@ export default function SkillsPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [filteredSkills, setFilteredSkills] = useState(skills)
 
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   useEffect(() => {
     let filtered = getSkillsByCategory(selectedCategory)
     
@@ -122,15 +127,22 @@ export default function SkillsPage() {
                              shadow-[0_0_10px_rgba(20,184,166,0.3)] hover:shadow-[0_0_20px_rgba(20,184,166,0.6)]
                              transition-all duration-300 hover:scale-[1.02]">
                   
+                  {/* Category Badge - Now at top, full width */}
+                  <div className="px-6 pt-4 pb-2 flex justify-end">
+                    <span className="px-2 py-1 bg-gray-800/80 text-xs text-gray-400 rounded-full">
+                      {skill.category}
+                    </span>
+                  </div>
+
                   {/* Header */}
-                  <div className="p-6 pb-4 pr-20">
+                  <div className="px-6 pb-4">
                     <div className="flex items-center gap-3 mb-3">
                       <SkillIcon 
                         iconName={skill.icon}
                         color={skill.color}
                         size={16}
                       />
-                      <h3 className="text-xl font-semibold group-hover:text-teal-400 transition-colors flex-1 pr-2">
+                      <h3 className="text-xl font-semibold group-hover:text-teal-400 transition-colors">
                         {skill.name}
                       </h3>
                     </div>
@@ -210,13 +222,6 @@ export default function SkillsPage() {
                       </div>
                     )}
                   </div>
-
-                  {/* Category Badge */}
-                  <div className="absolute top-4 right-4">
-                    <span className="px-2 py-1 bg-gray-800/80 text-xs text-gray-400 rounded-full">
-                      {skill.category}
-                    </span>
-                  </div>
                 </div>
               </Link>
             </motion.div>
@@ -250,4 +255,4 @@ export default function SkillsPage() {
       <ContactIcons />
     </main>
   )
-} 
+}
