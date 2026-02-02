@@ -95,10 +95,10 @@ export default function SkillsPage() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-3 sm:px-4 py-2 rounded-full text-sm sm:text-base transition-all duration-300 ${
+                className={`px-3 sm:px-4 py-2 rounded-full text-sm sm:text-base border transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-teal-400 text-black font-semibold'
-                    : 'bg-gray-800/60 text-gray-300 hover:bg-gray-700/60 hover:text-white'
+                    ? 'bg-teal-400 text-black font-semibold border-teal-400'
+                    : 'bg-gray-800/60 border-gray-600 text-gray-300 hover:bg-gray-700/60 hover:text-white hover:border-gray-500'
                 }`}
               >
                 {category}

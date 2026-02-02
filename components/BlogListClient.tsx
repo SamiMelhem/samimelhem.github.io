@@ -18,7 +18,7 @@ interface PostMeta {
 
 export default function BlogListClient({ posts }: { posts: PostMeta[] }) {
     const [searchQuery, setSearchQuery] = useState("");
-    const [selectedTag, setSelectedTag] = useState<string | null>(null);
+    const [selectedTags, setSelectedTags] = useState<string[]>([]);
     const [showAllIndustryUpdates, setShowAllIndustryUpdates] = useState(false);
 
     // Separate posts by type
@@ -36,7 +36,7 @@ export default function BlogListClient({ posts }: { posts: PostMeta[] }) {
         return Array.from(tagSet).sort();
     }, [posts]);
 
-    // Filter posts based on search and tag
+    // Filter posts based on search and tags
     const filteredPosts = useMemo(() => {
         let filtered = posts;
 
@@ -50,9 +50,11 @@ export default function BlogListClient({ posts }: { posts: PostMeta[] }) {
             );
         }
 
-        // Filter by selected tag
-        if (selectedTag) {
-            filtered = filtered.filter(post => post.tags.includes(selectedTag));
+        // Filter by selected tags (post must have at least one of the selected tags)
+        if (selectedTags.length > 0) {
+            filtered = filtered.filter(post => 
+                selectedTags.some(tag => post.tags.includes(tag))
+            );
         }
 
         // If showing all industry updates, filter to only those
@@ -61,19 +63,23 @@ export default function BlogListClient({ posts }: { posts: PostMeta[] }) {
         }
 
         return filtered;
-    }, [posts, searchQuery, selectedTag, showAllIndustryUpdates]);
+    }, [posts, searchQuery, selectedTags, showAllIndustryUpdates]);
 
     const handleTagClick = (tag: string) => {
-        setSelectedTag(selectedTag === tag ? null : tag);
+        setSelectedTags(prev => 
+            prev.includes(tag) 
+                ? prev.filter(t => t !== tag) 
+                : [...prev, tag]
+        );
     };
 
     const clearFilters = () => {
         setSearchQuery("");
-        setSelectedTag(null);
+        setSelectedTags([]);
         setShowAllIndustryUpdates(false);
     };
 
-    const hasActiveFilters = searchQuery || selectedTag || showAllIndustryUpdates;
+    const hasActiveFilters = searchQuery || selectedTags.length > 0 || showAllIndustryUpdates;
 
     return (
         <main className="relative min-h-screen flex flex-col text-white">
@@ -165,7 +171,7 @@ export default function BlogListClient({ posts }: { posts: PostMeta[] }) {
                             placeholder="Search articles by title, content, or tags..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full pl-12 pr-4 py-3 bg-white/5 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all duration-300"
+                            className="w-full pl-12 pr-4 py-3 bg-gray-800/60 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all duration-300"
                         />
                         {searchQuery && (
                             <button
@@ -181,15 +187,15 @@ export default function BlogListClient({ posts }: { posts: PostMeta[] }) {
 
                     {/* Tag Filter Pills */}
                     <div className="flex flex-wrap gap-2 items-center">
-                        <span className="text-sm text-gray-400 mr-2">Filter by tag:</span>
+                        <span className="text-sm text-gray-400 mr-2">Filter by tags:</span>
                         {allTags.map((tag) => (
                             <button
                                 key={tag}
                                 onClick={() => handleTagClick(tag)}
-                                className={`px-3 py-1 text-sm rounded-full border transition-all duration-200 ${
-                                    selectedTag === tag
-                                        ? 'bg-teal-500/30 border-teal-400 text-teal-300'
-                                        : 'bg-white/5 border-gray-600 text-gray-400 hover:border-gray-500 hover:text-gray-300'
+                                className={`px-3 py-1.5 text-sm rounded-full border transition-all duration-200 ${
+                                    selectedTags.includes(tag)
+                                        ? 'bg-teal-400 text-black font-semibold border-teal-400'
+                                        : 'bg-gray-800/60 border-gray-600 text-gray-300 hover:bg-gray-700/60 hover:text-white hover:border-gray-500'
                                 }`}
                             >
                                 {tag}
@@ -199,11 +205,17 @@ export default function BlogListClient({ posts }: { posts: PostMeta[] }) {
 
                     {/* Active Filters Indicator */}
                     {hasActiveFilters && (
-                        <div className="flex items-center gap-4 mt-4 p-3 bg-white/5 rounded-lg border border-gray-700">
+                        <div className="flex flex-wrap items-center gap-4 mt-4 p-3 bg-gray-800/60 rounded-lg border border-gray-600">
                             <span className="text-sm text-gray-300">
                                 Showing {filteredPosts.length} result{filteredPosts.length !== 1 ? 's' : ''}
                                 {showAllIndustryUpdates && <span className="text-purple-400"> in Industry Updates</span>}
-                                {selectedTag && <span className="text-teal-400"> tagged &quot;{selectedTag}&quot;</span>}
+                                {selectedTags.length > 0 && (
+                                    <span className="text-teal-400"> tagged {selectedTags.map((tag, i) => (
+                                        <span key={tag}>
+                                            &quot;{tag}&quot;{i < selectedTags.length - 1 ? (i === selectedTags.length - 2 ? ' or ' : ', ') : ''}
+                                        </span>
+                                    ))}</span>
+                                )}
                                 {searchQuery && <span className="text-gray-400"> matching &quot;{searchQuery}&quot;</span>}
                             </span>
                             <button
