@@ -129,7 +129,7 @@ Successfully architected full-stack applications using TypeScript as the foundat
   },
   {
     name: 'C++',
-    slug: 'cpp',
+    slug: 'c++',
     category: 'Programming Languages',
     proficiency: 'Intermediate',
     description: 'Used for performance-critical applications and system programming. Applied it in client-server systems where real-time processing was essential.',

@@ -19,90 +19,9 @@ export interface ProjectCardProps {
   date?: string       // optional project date
 }
 
-// Mapping function to convert project tech names to skill slugs
+// Converts tech names to skill slugs: lowercase, replace slashes and spaces with hyphens
 const getSkillSlug = (techName: string): string => {
-  const techToSlugMap: { [key: string]: string } = {
-    // Programming Languages
-    'Python': 'python',
-    'TypeScript': 'typescript',
-    'JavaScript': 'javascript',
-    'HTML/CSS': 'html-css',
-    'C++': 'c++',
-    'Java': 'java',
-    'Go': 'go',
-    'Rust': 'rust',
-    'R': 'r',
-    'C': 'c',
-    'C#': 'c-sharp',
-    
-    // Frameworks & Libraries
-    'React': 'react',
-    'Next.js': 'next.js',
-    'Node.js': 'node.js',
-    'Express.js': 'express.js',
-    'Flask': 'flask',
-    'FastAPI': 'fastapi',
-    'SQLAlchemy': 'sqlalchemy',
-    'Tailwind CSS': 'tailwind-css',
-    'TensorFlow': 'tensorflow',
-    'PyTorch': 'pytorch',
-    'Electron': 'electron',
-    'Vite': 'vite',
-    'PostCSS': 'postcss',
-    'Axios': 'axios',
-    'Lucide React': 'lucide-react',
-    'Radix UI': 'radix-ui',
-    'Dash': 'dash',
-    'Plotly': 'plotly',
-    'Pandas': 'pandas',
-    'NumPy': 'numpy',
-    'Matplotlib': 'matplotlib',
-    'Scikit-Learn': 'scikit-learn',
-    'OpenCV': 'opencv',
-    'yfinance': 'yfinance',
-    
-    // Databases
-    'PostgreSQL': 'postgresql',
-    'MySQL': 'mysql',
-    'MongoDB': 'mongodb',
-    'Redis': 'redis',
-    'SQLite': 'sqlite',
-    
-    // Cloud & DevOps
-    'Vercel': 'vercel',
-    'Convex': 'convex',
-    'Firebase': 'firebase',
-    'AWS': 'aws',
-    'Docker': 'docker',
-    'Kubernetes': 'kubernetes',
-    
-    // Tools & Platforms
-    'Auth0': 'auth0',
-    'CARLA': 'carla',
-    'Git': 'git',
-    'GitHub': 'github',
-    'VS Code': 'vs-code',
-    'Linux': 'linux',
-    'Excel': 'excel',
-    'Tableau': 'tableau',
-    'Power BI': 'power-bi',
-    'Selenium': 'selenium',
-    
-    // AI/ML & Other Technologies
-    'Socket Programming': 'sockets',
-    'Socket': 'sockets',
-    'TCP/IP': 'tcp-ip',
-    'Multithreading': 'multithreading',
-    'Prompt Engineering': 'prompt-engineering',
-    'GPT Agent Creation': 'gpt-agent-creation',
-    'Educational Technology': 'educational-technology',
-    'LLM APIs': 'llm-apis',
-    'PDF Processing': 'pdf-processing',
-    'VBA': 'vba',
-  }
-  
-  // Return mapped slug or create a fallback slug
-  return techToSlugMap[techName] || encodeURIComponent(techName.toLowerCase().replace(/[^a-z0-9]+/g, '-'))
+  return techName.toLowerCase().replace(/[\/\s]+/g, '-')
 }
 
 export default function ProjectCard({

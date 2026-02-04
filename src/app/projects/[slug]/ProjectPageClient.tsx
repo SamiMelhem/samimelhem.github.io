@@ -8,6 +8,11 @@ import ContactIcons from '../../../../components/ContactIcons'
 import NotionRagCliIcon from '../../../../components/NotionRagCliIcon'
 import { FaExternalLinkAlt as ExternalLink, FaGithub as Github, FaArrowLeft as ArrowLeft, FaCalendarAlt as Calendar, FaBullseye as Target, FaCog as Cog, FaChartBar as BarChart3, FaCheckCircle as CheckCircle } from 'react-icons/fa'
 
+// Converts tech names to skill slugs: lowercase, replace slashes and spaces with hyphens
+const getSkillSlug = (techName: string): string => {
+  return techName.toLowerCase().replace(/[\/\s]+/g, '-')
+}
+
 interface ProjectPageClientProps {
   project: Project
 }
@@ -82,14 +87,18 @@ export default function ProjectPageClient({ project }: ProjectPageClientProps) {
               {/* Tech Stack */}
               {project.techs && (
                 <div className="flex flex-wrap gap-2">
-                  {project.techs.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-gray-800/60 text-teal-300 text-sm rounded-full border border-teal-400/30"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  {project.techs.map((tech) => {
+                    const skillSlug = getSkillSlug(tech)
+                    return (
+                      <Link
+                        key={tech}
+                        href={`/skills/${skillSlug}`}
+                        className="px-3 py-1 bg-gray-800/60 text-teal-300 text-sm rounded-full border border-teal-400/30 hover:bg-teal-600/30 hover:border-teal-400 transition-colors cursor-pointer"
+                      >
+                        {tech}
+                      </Link>
+                    )
+                  })}
                 </div>
               )}
             </div>
