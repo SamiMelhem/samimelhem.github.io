@@ -11,7 +11,7 @@
     "deploy": "git config user.email \"SamiISaboss23@gmail.com\" && git config user.name \"Sami Melhem\" && gh-pages -d out -r https://x-access-token:${GH_TOKEN}@github.com/samimelhem/samimelhem.github.io.git"
   },
   "dependencies": {
-    "framer-motion": "^12.30.0",
+    "framer-motion": "^12.31.0",
     "next": "^16.1.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
@@ -24,7 +24,7 @@
     "@tailwindcss/postcss": "^4.1.18",
     "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^25.2.0",
-    "@types/react": "^19.2.10",
+    "@types/react": "^19.2.11",
     "@types/react-dom": "^19.2.3",
     "@types/three": "^0.182.0",
     "autoprefixer": "^10.4.24",

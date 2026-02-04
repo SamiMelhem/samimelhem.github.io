@@ -6,6 +6,8 @@ import Image from 'next/image'
 import { Project } from '../../../../data/projects'
 import ContactIcons from '../../../../components/ContactIcons'
 import NotionRagCliIcon from '../../../../components/NotionRagCliIcon'
+import CustomBenchIcon from '../../../../components/CustomBenchIcon'
+import BMAuthIcon from '../../../../components/BMAuthIcon'
 import { FaExternalLinkAlt as ExternalLink, FaGithub as Github, FaArrowLeft as ArrowLeft, FaCalendarAlt as Calendar, FaBullseye as Target, FaCog as Cog, FaChartBar as BarChart3, FaCheckCircle as CheckCircle } from 'react-icons/fa'
 
 // Converts tech names to skill slugs: lowercase, replace slashes and spaces with hyphens
@@ -104,7 +106,7 @@ export default function ProjectPageClient({ project }: ProjectPageClientProps) {
             </div>
             
             {/* Project Image */}
-            {project.image && project.image !== 'NotionRagCliIcon' && (
+            {project.image && !['NotionRagCliIcon', 'CustomBenchIcon', 'BMAuthIcon'].includes(project.image) && (
               <div className="relative rounded-xl overflow-hidden shadow-2xl">
                 <Image
                   src={project.image}
@@ -118,6 +120,16 @@ export default function ProjectPageClient({ project }: ProjectPageClientProps) {
             {project.image === 'NotionRagCliIcon' && (
               <div className="relative rounded-xl overflow-hidden shadow-2xl w-full h-80 bg-gray-800 flex items-center justify-center">
                 <NotionRagCliIcon />
+              </div>
+            )}
+            {project.image === 'CustomBenchIcon' && (
+              <div className="relative rounded-xl overflow-hidden shadow-2xl w-full h-80 flex items-center justify-center">
+                <CustomBenchIcon />
+              </div>
+            )}
+            {project.image === 'BMAuthIcon' && (
+              <div className="relative rounded-xl overflow-hidden shadow-2xl w-full h-80 flex items-center justify-center">
+                <BMAuthIcon />
               </div>
             )}
           </div>
@@ -141,6 +153,63 @@ function ProjectContent({ project }: { project: Project }) {
       keyResults: string[]
       businessImpact: string
     }> = {
+      'custombench': {
+        challenge: "Evaluating and comparing Large Language Models (LLMs) is a time-consuming and inconsistent process. Developers and researchers struggle to benchmark multiple models against custom test scenarios, often resorting to manual testing that doesn't scale. Existing benchmarking solutions lack real-time progress visibility, automated evaluation capabilities, and the flexibility to test against custom datasets that reflect real-world use cases.",
+        solution: "Built a full-stack LLM benchmarking platform that enables concurrent evaluation of 10+ models via OpenRouter. The platform features a dual-interface design supporting both a modern web UI for interactive workflows and a CLI for automation and CI/CD integration. Real-time Server-Sent Events (SSE) provide live progress tracking, while an automated LLM-as-judge evaluation system delivers consistent, structured verdicts using Zod schema validation.",
+        technicalHighlights: [
+          "Architected real-time benchmark execution using Server-Sent Events (SSE) with 30-minute timeout safeguards for long-running evaluations",
+          "Engineered automated LLM-as-judge evaluation pipeline achieving 100% structured verdict output through Zod schema validation",
+          "Built concurrent model execution system supporting 10+ simultaneous LLM evaluations via OpenRouter API",
+          "Designed comprehensive leaderboard system with accuracy metrics, winner highlighting, and reproducible JSON result exports",
+          "Developed dual-interface platform with both web UI and CLI automation supporting research workflows and CI/CD integration"
+        ],
+        keyResults: [
+          "Enables concurrent evaluation of 10+ LLMs in a single benchmark run",
+          "Achieves 100% structured output compliance through Zod schema validation",
+          "Supports custom Q&A datasets for domain-specific model evaluation",
+          "Provides real-time progress tracking with SSE-based live updates",
+          "Delivers reproducible results through JSON export and leaderboard rankings"
+        ],
+        businessImpact: "CustomBench democratizes LLM evaluation by providing researchers and developers with a production-ready benchmarking platform. The tool accelerates model selection decisions, enables data-driven comparisons across providers, and integrates seamlessly into development workflows. It showcases expertise in real-time systems, API orchestration, and full-stack development with modern TypeScript patterns."
+      },
+      'bmauth': {
+        challenge: "Password-based authentication remains the weakest link in application security, with credential stuffing, phishing, and brute force attacks causing billions in annual damages. Implementing WebAuthn/FIDO2 biometric authentication is complex, requiring deep knowledge of cryptographic protocols, cross-device synchronization, and recovery mechanisms. Most developers lack the expertise or time to implement secure passwordless authentication from scratch.",
+        solution: "Created a production-grade biometric authentication framework for FastAPI that eliminates password-based attack vectors entirely. The system implements WebAuthn/FIDO2 standards with device-bound public-key cryptography, multi-layer verification combining biometrics with email PIN verification, and pluggable storage architecture supporting Supabase/Postgres backends. Published to PyPI for zero-config integration with any FastAPI application.",
+        technicalHighlights: [
+          "Implemented full WebAuthn/FIDO2 specification with device-bound public-key cryptography eliminating password attack vectors",
+          "Developed pluggable storage architecture with Supabase/Postgres backend and automatic database schema generation",
+          "Built multi-layer verification system combining device biometrics with email PIN verification for enhanced security",
+          "Engineered cross-device authentication via QR-based biometric verification and secure account recovery flows",
+          "Published to PyPI with comprehensive documentation enabling zero-config integration with any FastAPI application"
+        ],
+        keyResults: [
+          "Eliminates 100% of password-based attack vectors (credential stuffing, phishing, brute force)",
+          "Achieves zero-config integration through PyPI package with automatic schema generation",
+          "Supports cross-device authentication via secure QR-based biometric verification",
+          "Provides pluggable storage supporting both Supabase and direct PostgreSQL connections",
+          "Delivers production-ready security framework with comprehensive account recovery mechanisms"
+        ],
+        businessImpact: "BMAuth makes enterprise-grade passwordless authentication accessible to every FastAPI developer. By abstracting the complexity of WebAuthn/FIDO2 implementation, the framework enables rapid deployment of biometric authentication that meets modern security standards. The project demonstrates expertise in cryptographic protocols, security architecture, and Python package development for the open-source community."
+      },
+      'ai-data-breach-hub': {
+        challenge: "Security analysts lack access to comprehensive, real-time threat intelligence for understanding cybersecurity breach patterns across industries. Existing breach data is fragmented across multiple sources, inconsistently formatted, and often contains sensitive PII that limits its use. Organizations cannot effectively benchmark their security posture or identify emerging threat patterns without labor-intensive manual research.",
+        solution: "Led the design and delivery of an AI-powered data breach intelligence platform in collaboration with Amazon. The system aggregates and normalizes 3,100+ public breach and security incident reports annually, using GenAI pipelines for automatic classification and analysis. The platform features a privacy-safe AWS architecture ensuring 100% PII-free ingestion, with comprehensive analytics delivered through an interactive dashboard powered by Elasticsearch and Kibana.",
+        technicalHighlights: [
+          "Architected scalable AWS infrastructure using Lambda, S3, and Redis for high-throughput data processing and storage",
+          "Implemented GenAI classification pipelines using ScrapeGraphAI for intelligent breach categorization and threat analysis",
+          "Built polyglot storage layer with MongoDB for documents and Elasticsearch for real-time analytics and search",
+          "Designed privacy-safe data collection ensuring 100% PII-free ingestion with legally-sourced, ethical data acquisition",
+          "Created interactive Kibana dashboards enabling sector-specific threat analysis and trend visualization"
+        ],
+        keyResults: [
+          "Aggregates 3,100+ security incidents per year enabling comprehensive threat landscape analysis",
+          "Detected +42% ransomware growth in universities and +58% data-theft disclosures in hospitals through GenAI analysis",
+          "Maintains 100% PII-free data ingestion ensuring privacy compliance and ethical data handling",
+          "Delivers real-time analytics through Elasticsearch enabling instant threat pattern identification",
+          "Provides horizontal scalability supporting growing data volumes without architecture changes"
+        ],
+        businessImpact: "This platform transforms how security teams understand and respond to the evolving threat landscape. By providing real-time, AI-powered breach intelligence, organizations can make data-driven security decisions and benchmark their exposure against industry peers. The project demonstrates expertise in cloud architecture, GenAI applications, and building production data pipelines for enterprise security use cases."
+      },
       'notion-rag-cli': {
         challenge: "Notion's built-in AI feature is expensive and limited, costing users significant money for basic AI-powered information retrieval. Users struggle to leverage their Notion knowledge base for intelligent queries without paying premium fees for Notion AI. Traditional approaches require complex setup, manual data processing, and lack integration between personal knowledge management systems and modern AI capabilities. There's a gap between having valuable information in Notion and being able to query it intelligently using AI in a cost-effective way.",
         solution: "Developed a comprehensive command-line tool that transforms Notion pages into a powerful RAG (Retrieval-Augmented Generation) system using Gemini 2.5 Flash-Lite Preview. The tool seamlessly extracts content from Notion, processes it through advanced embedding generation, stores it in ChromaDB for efficient vector search, and provides intelligent querying capabilities through sophisticated prompt engineering with real-time cost tracking.",

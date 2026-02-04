@@ -5,7 +5,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.18-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Bun](https://img.shields.io/badge/Bun-1.3.5-000000?style=for-the-badge&logo=bun&logoColor=white)](https://bun.sh/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.30.0-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.31.0-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
 A high-performance, fully customizable developer portfolio built with **Next.js 16**, **TypeScript**, and **Tailwind CSS**. Features professional animations, mobile-first responsive design, and automated CI/CD deployment.
 
@@ -29,6 +29,7 @@ A high-performance, fully customizable developer portfolio built with **Next.js 
 
 ### 📱 **User Experience**
 - **Interactive Navigation**: Live drag preview for mobile carousels
+- **Clickable Skills**: Tech stack badges on project pages link directly to skill detail pages
 - **Smart Contact System**: Platform-specific email client integration
 - **Progressive Enhancement**: Desktop features that gracefully degrade on mobile
 - **Accessibility**: WCAG compliant with keyboard navigation and screen reader support
@@ -154,6 +155,7 @@ Update `data/skills.ts` with your technical expertise:
 const skills: Skill[] = [
   {
     name: 'Your Skill',
+    slug: 'your-skill', // URL-friendly identifier (auto-generated pattern below)
     category: 'Programming Languages', // or 'Frameworks', 'Tools', etc.
     proficiency: 'Advanced', // Beginner, Intermediate, Advanced, Expert
     experience: '3+ years',
@@ -162,6 +164,14 @@ const skills: Skill[] = [
   }
 ]
 ```
+
+**Slug Pattern**: Skill slugs follow a simple convention - lowercase with slashes and spaces replaced by hyphens:
+- `Tailwind CSS` → `tailwind-css`
+- `Next.js` → `next.js`
+- `HTML/CSS` → `html-css`
+- `C++` → `c++`
+
+This pattern is automatically applied when clicking skill badges on project pages.
 
 ### 4. Blog Posts
 
