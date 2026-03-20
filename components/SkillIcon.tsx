@@ -23,7 +23,6 @@ import {
   SiFirebase,
   SiVite,
   SiLinux,
-  SiTableau,
   SiPlotly,
   SiOpencv,
   SiScikitlearn,
@@ -35,13 +34,9 @@ import {
   SiRadixui,
   SiLucide,
   SiSocketdotio,
-  SiAdobeacrobatreader,
   SiNotion,
   SiPytest,
   SiGooglegemini,
-  SiAmazonwebservices,
-  SiAmazons3,
-  SiAwslambda,
   SiRedis,
   SiMongodb,
   SiElasticsearch,
@@ -51,6 +46,7 @@ import {
   SiZod
 } from 'react-icons/si'
 import { FaYahoo } from 'react-icons/fa'
+import { FaAws, FaChartBar, FaFilePdf, FaCloud, FaServer } from 'react-icons/fa6'
 import { FcScatterPlot } from 'react-icons/fc'
 import { BiSolidDashboard } from 'react-icons/bi'
 import { PiMicrosoftExcelLogoFill } from 'react-icons/pi'
@@ -92,7 +88,6 @@ const iconComponents: Record<string, ComponentType<{ size?: number; className?: 
   SiFirebase,
   SiVite,
   SiLinux,
-  SiTableau,
   SiPlotly,
   SiOpencv,
   SiScikitlearn,
@@ -105,14 +100,15 @@ const iconComponents: Record<string, ComponentType<{ size?: number; className?: 
   SiRadixui,
   SiLucide,
   SiSocketdotio,
-  SiAdobeacrobatreader,
   SiNotion,
   SiPytest,
   SiGooglegemini,
-  SiAmazonwebservices,
-  SiAmazons3,
-  SiAwslambda,
   SiRedis,
+  SiTableau: FaChartBar,
+  SiAdobeacrobatreader: FaFilePdf,
+  SiAmazonwebservices: FaAws,
+  SiAmazons3: FaCloud,
+  SiAwslambda: FaServer,
   SiMongodb,
   SiElasticsearch,
   SiKibana,

@@ -15,6 +15,14 @@ export default function VantaNet() {
 
   useEffect(() => {
     if (!vantaEffect && ref.current) {
+      const origSetValues = THREE.Material.prototype.setValues
+      THREE.Material.prototype.setValues = function (values: Record<string, unknown>) {
+        if (values && values.vertexColors === undefined) {
+          delete values.vertexColors
+        }
+        origSetValues.call(this, values)
+      }
+
       setVantaEffect(
         NET({
           THREE,                  // pass in THREE

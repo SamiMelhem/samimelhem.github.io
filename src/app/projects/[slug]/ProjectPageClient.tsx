@@ -7,7 +7,7 @@ import { Project } from '../../../../data/projects'
 import ContactIcons from '../../../../components/ContactIcons'
 import NotionRagCliIcon from '../../../../components/NotionRagCliIcon'
 import CustomBenchIcon from '../../../../components/CustomBenchIcon'
-import BMAuthIcon from '../../../../components/BMAuthIcon'
+import PyAuthIcon from '../../../../components/PyAuthIcon'
 import { FaExternalLinkAlt as ExternalLink, FaGithub as Github, FaArrowLeft as ArrowLeft, FaCalendarAlt as Calendar, FaBullseye as Target, FaCog as Cog, FaChartBar as BarChart3, FaCheckCircle as CheckCircle } from 'react-icons/fa'
 
 // Converts tech names to skill slugs: lowercase, replace slashes and spaces with hyphens
@@ -106,7 +106,7 @@ export default function ProjectPageClient({ project }: ProjectPageClientProps) {
             </div>
             
             {/* Project Image */}
-            {project.image && !['NotionRagCliIcon', 'CustomBenchIcon', 'BMAuthIcon'].includes(project.image) && (
+            {project.image && !['NotionRagCliIcon', 'CustomBenchIcon', 'PyAuthIcon'].includes(project.image) && (
               <div className="relative rounded-xl overflow-hidden shadow-2xl">
                 <Image
                   src={project.image}
@@ -127,9 +127,9 @@ export default function ProjectPageClient({ project }: ProjectPageClientProps) {
                 <CustomBenchIcon />
               </div>
             )}
-            {project.image === 'BMAuthIcon' && (
+            {project.image === 'PyAuthIcon' && (
               <div className="relative rounded-xl overflow-hidden shadow-2xl w-full h-80 flex items-center justify-center">
-                <BMAuthIcon />
+                <PyAuthIcon />
               </div>
             )}
           </div>
@@ -172,24 +172,24 @@ function ProjectContent({ project }: { project: Project }) {
         ],
         businessImpact: "CustomBench democratizes LLM evaluation by providing researchers and developers with a production-ready benchmarking platform. The tool accelerates model selection decisions, enables data-driven comparisons across providers, and integrates seamlessly into development workflows. It showcases expertise in real-time systems, API orchestration, and full-stack development with modern TypeScript patterns."
       },
-      'bmauth': {
-        challenge: "Password-based authentication remains the weakest link in application security, with credential stuffing, phishing, and brute force attacks causing billions in annual damages. Implementing WebAuthn/FIDO2 biometric authentication is complex, requiring deep knowledge of cryptographic protocols, cross-device synchronization, and recovery mechanisms. Most developers lack the expertise or time to implement secure passwordless authentication from scratch.",
-        solution: "Created a production-grade biometric authentication framework for FastAPI that eliminates password-based attack vectors entirely. The system implements WebAuthn/FIDO2 standards with device-bound public-key cryptography, multi-layer verification combining biometrics with email PIN verification, and pluggable storage architecture supporting Supabase/Postgres backends. Published to PyPI for zero-config integration with any FastAPI application.",
+      'pyauth': {
+        challenge: "Authentication in Python is powerful but fragmented. Many libraries solve one part of the problem well, but few provide a cohesive developer experience across credentials, OAuth, session management, adapters, verification flows, and framework integration. Features like passkeys, magic links, OTP, and organization workflows are either missing, split across multiple packages, or require significant custom glue code.",
+        solution: "Built PyAuth, a framework-agnostic authentication library for Python that delivers a Better Auth-style developer experience. The system provides a shared core architecture with typed Pydantic v2 configuration, an async SQLAlchemy adapter, and a unified error model. Ships with credentials (Argon2id), session management, OAuth2 (Google/GitHub with PKCE), email verification, and both cookie and bearer transport — all mountable via a single FastAPI router.",
         technicalHighlights: [
-          "Implemented full WebAuthn/FIDO2 specification with device-bound public-key cryptography eliminating password attack vectors",
-          "Developed pluggable storage architecture with Supabase/Postgres backend and automatic database schema generation",
-          "Built multi-layer verification system combining device biometrics with email PIN verification for enhanced security",
-          "Engineered cross-device authentication via QR-based biometric verification and secure account recovery flows",
-          "Published to PyPI with comprehensive documentation enabling zero-config integration with any FastAPI application"
+          "Architected framework-agnostic auth core with composable strategies and a standardized adapter interface across data layers",
+          "Implemented async SQLAlchemy adapter for SQLite and PostgreSQL with shared User, Account, Session, and Verification schema",
+          "Built OAuth2 authorization-code flows for Google and GitHub with PKCE, state validation, and cautious account linking",
+          "Developed session management with high-entropy opaque tokens, hashed token storage, and secure cookie defaults",
+          "Created PyAuthRouter with FastAPI integration supporting mountable auth endpoints, bearer/cookie dependencies, and dev helpers"
         ],
         keyResults: [
-          "Eliminates 100% of password-based attack vectors (credential stuffing, phishing, brute force)",
-          "Achieves zero-config integration through PyPI package with automatic schema generation",
-          "Supports cross-device authentication via secure QR-based biometric verification",
-          "Provides pluggable storage supporting both Supabase and direct PostgreSQL connections",
-          "Delivers production-ready security framework with comprehensive account recovery mechanisms"
+          "Delivers unified auth covering credentials, OAuth, sessions, and email verification in a single library",
+          "Supports both cookie-based and JWT bearer transport with framework-agnostic abstractions",
+          "Provides typed Pydantic v2 configuration for hashing, JWTs, sessions, cookies, OAuth, and mailer behavior",
+          "Enables zero-config local development via PyAuthSettings.for_development() and built-in ConsoleMailer",
+          "Ships production-ready FastAPI adapter with mountable router and current-user dependency injection"
         ],
-        businessImpact: "BMAuth makes enterprise-grade passwordless authentication accessible to every FastAPI developer. By abstracting the complexity of WebAuthn/FIDO2 implementation, the framework enables rapid deployment of biometric authentication that meets modern security standards. The project demonstrates expertise in cryptographic protocols, security architecture, and Python package development for the open-source community."
+        businessImpact: "PyAuth unifies Python authentication into a single cohesive library, eliminating the need to stitch together multiple packages. By providing secure defaults for Argon2id hashing, opaque session tokens, and OAuth2 with PKCE, it enables developers to ship production-grade auth rapidly. The project demonstrates expertise in security architecture, protocol implementation, adapter patterns, and Python library design for the open-source ecosystem."
       },
       'ai-data-breach-hub': {
         challenge: "Security analysts lack access to comprehensive, real-time threat intelligence for understanding cybersecurity breach patterns across industries. Existing breach data is fragmented across multiple sources, inconsistently formatted, and often contains sensitive PII that limits its use. Organizations cannot effectively benchmark their security posture or identify emerging threat patterns without labor-intensive manual research.",

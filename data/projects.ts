@@ -36,22 +36,22 @@ const projects: Project[] = [
     ]
   },
   {
-    slug: 'bmauth',
-    title: 'BMAuth',
-    description: 'Biometric Authentication System for FastAPI applications, providing the most secure authentication system to any developer.',
-    longDescription: 'A production-grade biometric authentication framework for FastAPI based on WebAuthn/FIDO2 principles. The system replaces passwords with device-bound public-key cryptography and multi-layer verification (biometrics + email PINs), featuring pluggable storage architecture with Supabase/Postgres backend and advanced cross-device authentication flows.',
-    image: 'BMAuthIcon',
-    techs: ['Python', 'FastAPI', 'HTML/CSS', 'WebAuthn/FIDO2', 'Supabase', 'PostgreSQL'],
-    github: 'https://github.com/SamiMelhem/BMAuth',
+    slug: 'pyauth',
+    title: 'PyAuth',
+    description: 'A framework-agnostic authentication library for Python, delivering a Better Auth-style developer experience with credentials, OAuth, sessions, and email verification.',
+    longDescription: 'A production-grade authentication library for Python focused on delivering a Better Auth-style developer experience. PyAuth provides a shared core architecture with framework-agnostic auth flows covering credentials (Argon2id), sessions (opaque token storage), OAuth2 (Google/GitHub with PKCE), email verification, and bearer/cookie transport. Ships with an async SQLAlchemy adapter and FastAPI as the first integration, with Litestar, Flask, and Django Ninja planned.',
+    image: 'PyAuthIcon',
+    techs: ['Python', 'FastAPI', 'SQLAlchemy', 'Pydantic', 'PostgreSQL', 'JWT', 'OAuth2'],
+    github: 'https://github.com/SamiMelhem/PyAuth',
     featured: true,
     openSource: true,
     date: 'October 2025 - Present',
     achievements: [
-      'Built production-grade WebAuthn/FIDO2 biometric auth framework eliminating password-based attack vectors',
-      'Developed pluggable storage architecture with Supabase/Postgres backend and automatic schema generation',
-      'Implemented multi-layer verification combining device biometrics with email PIN verification',
-      'Designed cross-device authentication via QR-based biometric verification and secure account recovery',
-      'Published to PyPI enabling zero-config integration with any FastAPI application'
+      'Architected framework-agnostic auth core with typed Pydantic v2 configuration and unified error model',
+      'Implemented async SQLAlchemy adapter supporting SQLite and PostgreSQL with shared User/Account/Session/Verification schema',
+      'Built OAuth2 flows for Google and GitHub with PKCE, state validation, and cautious account linking',
+      'Developed session management with high-entropy opaque tokens, hashed storage, and secure cookie defaults',
+      'Shipped FastAPI integration with mountable router, bearer/cookie auth dependencies, and development helpers'
     ]
   },
   {

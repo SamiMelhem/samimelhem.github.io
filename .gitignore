@@ -28,6 +28,13 @@
 # newsletter automation (private)
 /.newsletter-automation/
 
+# personal documents (Sami-specific; not for public forks — keep copies locally)
+public/documents/career_info.md
+public/documents/sami_melhem.pdf
+public/documents/sami_melhem_cv.pdf
+public/documents/sami_melhem_research_paper_1.pdf
+public/documents/sami_melhem_research_paper_2.pdf
+
 # debug
 npm-debug.log*
 yarn-debug.log*

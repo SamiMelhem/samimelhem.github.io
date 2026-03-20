@@ -41,7 +41,7 @@ const skillsData: Omit<Skill, 'experience'>[] = [
     proficiency: 'Advanced',
     description: 'My go-to language for data science, machine learning, and backend development. Specialized in data processing, conversational AI systems, and environmental data pipelines with extensive experience across research, industry, and academic settings.',
     startYear: 2021,
-    projects: ['bmauth', 'ai-data-breach-hub', 'av-simulator', 'financial-modeling-tool', 'notion-rag-cli'],
+    projects: ['pyauth', 'ai-data-breach-hub', 'av-simulator', 'financial-modeling-tool', 'notion-rag-cli'],
     icon: 'SiPython',
     color: '#3776ab',
     internships: 4,
@@ -223,7 +223,7 @@ Successfully integrated multiple browser APIs including fetch for HTTP requests,
     proficiency: 'Advanced',
     description: 'Foundation web technologies with emphasis on modern layout systems, animations, and dynamic theming. Specialized in CSS Grid layouts, utility-first styling with Tailwind CSS, and creating engaging user experiences through smooth animations and transitions.',
     startYear: 2021,
-    projects: ['bmauth', 'save-gas', 'exped-browser', 'panda-express-pos'],
+    projects: ['pyauth', 'save-gas', 'exped-browser', 'panda-express-pos'],
     icon: 'SiHtml5',
     color: '#e34f26',
     researchRoles: 1,
@@ -694,7 +694,7 @@ Developed an integrated Flask and Selenium application for automated web scrapin
     proficiency: 'Intermediate',
     description: 'Modern Python web framework for building APIs with Uvicorn server deployment. Used for creating high-performance LLM pipelines processing 500+ PDFs weekly and startup evaluation systems.',
     startYear: 2024,
-    projects: ['bmauth', 'ai-data-breach-hub'],
+    projects: ['pyauth', 'ai-data-breach-hub'],
     icon: 'SiFastapi',
     color: '#009688',
     jobs: 1,
@@ -849,7 +849,7 @@ Solved complex timing challenges when scraping websites with dynamic content loa
     proficiency: 'Intermediate',
     description: 'My database of choice for complex applications. Extensive experience with relational database design, foreign key relationships, and business logic implementation for commercial POS systems.',
     startYear: 2024,
-    projects: ['bmauth', 'panda-express-pos'],
+    projects: ['pyauth', 'panda-express-pos'],
     icon: 'SiPostgresql',
     color: '#336791',
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
@@ -2827,7 +2827,7 @@ Designed GitHub Actions workflows for the AI Data Breach Hub that automate pytes
     proficiency: 'Intermediate',
     description: 'Modern passwordless authentication standard using public-key cryptography. Experienced in implementing biometric authentication systems that eliminate password-based attack vectors.',
     startYear: 2025,
-    projects: ['bmauth'],
+    projects: ['pyauth'],
     icon: 'WebAuthnIcon',
     color: '#3DDC84',
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
@@ -2838,18 +2838,18 @@ Designed GitHub Actions workflows for the AI Data Breach Hub that automate pytes
 - **Cross-Device Authentication**: Enabling QR-code based authentication flows for accessing accounts from new devices
 - **Registration and Authentication Ceremonies**: Building separate workflows for credential registration and subsequent authentication
 
-**Advanced WebAuthn Implementation Patterns:**
-- **BMAuth Framework Architecture**: Designing a production-ready FastAPI authentication system built entirely on WebAuthn/FIDO2 principles
-- **Seamless UX Design**: Creating separate windows and optimal workflows between server and user for intuitive registration and login experiences
-- **Multi-Layer Verification**: Combining device-bound cryptography with additional verification layers for enhanced security
+**Advanced Authentication Implementation Patterns:**
+- **PyAuth Framework Architecture**: Designing a framework-agnostic Python authentication library with composable strategies covering credentials, OAuth2, sessions, and email verification
+- **Adapter Pattern Design**: Building a standardized adapter interface across SQLAlchemy and future data layers for clean separation of concerns
+- **Secure Defaults**: Implementing Argon2id password hashing, high-entropy opaque session tokens, and OAuth2 with PKCE out of the box
 - **Browser Compatibility**: Handling WebAuthn support across different browsers and ensuring graceful fallbacks
 - **Biometric Compatibility**: Optimizing biometric authentication flows across diverse devices and operating systems
 - **Attack Surface Reduction**: Eliminating phishing, credential stuffing, and password reuse vulnerabilities through passwordless design
 
 **Complex Problem-Solving Examples:**
 
-*BMAuth Production Framework:*
-Built a comprehensive WebAuthn/FIDO2 authentication framework for FastAPI that completely replaces traditional passwords with device-bound cryptographic keys. The system supports both platform authenticators (enabling users to authenticate with fingerprint or face recognition on their primary devices) and cross-device flows (allowing users to authenticate on new devices by scanning QR codes from their registered device). Designed intuitive registration and authentication ceremonies that happen in separate, dedicated windows, creating optimal workflows that guide users through the cryptographic processes without exposing technical complexity. The framework significantly reduces security attack surfaces by eliminating phishing vulnerabilities (no credentials to steal), credential reuse attacks (each device has unique cryptographic keys), and password-based breaches entirely.
+*PyAuth Authentication Library:*
+Built a comprehensive authentication library for Python that provides a Better Auth-style developer experience across multiple frameworks. The system covers the full auth lifecycle — credentials with Argon2id hashing, database-backed sessions with hashed opaque tokens, OAuth2 authorization-code flows for Google and GitHub with PKCE and state validation, email verification with purpose-scoped single-use tokens, and both cookie and JWT bearer transport. Designed a framework-agnostic core with thin framework bindings, shipping FastAPI as the first integration with a mountable router and current-user dependency injection. The library includes typed Pydantic v2 configuration, a unified error model, and development helpers like auto-generated JWT keys and a ConsoleMailer.
 
 *Seamless Biometric Authentication UX:*
 Tackled the challenge of making WebAuthn's complex cryptographic operations feel seamless to end users. Created registration flows that guide users through setting up biometric authentication with clear instructions and visual feedback. Implemented authentication workflows that leverage device biometrics as the primary authentication method, providing instant access without typing passwords while maintaining security through device-bound private keys. Addressed browser compatibility challenges by detecting WebAuthn support, handling different browser implementations, and ensuring consistent user experiences across Chrome, Firefox, Safari, and Edge. The result is a passwordless authentication system that delivers both superior security and improved user experience compared to traditional password-based authentication.
@@ -2867,7 +2867,7 @@ Tackled the challenge of making WebAuthn's complex cryptographic operations feel
     proficiency: 'Intermediate',
     description: 'Open-source Firebase alternative with Postgres backend. Experienced in building pluggable storage architectures with automatic schema generation and lifecycle management.',
     startYear: 2025,
-    projects: ['bmauth'],
+    projects: ['pyauth'],
     icon: 'SupabaseIcon',
     color: '#3ECF8E',
     technicalDeepDive: `**Core Concepts I'm Proficient In:**
@@ -2876,7 +2876,7 @@ Tackled the challenge of making WebAuthn's complex cryptographic operations feel
 - **Authentication Service**: Experience with Supabase Auth for secure user authentication (solid features with some limitations)
 - **Storage Service**: Leveraging Supabase Storage for reliable file storage and retrieval operations
 - **Row-Level Security**: Implementing access policies and security rules ensuring appropriate users have correct permissions
-- **Client Development**: Building custom Supabase clients for framework integration (BMAuth Supabase client)
+- **Client Development**: Building custom Supabase clients for framework integration (PyAuth storage adapter)
 
 **Advanced Supabase Implementation Patterns:**
 - **Pluggable Storage Architecture**: Designing storage backends that work with Supabase while supporting fallback options
@@ -2888,11 +2888,11 @@ Tackled the challenge of making WebAuthn's complex cryptographic operations feel
 
 **Complex Problem-Solving Examples:**
 
-*BMAuth Supabase Storage Backend:*
-Developed a comprehensive Supabase/Postgres storage backend for the BMAuth authentication framework that handles the complete authentication lifecycle. Built automatic schema generation that creates necessary tables (users, challenges, sessions, verification_codes) on first connection, enabling zero-config deployment where the system self-initializes its database structure. Implemented lifecycle management for WebAuthn credentials, authentication challenges, active sessions, and recovery verification codes, ensuring proper data retention and cleanup. Created debug endpoints that provide observability into authentication state during development, helping developers troubleshoot registration and login flows. The storage backend includes intelligent fallbacks - if Supabase isn't configured, the system seamlessly uses in-memory storage for development and testing.
+*PyAuth Storage Adapter:*
+Developed an async SQLAlchemy adapter for the PyAuth authentication library that handles the complete authentication lifecycle across SQLite and PostgreSQL deployments. Built a shared schema model covering User, Account, Session, and Verification entities, with automatic table management and zero-config deployment. Implemented lifecycle management for credentials, sessions, and verification tokens, ensuring proper data retention and cleanup. The adapter pattern enables future expansion to additional data layers while maintaining a consistent interface.
 
 *Security and Permissions Architecture:*
-Implemented row-level security policies in Supabase early in the BMAuth development process to ensure users can only access their own authentication data. Configured security rules that prevent users from viewing other accounts' credentials, reading other users' sessions, or accessing verification codes not intended for them. Tested both Supabase Auth (found it solid but with limitations for advanced use cases) and Supabase Storage (reliable for file retrieval operations). Built the Supabase client integration to be straightforward - the client creation process proved manageable, allowing BMAuth to offer Supabase as a production-ready storage option alongside in-memory development mode.
+Implemented secure defaults throughout the PyAuth library to ensure authentication data is properly protected. Configured hashed session token storage so raw tokens are never persisted, secure cookie defaults with HttpOnly and Secure flags, and purpose-scoped verification tokens with automatic expiry. The adapter interface enforces proper data isolation, and the Supabase integration option adds row-level security policies ensuring users can only access their own authentication data.
 
 **Areas for Continued Growth:**
 - **Advanced Authentication**: Exploring Supabase Auth's full capabilities for building sophisticated authentication systems
@@ -3019,6 +3019,51 @@ Built CustomBench's entire data validation workflow around Zod schemas, ensuring
 - **Database Integration**: Exploring how to build fast schemas that work across SQL and NoSQL contexts for comprehensive type safety
 - **Complex Validations**: Mastering discriminated unions, recursive schemas, and conditional validation for complex data structures
 - **Schema Documentation**: Learning patterns for generating API documentation and TypeScript types automatically from Zod schemas`
+  },
+
+  // Security & Auth
+  {
+    name: 'JWT',
+    slug: 'jwt',
+    category: 'Tools & Platforms',
+    proficiency: 'Advanced',
+    description: 'JSON Web Tokens for stateless authentication and authorization. Implemented access/refresh token flows, secure signing with RS256/HS256, and bearer transport in production auth systems.',
+    startYear: 2025,
+    projects: ['pyauth'],
+    icon: 'TbFileText',
+    color: '#d63aff',
+    technicalDeepDive: `**Core Concepts I'm Proficient In:**
+- **Token Structure & Claims**: Deep understanding of JWT header, payload, and signature components, including standard claims (iss, sub, exp, iat, aud, jti) and custom claims for role-based access control
+- **Signing Algorithms**: Implementation of both symmetric (HS256) and asymmetric (RS256/ES256) signing strategies, with understanding of when each is appropriate for single-service vs. distributed architectures
+- **Access & Refresh Token Patterns**: Design of dual-token architectures where short-lived access tokens (15-30 min) provide stateless auth while long-lived refresh tokens enable session continuity without re-authentication
+- **Bearer Transport**: Implementation of RFC 6750 bearer token transport via Authorization headers, with proper extraction, validation, and error handling in API middleware
+- **Token Lifecycle Management**: Handling token issuance, validation, expiration, refresh rotation, and revocation strategies including token blacklisting and database-backed revocation checks
+- **Security Best Practices**: Application of OWASP guidelines for JWT security including proper algorithm validation, audience restriction, issuer verification, and protection against algorithm confusion attacks
+
+**Advanced Implementation Patterns:**
+- **Stateless vs. Stateful Trade-offs**: Strategic decision-making between pure stateless JWT auth and hybrid approaches that combine JWTs with server-side session validation for revocation support
+- **Key Management**: Secure generation, rotation, and storage of signing keys, including development helpers that auto-generate keys for local environments
+- **Claims-Based Authorization**: Building middleware that extracts and validates JWT claims for fine-grained permission checks beyond simple authentication
+- **Framework Integration**: Creating dependency-injectable bearer auth providers that integrate cleanly with FastAPI, enabling protected route declarations with minimal boilerplate
+- **Token Refresh Rotation**: Implementing refresh token rotation where each refresh issues a new refresh token, invalidating the previous one to limit the window of token theft
+
+**Complex Problem-Solving Examples:**
+
+*PyAuth Bearer Transport Implementation:*
+Designed and implemented the JWT bearer transport layer for the PyAuth authentication library, supporting both cookie-based and bearer token authentication in a single framework-agnostic system. The challenge was creating a token system that works alongside opaque session tokens without conflicting — PyAuth uses database-backed opaque tokens as the primary session mechanism, with JWTs as an optional stateless transport for API-to-API communication. Implemented RS256 signing with configurable key pairs, standard claim validation (expiry, issuer, audience), and a FastAPI dependency (\`get_current_user_bearer()\`) that extracts and validates bearer tokens from the Authorization header. The system includes \`PyAuthSettings.for_development()\` which auto-generates JWT signing keys so developers can start building immediately without manual key setup.
+
+*Secure Token Configuration Architecture:*
+Built a typed Pydantic v2 configuration system for JWT settings within PyAuth that enforces secure defaults while remaining fully customizable. The configuration covers signing algorithm selection, key material (supporting both raw secrets and PEM-encoded key pairs), token expiry durations, issuer and audience claims, and refresh token behavior. Development mode auto-generates ephemeral keys and logs warnings about non-production configuration, while production mode requires explicit key configuration and validates that keys meet minimum security requirements. This approach ensures developers cannot accidentally ship insecure JWT configurations.
+
+*Dual Transport Authentication:*
+Solved the architectural challenge of supporting both cookie-based session auth and JWT bearer auth within a single authentication library. Cookie transport uses opaque session tokens with hashed database storage for maximum security and revocability, while bearer transport uses signed JWTs for stateless API authentication. Both transports resolve to the same user model through PyAuth's \`get_current_user()\` and \`get_current_user_bearer()\` dependencies, allowing applications to use whichever transport fits their use case — browser-based apps use cookies, while API clients and service-to-service calls use bearer tokens.
+
+**Areas for Continued Growth:**
+- **JWE (JSON Web Encryption)**: Learning encrypted token patterns for scenarios where token payload confidentiality is required beyond just integrity verification
+- **Distributed Key Management**: Exploring JWKS (JSON Web Key Sets) endpoints and key rotation strategies for microservice architectures
+- **Token Binding**: Investigating DPoP (Demonstrating Proof of Possession) and other token binding mechanisms to prevent token theft and replay attacks
+- **Performance Optimization**: Profiling JWT validation overhead at scale and exploring caching strategies for signature verification in high-throughput systems
+- **Standards Evolution**: Following developments in OAuth 2.1, Transaction Tokens, and emerging standards that build on JWT foundations`
   },
 
 ]

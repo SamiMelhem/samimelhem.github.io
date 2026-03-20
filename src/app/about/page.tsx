@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaDownload, FaGraduationCap, FaCode, FaBrain, FaFileAlt, FaMusic, FaDumbbell, FaPlane, FaMapMarkerAlt, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaGraduationCap, FaCode, FaBrain, FaFileAlt, FaMusic, FaDumbbell, FaPlane, FaMapMarkerAlt, FaExternalLinkAlt } from 'react-icons/fa'
 import { GiTennisRacket } from 'react-icons/gi'
 import ContactIcons from '../../../components/ContactIcons'
 
@@ -56,7 +56,7 @@ export default function AboutPage() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 1.1 }}
             >
-              Entering my senior year, my focus has shifted toward specialization and long‑term impact. I returned to work with a startup, built and deployed developer tools such as my Notion RAG CLI, and launched my personal website to showcase my work. In parallel, I began creating and contributing to open‑source projects and continued developing a startup idea that originated from my work in the Aggie Data Science Club. Today, I am focused on building scalable internal tools, small language model applications, and AI infrastructure, with the goal of creating practical, user‑centered software that improves productivity and delivers meaningful real‑world impact.
+              Entering my senior year, my focus has shifted toward specialization and long‑term impact. I returned to work with a startup, built and deployed developer tools such as my Notion RAG CLI, and launched my personal website to showcase my work. In parallel, I began creating and contributing to open‑source projects and continued developing a large project that originated from my work in the Aggie Data Science Club. Today, I am focused on building scalable internal tools, small language model applications, and AI infrastructure, with the goal of creating practical, user‑centered software that improves productivity and delivers meaningful real‑world impact.
             </motion.p>
           </motion.section>
 

@@ -49,7 +49,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-                {`Senior at Texas A&M University majoring in Computer Science with an emphasis in Data Science, and minoring in Cybersecurity • Principal Clarinet • AI & Data Science Enthusiast`}
+                {`Incoming SWE at Visa, BS in Computer Science at Texas A&M • Builder • Composer`}
             </motion.p>
         </div>
         {/* CTA Buttons */}

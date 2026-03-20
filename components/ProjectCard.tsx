@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import NotionRagCliIcon from './NotionRagCliIcon'
 import CustomBenchIcon from './CustomBenchIcon'
-import BMAuthIcon from './BMAuthIcon'
+import PyAuthIcon from './PyAuthIcon'
 
 export interface ProjectCardProps {
   title: string
@@ -49,7 +49,7 @@ export default function ProjectCard({
         href={href}
         className="flex flex-col flex-1 transition-transform group-hover:scale-[1.02] relative z-10"
       >
-        {image && !['NotionRagCliIcon', 'CustomBenchIcon', 'BMAuthIcon'].includes(image) && (
+        {image && !['NotionRagCliIcon', 'CustomBenchIcon', 'PyAuthIcon'].includes(image) && (
           <div className="relative h-36 sm:h-48 w-full flex-shrink-0">
             <Image
               src={image}
@@ -72,9 +72,9 @@ export default function ProjectCard({
             <CustomBenchIcon />
           </div>
         )}
-        {image === 'BMAuthIcon' && (
+        {image === 'PyAuthIcon' && (
           <div className="relative h-36 sm:h-48 w-full flex-shrink-0 overflow-hidden">
-            <BMAuthIcon />
+            <PyAuthIcon />
           </div>
         )}
         <div className="p-4 sm:p-6 flex flex-col flex-1 justify-between min-h-0 bg-gray-900/70">

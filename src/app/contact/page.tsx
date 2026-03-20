@@ -5,7 +5,8 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { MdEmail, MdSend, MdContentCopy, MdCheck, MdArrowDropDown } from 'react-icons/md'
-import { SiLinkedin, SiGithub, SiInstagram, SiGmail, SiApple } from 'react-icons/si'
+import { SiGithub, SiInstagram, SiGmail, SiApple } from 'react-icons/si'
+import { FaLinkedin } from 'react-icons/fa6'
 import { FaUser, FaBuilding, FaEnvelope, FaComment, FaExternalLinkAlt, FaYahoo } from 'react-icons/fa'
 
 export default function ContactPage() {
@@ -188,7 +189,7 @@ ${body}`
     {
         href: 'https://www.linkedin.com/in/sami-melhem/',
         label: 'LinkedIn',
-        Icon: SiLinkedin,
+        Icon: FaLinkedin,
         external: true,
     },
     {
