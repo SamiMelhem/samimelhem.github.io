@@ -143,7 +143,7 @@ export default function AboutPage() {
               >
                 <h3 className="font-semibold text-white text-lg">Texas A&M University</h3>
                 <p className="text-gray-300 mb-2">
-                  <strong>Master of Science in Computer Science</strong> (Expected December 2027)<br/>
+                  <strong>Master of Science in Computer Science</strong> (Expected May 2027)<br/>
                   <strong>GPA:</strong> 4.0/4.0<br/>
                   <strong>Bachelor of Science in Computer Science</strong> (Expected May 2026)<br/>
                   <strong>Minor:</strong> Cybersecurity | <strong>Emphasis:</strong> Data Science | <strong>GPA:</strong> 3.8/4.0
