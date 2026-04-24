@@ -392,98 +392,199 @@ export default function AboutPage() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              I&apos;ve been featured in various media outlets and speaking engagements, sharing insights on AI in education 
-              and innovative learning methodologies that bridge technology and pedagogy.
+              I&apos;ve been featured in various media outlets and speaking engagements, sharing insights on AI in education, 
+              engineering innovation, entrepreneurship, and the performing arts.
             </motion.p>
             
-            <motion.div 
-              className="space-y-4"
+            {/* ── Featured Articles ── */}
+            {/* To add a new article, copy one of the motion.div blocks below and update the title, source, date, description, and link. */}
+            <motion.div
+              className="mb-8"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              {/* Nature Feature */}
-              <motion.div 
-                className="bg-gray-700/50 rounded-lg p-4 border-l-4 border-blue-400"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.4, delay: 0.5 }}
-              >
-                <h3 className="font-semibold text-white text-lg mb-2">Featured in Nature - AI in Education</h3>
-                <p className="text-gray-300 text-sm mb-2">
-                  <strong>Nature</strong> (March 2025)
-                </p>
-                <p className="text-gray-300 text-sm mb-3">
-                  Featured in Nature&apos;s comprehensive article on how students are creatively using ChatGPT and AI tools 
-                  for learning, highlighting innovative approaches to AI-assisted education and the &quot;priming&quot; methodology.
-                </p>
-                <a
-                  href="https://www.nature.com/articles/d41586-025-00621-2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm"
-                >
-                  <FaExternalLinkAlt className="group-hover:animate-pulse text-xs" />
-                  Read Article
-                </a>
-              </motion.div>
+              <h3 className="text-lg font-semibold text-gray-200 mb-4 flex items-center gap-2">
+                <FaFileAlt className="text-teal-400" />
+                Featured Articles
+              </h3>
 
-              {/* UIUC Speaking Engagement */}
-              <motion.div 
-                className="bg-gray-700/50 rounded-lg p-4 border-l-4 border-green-400"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.4, delay: 0.6 }}
-              >
-                <h3 className="font-semibold text-white text-lg mb-2">Public Speaking - University of Illinois Urbana-Champaign</h3>
-                <p className="text-gray-300 text-sm mb-2">
-                  <strong>UIUC Graduate Students</strong> (March 2024)
-                </p>
-                <p className="text-gray-300 text-sm mb-3">
-                  Presented to 100+ graduate students on practical AI applications in education, demonstrating the 
-                  &quot;priming&quot; methodology and innovative ways to leverage ChatGPT for academic success.
-                </p>
-                <a
-                  href="https://www.linkedin.com/posts/sami-melhem_aiineducation-chatgpt4-classprimer-activity-7171281188806881280-l2Ca"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors text-sm"
+              <div className="space-y-4">
+                {/* TAMU Student Affairs – Wind Symphony TMEA Selection (April 2026) */}
+                <motion.div
+                  className="bg-gray-700/50 rounded-lg p-4 border-l-4 border-red-400"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.4, delay: 0.5 }}
                 >
-                  <FaExternalLinkAlt className="group-hover:animate-pulse text-xs" />
-                  View Details
-                </a>
-              </motion.div>
+                  <h3 className="font-semibold text-white text-lg mb-2">Texas A&amp;M Wind Symphony Selected for 2027 TMEA Clinic/Convention</h3>
+                  <p className="text-gray-300 text-sm mb-2">
+                    <strong>Texas A&amp;M Division of Student Affairs</strong> (April 2026)
+                  </p>
+                  <p className="text-gray-300 text-sm mb-3">
+                    Quoted in the announcement of the Texas A&amp;M Wind Symphony&apos;s selection as a TMEA Invited Ensemble —
+                    one of only 29 ensembles across all levels in Texas chosen to perform at the nation&apos;s largest music educator
+                    gathering (30,000+ attendees). As a four-year member and Principal Clarinet, I reflected on the collaborative,
+                    passion-driven environment that made the ensemble&apos;s selection especially meaningful.
+                  </p>
+                  <a
+                    href="https://studentaffairs.tamu.edu/news/2026/04/21/texas-am-university-wind-symphony-selected-to-perform-for-the-2027-tmea-clinic-convention/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 text-red-400 hover:text-red-300 transition-colors text-sm"
+                  >
+                    <FaExternalLinkAlt className="group-hover:animate-pulse text-xs" />
+                    Read Article
+                  </a>
+                </motion.div>
 
-              {/* AI x Education Newsletter */}
-              <motion.div 
-                className="bg-gray-700/50 rounded-lg p-4 border-l-4 border-purple-400"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.4, delay: 0.7 }}
-              >
-                <h3 className="font-semibold text-white text-lg mb-2">Featured in AI x Education Newsletter</h3>
-                <p className="text-gray-300 text-sm mb-2">
-                  <strong>AI x Education Substack</strong> (February 2024)
-                </p>
-                <p className="text-gray-300 text-sm mb-3">
-                  Featured in the &quot;Efficiency vs Ethics of AI in Education&quot; newsletter, sharing insights on the 
-                  &quot;priming&quot; methodology and how students can effectively use AI tools for academic preparation 
-                  while maintaining authentic learning experiences.
-                </p>
-                <a
-                  href="https://aixeducation.substack.com/p/efficiency-vs-ethics-of-ai-in-education"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors text-sm"
+                {/* TAMU Engineering – Meloy Program Internships (February 2026) */}
+                <motion.div
+                  className="bg-gray-700/50 rounded-lg p-4 border-l-4 border-red-400"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.4, delay: 0.6 }}
                 >
-                  <FaExternalLinkAlt className="group-hover:animate-pulse text-xs" />
-                  Read Newsletter
-                </a>
-              </motion.div>
+                  <h3 className="font-semibold text-white text-lg mb-2">Meloy Program Summer Internships Offer Start-Up Experience</h3>
+                  <p className="text-gray-300 text-sm mb-2">
+                    <strong>Texas A&amp;M College of Engineering</strong> (February 2026)
+                  </p>
+                  <p className="text-gray-300 text-sm mb-3">
+                    Featured as one of the first members of the Meloy Engineering Innovation &amp; Entrepreneurship Program&apos;s
+                    inaugural internship cohort. The article highlights my summer internship at Momentum Technologies Inc.,
+                    where I developed a predictive software tool used to model mineral extraction plant output for client presentations,
+                    repurposed unused server infrastructure for internal tools, and contributed to research papers — gaining hands-on
+                    startup experience in unit economics and internal tooling.
+                  </p>
+                  <a
+                    href="https://engineering.tamu.edu/news/2026/02/meloy-program-summer-internships-offer-start-up-experience.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 text-red-400 hover:text-red-300 transition-colors text-sm"
+                  >
+                    <FaExternalLinkAlt className="group-hover:animate-pulse text-xs" />
+                    Read Article
+                  </a>
+                </motion.div>
+
+                {/* Nature – AI in Education (March 2025) */}
+                <motion.div
+                  className="bg-gray-700/50 rounded-lg p-4 border-l-4 border-blue-400"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.4, delay: 0.7 }}
+                >
+                  <h3 className="font-semibold text-white text-lg mb-2">Featured in Nature - AI in Education</h3>
+                  <p className="text-gray-300 text-sm mb-2">
+                    <strong>Nature</strong> (March 2025)
+                  </p>
+                  <p className="text-gray-300 text-sm mb-3">
+                    Featured in Nature&apos;s comprehensive article on how students are creatively using ChatGPT and AI tools
+                    for learning, highlighting innovative approaches to AI-assisted education and the &quot;priming&quot; methodology.
+                  </p>
+                  <a
+                    href="https://www.nature.com/articles/d41586-025-00621-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm"
+                  >
+                    <FaExternalLinkAlt className="group-hover:animate-pulse text-xs" />
+                    Read Article
+                  </a>
+                </motion.div>
+              </div>
+            </motion.div>
+
+            {/* ── Speaking Engagements ── */}
+            {/* To add a new speaking engagement, copy the motion.div block below and update the title, venue, date, description, and link. */}
+            <motion.div
+              className="mb-8"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <h3 className="text-lg font-semibold text-gray-200 mb-4 flex items-center gap-2">
+                <FaExternalLinkAlt className="text-teal-400" />
+                Speaking Engagements
+              </h3>
+
+              <div className="space-y-4">
+                {/* UIUC Speaking Engagement (March 2024) */}
+                <motion.div
+                  className="bg-gray-700/50 rounded-lg p-4 border-l-4 border-green-400"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.4, delay: 0.6 }}
+                >
+                  <h3 className="font-semibold text-white text-lg mb-2">Public Speaking - University of Illinois Urbana-Champaign</h3>
+                  <p className="text-gray-300 text-sm mb-2">
+                    <strong>UIUC Graduate Students</strong> (March 2024)
+                  </p>
+                  <p className="text-gray-300 text-sm mb-3">
+                    Presented to 100+ graduate students on practical AI applications in education, demonstrating the
+                    &quot;priming&quot; methodology and innovative ways to leverage ChatGPT for academic success.
+                  </p>
+                  <a
+                    href="https://www.linkedin.com/posts/sami-melhem_aiineducation-chatgpt4-classprimer-activity-7171281188806881280-l2Ca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors text-sm"
+                  >
+                    <FaExternalLinkAlt className="group-hover:animate-pulse text-xs" />
+                    View Details
+                  </a>
+                </motion.div>
+              </div>
+            </motion.div>
+
+            {/* ── Newsletters ── */}
+            {/* To add a new newsletter mention, copy the motion.div block below and update the title, source, date, description, and link. */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              <h3 className="text-lg font-semibold text-gray-200 mb-4 flex items-center gap-2">
+                <FaFileAlt className="text-teal-400" />
+                Newsletters
+              </h3>
+
+              <div className="space-y-4">
+                {/* AI x Education Newsletter (February 2024) */}
+                <motion.div
+                  className="bg-gray-700/50 rounded-lg p-4 border-l-4 border-purple-400"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.4, delay: 0.7 }}
+                >
+                  <h3 className="font-semibold text-white text-lg mb-2">Featured in AI x Education Newsletter</h3>
+                  <p className="text-gray-300 text-sm mb-2">
+                    <strong>AI x Education Substack</strong> (February 2024)
+                  </p>
+                  <p className="text-gray-300 text-sm mb-3">
+                    Featured in the &quot;Efficiency vs Ethics of AI in Education&quot; newsletter, sharing insights on the
+                    &quot;priming&quot; methodology and how students can effectively use AI tools for academic preparation
+                    while maintaining authentic learning experiences.
+                  </p>
+                  <a
+                    href="https://aixeducation.substack.com/p/efficiency-vs-ethics-of-ai-in-education"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors text-sm"
+                  >
+                    <FaExternalLinkAlt className="group-hover:animate-pulse text-xs" />
+                    Read Newsletter
+                  </a>
+                </motion.div>
+              </div>
             </motion.div>
           </motion.section>
 
@@ -670,19 +771,6 @@ export default function AboutPage() {
                 </div>
               </div>
             </motion.div>
-
-            {/* Philosophy */}
-            <motion.p 
-              className="text-center text-gray-300 leading-relaxed mt-8 italic"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.9 }}
-            >
-              &quot;I believe in the power of technology to solve real-world problems and make a positive impact on society. 
-              Through my work with startups, research labs, and various projects, I strive to create solutions that 
-              not only improve productivity but also help others improve their life situations.&quot;
-            </motion.p>
           </motion.section>
         </div>
       </div>
