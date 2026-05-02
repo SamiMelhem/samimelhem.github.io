@@ -17,16 +17,16 @@ export default function AboutPage() {
         >
           About Me
         </motion.h1>
-        
+
         <div className="space-y-8 sm:space-y-12">
           {/* Introduction */}
-          <motion.section 
+          <motion.section
             className="bg-gray-800/70 rounded-xl p-6 sm:p-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <motion.h2 
+            <motion.h2
               className="text-2xl sm:text-3xl font-semibold mb-4 text-teal-400"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export default function AboutPage() {
             >
               Hello, I am Sami Melhem
             </motion.h2>
-            <motion.p 
+            <motion.p
               className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -42,7 +42,7 @@ export default function AboutPage() {
             >
               I am currently a senior at Texas A&M University majoring in Computer Science, with an emphasis in Data Science and a minor in Cybersecurity. Earlier in my time at A&M, I built a strong academic foundation in machine learning, big‑data analytics, and AI workflows through coursework and early technical projects. During this period, I was actively involved in the Aggie Coding Club and Aggie Data Science Club, where I contributed to applied projects such as market trend forecasting and data visualization, gaining hands‑on experience working with real‑world data in collaborative environments.
             </motion.p>
-            <motion.p 
+            <motion.p
               className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -50,7 +50,7 @@ export default function AboutPage() {
             >
               As I moved into my sophomore and junior years, my involvement deepened and my responsibilities grew. I took on a leadership role as a Projects Officer in the Aggie Data Science Club, where I led technical initiatives, managed teams, and helped improve the organization both internally and externally. Alongside this, I joined research and development efforts as a conversational AI developer and undergraduate researcher, while also gaining industry exposure through internships at both startup and enterprise companies. During my junior year, I balanced a heavy course load with serving as a teaching assistant for Data Structures and Algorithms, leading independent and team-based projects, and formally studying machine learning and large language models through research-focused programs. These efforts culminated in contributing to a published research paper analyzing the use of ChatGPT in mechanical engineering education.
             </motion.p>
-            <motion.p 
+            <motion.p
               className="text-base sm:text-lg text-gray-300 leading-relaxed"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -61,14 +61,14 @@ export default function AboutPage() {
           </motion.section>
 
           {/* Skills & Expertise */}
-          <motion.section 
+          <motion.section
             className="bg-gray-800/70 rounded-xl p-6 sm:p-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <motion.h2 
+            <motion.h2
               className="text-2xl sm:text-3xl font-semibold mb-6 text-teal-400 flex items-center gap-3"
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ export default function AboutPage() {
               <FaCode className="text-teal-400" />
               Skills & Expertise
             </motion.h2>
-            <motion.div 
+            <motion.div
               className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -94,7 +94,7 @@ export default function AboutPage() {
                 { title: "APIs & Integrations", content: "Notion API, REST APIs, WebSocket APIs, WebAuthn/FIDO2, Authentication Systems, Third-party Integrations" },
                 { title: "Methodologies", content: "Agile, Waterfall, Scrum, LLM Benchmarking, Physics-Informed Neural Networks (PINNs), ETL Pipelines" }
               ].map((skill, index) => (
-                <motion.div 
+                <motion.div
                   key={skill.title}
                   className="bg-gray-700/50 rounded-lg p-4"
                   initial={{ opacity: 0, y: 20 }}
@@ -110,14 +110,14 @@ export default function AboutPage() {
           </motion.section>
 
           {/* Education & Background */}
-          <motion.section 
+          <motion.section
             className="bg-gray-800/70 rounded-xl p-6 sm:p-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <motion.h2 
+            <motion.h2
               className="text-2xl sm:text-3xl font-semibold mb-6 text-teal-400 flex items-center gap-3"
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -127,14 +127,14 @@ export default function AboutPage() {
               <FaGraduationCap className="text-teal-400" />
               Education & Background
             </motion.h2>
-            <motion.div 
+            <motion.div
               className="space-y-4"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <motion.div 
+              <motion.div
                 className="border-l-4 border-teal-400 pl-4"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -143,17 +143,17 @@ export default function AboutPage() {
               >
                 <h3 className="font-semibold text-white text-lg">Texas A&M University</h3>
                 <p className="text-gray-300 mb-2">
-                  <strong>Master of Science in Computer Science</strong> (Expected May 2027)<br/>
-                  <strong>GPA:</strong> 4.0/4.0<br/>
-                  <strong>Bachelor of Science in Computer Science</strong> (Expected May 2026)<br/>
+                  <strong>Master of Science in Computer Science</strong> (Expected May 2027)<br />
+                  <strong>GPA:</strong> 4.0/4.0<br />
+                  <strong>Bachelor of Science in Computer Science</strong> (Expected May 2026)<br />
                   <strong>Minor:</strong> Cybersecurity | <strong>Emphasis:</strong> Data Science | <strong>GPA:</strong> 3.8/4.0
                 </p>
                 <p className="text-gray-300 text-sm">
-                  <strong>Relevant Coursework:</strong> Machine Learning, Artificial Intelligence, Data Structures & Algorithms, 
+                  <strong>Relevant Coursework:</strong> Machine Learning, Artificial Intelligence, Data Structures & Algorithms,
                   Database Systems, Cloud Computing, Data Visualization, Cryptography, Cybersecurity Risk Management
                 </p>
               </motion.div>
-              <motion.div 
+              <motion.div
                 className="border-l-4 border-teal-400 pl-4"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -162,26 +162,26 @@ export default function AboutPage() {
               >
                 <h3 className="font-semibold text-white text-lg">Honors & Awards</h3>
                 <p className="text-gray-300">
-                  • {`Meloy Fellows Scholarship (2025-2026)`}<br/>
-                  • {`Association of Former Students Scholarship (2025-2026)`}<br /> 
-                  • {`Michelle '88 & Todd Steudtner '87 Scholarship (2025-2026)`}<br/>
-                  • {`Michael '78 & Dianne '79 Pfister Endowed Scholar (2024-2025, 2025-2026)`}<br/>
-                  • {`Best Juniors at ACPC Spring Competition (Spring 2025)`}<br/>
-                  • {`Distinguished Student (Fall 2024)`}<br/>
+                  • {`Meloy Fellows Scholarship (2025-2026)`}<br />
+                  • {`Association of Former Students Scholarship (2025-2026)`}<br />
+                  • {`Michelle '88 & Todd Steudtner '87 Scholarship (2025-2026)`}<br />
+                  • {`Michael '78 & Dianne '79 Pfister Endowed Scholar (2024-2025, 2025-2026)`}<br />
+                  • {`Best Juniors at ACPC Spring Competition (Spring 2025)`}<br />
+                  • {`Distinguished Student (Fall 2024)`}<br />
                 </p>
               </motion.div>
             </motion.div>
           </motion.section>
 
           {/* Leadership & Extracurriculars */}
-          <motion.section 
+          <motion.section
             className="bg-gray-800/70 rounded-xl p-6 sm:p-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <motion.h2 
+            <motion.h2
               className="text-2xl sm:text-3xl font-semibold mb-6 text-teal-400 flex items-center gap-3"
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -191,7 +191,7 @@ export default function AboutPage() {
               <FaMusic className="text-teal-400" />
               Leadership & Activities
             </motion.h2>
-            <motion.div 
+            <motion.div
               className="grid sm:grid-cols-2 gap-4"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -201,40 +201,40 @@ export default function AboutPage() {
               <div className="bg-gray-700/50 rounded-lg p-4">
                 <h3 className="font-semibold text-white mb-2">Music Leadership</h3>
                 <p className="text-gray-300 text-sm">
-                  • Principal Clarinet - TAMU Wind Symphony<br/>
-                  • Principal Clarinet - TAMU Chamber Orchestra<br/>
-                  • Treasurer - TAMU Wind Symphony (2024-2025, 2025-2026)<br/>
-                  • Vice President - Carnival of Animals (2024-2025, 2025-2026)<br/>
+                  • Principal Clarinet - TAMU Wind Symphony<br />
+                  • Principal Clarinet - TAMU Chamber Orchestra<br />
+                  • Treasurer - TAMU Wind Symphony (2024-2025, 2025-2026)<br />
+                  • Vice President - Carnival of Animals (2024-2025, 2025-2026)<br />
                   • Treasurer & Secretary - Carnival of Animals (2024)
                 </p>
               </div>
               <div className="bg-gray-700/50 rounded-lg p-4">
                 <h3 className="font-semibold text-white mb-2">Technical Leadership</h3>
                 <p className="text-gray-300 text-sm">
-                  • Projects Officer - Aggie Data Science Club (2024-2025)<br/>
-                  • Project Manager - Aggie Data Science Club (2024-2025, 2025-2026)<br/>
+                  • Projects Officer - Aggie Data Science Club (2024-2025)<br />
+                  • Project Manager - Aggie Data Science Club (2024-2025, 2025-2026)<br />
                 </p>
               </div>
               <div className="bg-gray-700/50 rounded-lg p-4">
                 <h3 className="font-semibold text-white mb-2">Campus Partners</h3>
                 <p className="text-gray-300 text-sm">
-                  • Handshake (AI Fellow, Nov. - Dec. 2025)<br/>
-                  • Perplexity (Fall 2025)<br/>
-                  • BoodleBox (Spring 2025)<br/>
+                  • Handshake (AI Fellow, Nov. - Dec. 2025)<br />
+                  • Perplexity (Fall 2025)<br />
+                  • BoodleBox (Spring 2025)<br />
                 </p>
               </div>
             </motion.div>
           </motion.section>
 
           {/* Resume & CV Downloads */}
-          <motion.section 
+          <motion.section
             className="bg-gray-800/70 rounded-xl p-6 sm:p-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <motion.h2 
+            <motion.h2
               className="text-2xl sm:text-3xl font-semibold mb-6 text-teal-400 flex items-center gap-3"
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -244,17 +244,17 @@ export default function AboutPage() {
               <FaBrain className="text-teal-400" />
               Professional Documents
             </motion.h2>
-            <motion.p 
+            <motion.p
               className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Interested in learning more about my professional background and experience? 
+              Interested in learning more about my professional background and experience?
               View my resume and CV for detailed information about my projects, skills, and achievements.
             </motion.p>
-            <motion.div 
+            <motion.div
               className="flex flex-col sm:flex-row gap-4"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -283,14 +283,14 @@ export default function AboutPage() {
           </motion.section>
 
           {/* Research Paper */}
-          <motion.section 
+          <motion.section
             className="bg-gray-800/70 rounded-xl p-6 sm:p-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <motion.h2 
+            <motion.h2
               className="text-2xl sm:text-3xl font-semibold mb-6 text-teal-400 flex items-center gap-3"
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -300,19 +300,19 @@ export default function AboutPage() {
               <FaFileAlt className="text-teal-400" />
               Research & Publications
             </motion.h2>
-            <motion.p 
+            <motion.p
               className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              I&apos;ve conducted research in artificial intelligence and machine learning, focusing on 
-              Large Language Models, reasoning-augmented AI systems, and their applications in engineering education. 
+              I&apos;ve conducted research in artificial intelligence and machine learning, focusing on
+              Large Language Models, reasoning-augmented AI systems, and their applications in engineering education.
               My work spans from comprehensive surveys of emerging AI techniques to evaluating AI capabilities in academic contexts.
             </motion.p>
             <div className="space-y-4">
-              <motion.div 
+              <motion.div
                 className="bg-gray-700/50 rounded-lg p-4 border-l-4 border-teal-400"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -324,8 +324,8 @@ export default function AboutPage() {
                   <strong>Texas A&M University</strong> (December 2025)
                 </p>
                 <p className="text-gray-300 text-sm mb-4">
-                  Co-authored with Biswas Poudel, Justin Liu, and Xianshun Jiang. 
-                  This survey synthesizes over forty systems that interleave planning, querying, retrieving, verifying, and stopping, 
+                  Co-authored with Biswas Poudel, Justin Liu, and Xianshun Jiang.
+                  This survey synthesizes over forty systems that interleave planning, querying, retrieving, verifying, and stopping,
                   analyzing training paradigms and architectural choices in reasoning-search-augmented LLMs.
                 </p>
                 <a
@@ -338,7 +338,7 @@ export default function AboutPage() {
                   View Research Paper
                 </a>
               </motion.div>
-              <motion.div 
+              <motion.div
                 className="bg-gray-700/50 rounded-lg p-4 border-l-4 border-teal-400"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -350,8 +350,8 @@ export default function AboutPage() {
                   <strong>2025 ASEE Annual Conference & Exposition</strong> (Accepted June 15, 2025)
                 </p>
                 <p className="text-gray-300 text-sm mb-4">
-                  Co-authored with Dr. Rujun Gao, Hillary E. Merzdorf, Xiaosu Guo, Dr. Kristi J. Shryock, and Prof. Arun R Srinivasa. 
-                  This research evaluates ChatGPT-4o&apos;s performance on mechanical engineering concept inventories, 
+                  Co-authored with Dr. Rujun Gao, Hillary E. Merzdorf, Xiaosu Guo, Dr. Kristi J. Shryock, and Prof. Arun R Srinivasa.
+                  This research evaluates ChatGPT-4o&apos;s performance on mechanical engineering concept inventories,
                   examining AI&apos;s potential and limitations in engineering education support.
                 </p>
                 <a
@@ -368,14 +368,14 @@ export default function AboutPage() {
           </motion.section>
 
           {/* Media & Speaking Engagements */}
-          <motion.section 
+          <motion.section
             className="bg-gray-800/70 rounded-xl p-6 sm:p-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.45 }}
           >
-            <motion.h2 
+            <motion.h2
               className="text-2xl sm:text-3xl font-semibold mb-6 text-teal-400 flex items-center gap-3"
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -385,17 +385,17 @@ export default function AboutPage() {
               <FaExternalLinkAlt className="text-teal-400" />
               Media & Speaking Engagements
             </motion.h2>
-            <motion.p 
+            <motion.p
               className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              I&apos;ve been featured in various media outlets and speaking engagements, sharing insights on AI in education, 
+              I&apos;ve been featured in various media outlets and speaking engagements, sharing insights on AI in education,
               engineering innovation, entrepreneurship, and the performing arts.
             </motion.p>
-            
+
             {/* ── Featured Articles ── */}
             {/* To add a new article, copy one of the motion.div blocks below and update the title, source, date, description, and link. */}
             <motion.div
@@ -589,14 +589,14 @@ export default function AboutPage() {
           </motion.section>
 
           {/* Beyond Code - Personal Interests */}
-          <motion.section 
+          <motion.section
             className="bg-gray-800/70 rounded-xl p-6 sm:p-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <motion.h2 
+            <motion.h2
               className="text-2xl sm:text-3xl font-semibold mb-8 text-teal-400 text-center"
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -605,9 +605,9 @@ export default function AboutPage() {
             >
               Beyond Code
             </motion.h2>
-            
+
             {/* Interest Cards Grid */}
-            <motion.div 
+            <motion.div
               className="grid grid-cols-2 lg:grid-cols-4 gap-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -615,13 +615,14 @@ export default function AboutPage() {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               {/* Music */}
-              <motion.div 
-                className="group bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 text-center border border-purple-500/30"
+              <motion.div
+                className="group bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 text-center border"
+                style={{ borderColor: "rgba(168, 85, 247, 0.3)" }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.4, delay: 0.4 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   background: "linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(236, 72, 153, 0.3) 100%)",
                   borderColor: "rgba(168, 85, 247, 0.6)",
@@ -630,7 +631,7 @@ export default function AboutPage() {
               >
                 <div className="mb-4">
                   <motion.div
-                    whileHover={{ 
+                    whileHover={{
                       color: "rgb(196, 181, 253)",
                       transition: { duration: 0.3, ease: "easeInOut" }
                     }}
@@ -645,13 +646,14 @@ export default function AboutPage() {
               </motion.div>
 
               {/* Fitness */}
-              <motion.div 
-                className="group bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl p-6 text-center border border-red-500/30"
+              <motion.div
+                className="group bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl p-6 text-center border"
+                style={{ borderColor: "rgba(239, 68, 68, 0.3)" }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.4, delay: 0.5 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   background: "linear-gradient(135deg, rgba(239, 68, 68, 0.3) 0%, rgba(249, 115, 22, 0.3) 100%)",
                   borderColor: "rgba(239, 68, 68, 0.6)",
@@ -660,7 +662,7 @@ export default function AboutPage() {
               >
                 <div className="mb-4">
                   <motion.div
-                    whileHover={{ 
+                    whileHover={{
                       color: "rgb(252, 165, 165)",
                       transition: { duration: 0.3, ease: "easeInOut" }
                     }}
@@ -675,13 +677,14 @@ export default function AboutPage() {
               </motion.div>
 
               {/* Pickleball */}
-              <motion.div 
-                className="group bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl p-6 text-center border border-green-500/30"
+              <motion.div
+                className="group bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl p-6 text-center border"
+                style={{ borderColor: "rgba(34, 197, 94, 0.3)" }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.4, delay: 0.6 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   background: "linear-gradient(135deg, rgba(34, 197, 94, 0.3) 0%, rgba(16, 185, 129, 0.3) 100%)",
                   borderColor: "rgba(34, 197, 94, 0.6)",
@@ -690,7 +693,7 @@ export default function AboutPage() {
               >
                 <div className="mb-4">
                   <motion.div
-                    whileHover={{ 
+                    whileHover={{
                       color: "rgb(134, 239, 172)",
                       transition: { duration: 0.3, ease: "easeInOut" }
                     }}
@@ -705,13 +708,14 @@ export default function AboutPage() {
               </motion.div>
 
               {/* Travel */}
-              <motion.div 
-                className="group bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-6 text-center border border-blue-500/30"
+              <motion.div
+                className="group bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-6 text-center border"
+                style={{ borderColor: "rgba(59, 130, 246, 0.3)" }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.4, delay: 0.7 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   background: "linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(6, 182, 212, 0.3) 100%)",
                   borderColor: "rgba(59, 130, 246, 0.6)",
@@ -720,7 +724,7 @@ export default function AboutPage() {
               >
                 <div className="mb-4">
                   <motion.div
-                    whileHover={{ 
+                    whileHover={{
                       color: "rgb(147, 197, 253)",
                       transition: { duration: 0.3, ease: "easeInOut" }
                     }}
@@ -736,7 +740,7 @@ export default function AboutPage() {
             </motion.div>
 
             {/* Recent Travel Highlights */}
-            <motion.div 
+            <motion.div
               className="mt-8 bg-gray-700/30 rounded-lg p-6 border border-gray-600/50"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -748,7 +752,7 @@ export default function AboutPage() {
                 <h3 className="text-lg font-semibold text-white">Recent Adventures</h3>
               </div>
               <div className="grid sm:grid-cols-3 gap-4 text-center">
-              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="bg-gray-800/50 rounded-lg p-4">
                   <div className="flex justify-center items-center mb-3 h-[48px] text-4xl">
                     ⛷️
                   </div>
@@ -774,7 +778,7 @@ export default function AboutPage() {
           </motion.section>
         </div>
       </div>
-      
+
       <ContactIcons />
     </main>
   )

@@ -7,11 +7,11 @@
 [![Bun](https://img.shields.io/badge/Bun-1.3.13-000000?style=for-the-badge&logo=bun&logoColor=white)](https://bun.sh/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.38.0-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
-A high-performance, fully customizable developer portfolio built with **Next.js 16**, **TypeScript**, and **Tailwind CSS**. Features professional animations, mobile-first responsive design, and automated CI/CD deployment.
+A high-performance, fully customizable developer portfolio built with **Next.js 16.2**, **TypeScript 5.9**, and **Tailwind CSS 4.2**. Features professional animations, mobile-first responsive design, and automated CI/CD deployment.
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-samimelhem.com-blue?style=for-the-badge&logo=vercel)](https://samimelhem.com)
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16.2.4-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 
 ## ✨ Features
 
@@ -22,7 +22,7 @@ A high-performance, fully customizable developer portfolio built with **Next.js 
 - **Dark Theme**: Modern gradient backgrounds with glassmorphism effects
 
 ### 🏗️ **Architecture**
-- **Next.js 16 App Router**: Latest React patterns with Server Components
+- **Next.js 16.2 App Router**: Latest React 19 patterns with Server Components
 - **TypeScript**: Full type safety across the entire application
 - **Static Site Generation**: Lightning-fast performance with `output: 'export'`
 - **Component Architecture**: 14+ reusable components with clear separation of concerns
@@ -299,7 +299,7 @@ samimelhem-portfolio/
 ## 🛠️ Technology Stack
 
 ### Core Technologies
-- **[Next.js 16](https://nextjs.org/)** - React framework with App Router
+- **[Next.js 16.2](https://nextjs.org/)** - React 19 framework with App Router
 - **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
 - **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
 - **[Framer Motion](https://www.framer.com/motion/)** - Animation library
