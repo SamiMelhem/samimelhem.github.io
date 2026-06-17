@@ -4,7 +4,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { MdEmail } from 'react-icons/md'
-import { SiGithub, SiInstagram } from 'react-icons/si'
+import { SiGithub } from 'react-icons/si'
 import { FaLinkedin } from 'react-icons/fa6'
 
 export default function ContactIcons() {
@@ -12,7 +12,6 @@ export default function ContactIcons() {
     { href: 'https://linkedin.com/in/sami-melhem/', Icon: FaLinkedin, label: 'LinkedIn', external: true },
     { href: 'https://github.com/SamiMelhem/',   Icon: SiGithub,   label: 'GitHub', external: true   },
     { href: '/contact/',   Icon: MdEmail,    label: 'Email', external: false    },
-    { href: 'https://instagram.com/samimelhem__/', Icon: SiInstagram, label: 'Instagram', external: true },
   ]
 
   return (

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { MdEmail, MdSend, MdContentCopy, MdCheck, MdArrowDropDown } from 'react-icons/md'
-import { SiGithub, SiInstagram, SiGmail, SiApple } from 'react-icons/si'
+import { SiGithub, SiGmail, SiApple } from 'react-icons/si'
 import { FaLinkedin } from 'react-icons/fa6'
 import { FaUser, FaBuilding, FaEnvelope, FaComment, FaExternalLinkAlt, FaYahoo } from 'react-icons/fa'
 
@@ -80,7 +80,7 @@ export default function ContactPage() {
             icon: SiGmail,
             color: 'text-red-400',
             getUrl: (subject: string, body: string) => 
-                `https://mail.google.com/mail/?view=cm&fs=1&to=samilmelhem23@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}/`
+                `https://mail.google.com/mail/?view=cm&fs=1&to=samilmelhem23@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
         },
         {
             name: 'Outlook',
@@ -93,7 +93,7 @@ export default function ContactPage() {
                     return `ms-outlook://compose?to=samilmelhem23@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
                 }
                 // On Mac/iOS, use web version (desktop app uses different protocol)
-                return `https://outlook.live.com/mail/0/deeplink/compose?to=samilmelhem23@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}/`
+                return `https://outlook.live.com/mail/0/deeplink/compose?to=samilmelhem23@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
             }
         },
         {
@@ -113,7 +113,7 @@ export default function ContactPage() {
             icon: FaYahoo,
             color: 'text-purple-400',
             getUrl: (subject: string, body: string) => 
-                `https://compose.mail.yahoo.com/?to=samilmelhem23@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}/`
+                `https://compose.mail.yahoo.com/?to=samilmelhem23@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
         }
     ]
 
@@ -153,7 +153,7 @@ ${formData.email}`
         if (service.name === 'Outlook' && navigator.userAgent.toLowerCase().includes('windows')) {
             // Try to open desktop app first
             const desktopUrl = url
-            const webUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=samilmelhem23@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}/`
+            const webUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=samilmelhem23@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
             
             // Attempt to open desktop app
             window.location.href = desktopUrl
@@ -196,12 +196,6 @@ ${body}`
         href: 'https://www.github.com/SamiMelhem/',
         label: 'GitHub',
         Icon: SiGithub,
-        external: true,
-    },
-    {
-        href: 'https://www.instagram.com/samimelhem__/',
-        label: 'Instagram',
-        Icon: SiInstagram,
         external: true,
     },
     ]
@@ -423,7 +417,7 @@ ${body}`
             </div>
 
             {/* Social Links Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto lg:mx-0">
               {contacts.map(({ href, label, Icon, external }, i) => (
             <motion.div
               key={label}

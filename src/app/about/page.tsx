@@ -262,7 +262,7 @@ export default function AboutPage() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <a
-                href="/documents/sami_melhem.pdf"
+                href="/view/resume/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-center gap-3 bg-teal-600 hover:bg-teal-700 px-6 py-3 rounded-lg transition-all duration-300 font-semibold"
@@ -271,7 +271,7 @@ export default function AboutPage() {
                 View Resume
               </a>
               <a
-                href="/documents/sami_melhem_cv.pdf"
+                href="/view/cv/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-center gap-3 bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg transition-all duration-300 font-semibold border border-gray-600 hover:border-gray-500"
@@ -329,7 +329,7 @@ export default function AboutPage() {
                   analyzing training paradigms and architectural choices in reasoning-search-augmented LLMs.
                 </p>
                 <a
-                  href="/documents/sami_melhem_research_paper_2.pdf"
+                  href="/view/research-paper-2/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-3 bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded-lg transition-all duration-300 font-medium text-sm"
@@ -355,7 +355,7 @@ export default function AboutPage() {
                   examining AI&apos;s potential and limitations in engineering education support.
                 </p>
                 <a
-                  href="/documents/sami_melhem_research_paper_1.pdf"
+                  href="/view/research-paper-1/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-3 bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded-lg transition-all duration-300 font-medium text-sm"
@@ -594,50 +594,26 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.6 }}
           >
-            <motion.h2
-              className="text-2xl sm:text-3xl font-semibold mb-8 text-teal-400 text-center"
-              initial={{ opacity: 0, y: -10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-            >
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-8 text-teal-400 text-center">
               Beyond Code
-            </motion.h2>
+            </h2>
 
             {/* Interest Cards Grid */}
-            <motion.div
-              className="grid grid-cols-2 lg:grid-cols-4 gap-6"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Music */}
-              <motion.div
-                className="group bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 text-center border"
-                style={{ borderColor: "rgba(168, 85, 247, 0.3)" }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.4, delay: 0.4 }}
+              <motion.div 
+                className="group bg-gradient-to-br from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 rounded-xl p-6 text-center border border-purple-500/30 hover:border-purple-500/60 transition-all duration-300"
                 whileHover={{
                   scale: 1.05,
-                  background: "linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(236, 72, 153, 0.3) 100%)",
-                  borderColor: "rgba(168, 85, 247, 0.6)",
                   transition: { duration: 0.3, ease: "easeInOut" }
                 }}
               >
                 <div className="mb-4">
-                  <motion.div
-                    whileHover={{
-                      color: "rgb(196, 181, 253)",
-                      transition: { duration: 0.3, ease: "easeInOut" }
-                    }}
-                  >
-                    <FaMusic className="text-4xl text-purple-400 mx-auto" />
-                  </motion.div>
+                  <div className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300">
+                    <FaMusic className="text-4xl mx-auto" />
+                  </div>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Music</h3>
                 <p className="text-sm text-gray-300 leading-relaxed">
@@ -646,29 +622,17 @@ export default function AboutPage() {
               </motion.div>
 
               {/* Fitness */}
-              <motion.div
-                className="group bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl p-6 text-center border"
-                style={{ borderColor: "rgba(239, 68, 68, 0.3)" }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.4, delay: 0.5 }}
+              <motion.div 
+                className="group bg-gradient-to-br from-red-500/20 to-orange-500/20 hover:from-red-500/30 hover:to-orange-500/30 rounded-xl p-6 text-center border border-red-500/30 hover:border-red-500/60 transition-all duration-300"
                 whileHover={{
                   scale: 1.05,
-                  background: "linear-gradient(135deg, rgba(239, 68, 68, 0.3) 0%, rgba(249, 115, 22, 0.3) 100%)",
-                  borderColor: "rgba(239, 68, 68, 0.6)",
                   transition: { duration: 0.3, ease: "easeInOut" }
                 }}
               >
                 <div className="mb-4">
-                  <motion.div
-                    whileHover={{
-                      color: "rgb(252, 165, 165)",
-                      transition: { duration: 0.3, ease: "easeInOut" }
-                    }}
-                  >
-                    <FaDumbbell className="text-4xl text-red-400 mx-auto" />
-                  </motion.div>
+                  <div className="text-red-400 group-hover:text-red-300 transition-colors duration-300">
+                    <FaDumbbell className="text-4xl mx-auto" />
+                  </div>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Fitness</h3>
                 <p className="text-sm text-gray-300 leading-relaxed">
@@ -677,29 +641,17 @@ export default function AboutPage() {
               </motion.div>
 
               {/* Pickleball */}
-              <motion.div
-                className="group bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl p-6 text-center border"
-                style={{ borderColor: "rgba(34, 197, 94, 0.3)" }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.4, delay: 0.6 }}
+              <motion.div 
+                className="group bg-gradient-to-br from-green-500/20 to-emerald-500/20 hover:from-green-500/30 hover:to-emerald-500/30 rounded-xl p-6 text-center border border-green-500/30 hover:border-green-500/60 transition-all duration-300"
                 whileHover={{
                   scale: 1.05,
-                  background: "linear-gradient(135deg, rgba(34, 197, 94, 0.3) 0%, rgba(16, 185, 129, 0.3) 100%)",
-                  borderColor: "rgba(34, 197, 94, 0.6)",
                   transition: { duration: 0.3, ease: "easeInOut" }
                 }}
               >
                 <div className="mb-4">
-                  <motion.div
-                    whileHover={{
-                      color: "rgb(134, 239, 172)",
-                      transition: { duration: 0.3, ease: "easeInOut" }
-                    }}
-                  >
-                    <GiTennisRacket className="text-4xl text-green-400 mx-auto" />
-                  </motion.div>
+                  <div className="text-green-400 group-hover:text-green-300 transition-colors duration-300">
+                    <GiTennisRacket className="text-4xl mx-auto" />
+                  </div>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Pickleball</h3>
                 <p className="text-sm text-gray-300 leading-relaxed">
@@ -708,45 +660,27 @@ export default function AboutPage() {
               </motion.div>
 
               {/* Travel */}
-              <motion.div
-                className="group bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-6 text-center border"
-                style={{ borderColor: "rgba(59, 130, 246, 0.3)" }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.4, delay: 0.7 }}
+              <motion.div 
+                className="group bg-gradient-to-br from-blue-500/20 to-cyan-500/20 hover:from-blue-500/30 hover:to-cyan-500/30 rounded-xl p-6 text-center border border-blue-500/30 hover:border-blue-500/60 transition-all duration-300"
                 whileHover={{
                   scale: 1.05,
-                  background: "linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(6, 182, 212, 0.3) 100%)",
-                  borderColor: "rgba(59, 130, 246, 0.6)",
                   transition: { duration: 0.3, ease: "easeInOut" }
                 }}
               >
                 <div className="mb-4">
-                  <motion.div
-                    whileHover={{
-                      color: "rgb(147, 197, 253)",
-                      transition: { duration: 0.3, ease: "easeInOut" }
-                    }}
-                  >
-                    <FaPlane className="text-4xl text-blue-400 mx-auto" />
-                  </motion.div>
+                  <div className="text-blue-400 group-hover:text-blue-300 transition-colors duration-300">
+                    <FaPlane className="text-4xl mx-auto" />
+                  </div>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Travel</h3>
                 <p className="text-sm text-gray-300 leading-relaxed">
                   Been to 5 countries and 13 states.
                 </p>
               </motion.div>
-            </motion.div>
+            </div>
 
             {/* Recent Travel Highlights */}
-            <motion.div
-              className="mt-8 bg-gray-700/30 rounded-lg p-6 border border-gray-600/50"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >
+            <div className="mt-8 bg-gray-700/30 rounded-lg p-6 border border-gray-600/50">
               <div className="flex items-center gap-3 mb-4">
                 <FaMapMarkerAlt className="text-teal-400 text-xl" />
                 <h3 className="text-lg font-semibold text-white">Recent Adventures</h3>
@@ -774,7 +708,7 @@ export default function AboutPage() {
                   <p className="text-xs text-gray-400">Beach Getaway</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </motion.section>
         </div>
       </div>
